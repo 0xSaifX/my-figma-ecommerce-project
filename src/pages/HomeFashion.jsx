@@ -1,0 +1,551 @@
+import { useState } from "react";
+import "./HomeFashion.css";
+import fashion1 from "../assets/fashion1.jpg";
+import fashion2 from "../assets/fashion2.jpg";
+import { ChevronDown, ChevronLeft, ChevronRight, CircleDivideIcon, DollarSignIcon, Star } from "lucide-react";
+import React from "react";
+import shirt from "../assets/shirt.jpg";
+import last1 from "../assets/last1.jpg";
+import last2 from "../assets/last2.jpg";
+import last3 from "../assets/last3.jpg";
+import last4 from "../assets/last4.jpg";
+import last5 from "../assets/last5.jpg";
+import perfume from "../assets/perfume.jpg";
+import belt from "../assets/belt.jpg";
+import makeup from "../assets/makeup.jpg";
+import watch from "../assets/watch.jpg";
+import menshoes from "../assets/menshoes.jpg";
+import toprated1 from "../assets/toprated1.jpg";
+import toprated2 from "../assets/toprated2.jpg";
+import toprated3 from "../assets/toprated3.jpg";
+import topsell1 from "../assets/topsell1.jpg";
+import topsell2 from "../assets/topsell2.jpg";
+import topsell3 from "../assets/topsell3.jpg";
+import trend1 from "../assets/trend1.png";
+import trend2 from "../assets/trend2.jpg";
+import trend3 from "../assets/trend3.png";
+import { FaChevronRight, FaHandHoldingMedical, FaStar, FaTruckMoving } from "react-icons/fa";
+
+
+const trending = [
+  { id: 1, name: "Healthy Nutmix, 200g Pack", category: "Driedfruit", price: "$45.00", oldPrice: "$42.00", image: trend1 },
+  { id: 2, name: "Organic Fresh Tomato", category: "Vegetables", price: "$30.00", oldPrice: "$25.00", image: trend2 },
+  { id: 3, name: "Coffee With Chocolate Cream Mix", category: "Coffee", price: "$65.00", oldPrice: "$62.00", image: trend3 },
+];
+
+const topRated = [
+  { id: 1, name: "Ginger - Organic", category: "Vegetables", price: "$65.00", oldPrice: "$62.00", image: toprated1 },
+  { id: 2, name: "Dates Value Pouch", category: "Driedfruit", price: "$78.00", oldPrice: "$56.00", image: toprated2 },
+  { id: 3, name: "Blue Berry", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
+];
+
+const topSelling = [
+  { id: 1, name: "Lemon - Seedless", category: "Vegetables", price: "$45.00", oldPrice: "$42.00", image: topsell1 },
+  { id: 2, name: "Mango - Kesar", category: "Fruits", price: "$65.00", oldPrice: "$62.00", image: topsell2 },
+  { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: topsell3 },
+]; 
+const ProductList = ({ title, highlight, items }) => (
+  <div className="product-column">
+    <div className="product-header">
+      <h3>
+        {title} <span>{highlight}</span>
+      </h3>
+      <div className="nav-icons">
+        <button>{"<"}</button>
+        <button>{">"}</button>
+      </div>
+    </div>
+    {items.map((item) => (
+      <div key={item.id} className="product-row">
+        <img src={item.image} alt={item.name} />
+        <div className="product-text">
+          <h4>{item.name}</h4>
+          <p className="category">{item.category}</p>
+          <div className="price">
+            <span className="new">{item.price}</span>
+            <span className="old">{item.oldPrice}</span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+);
+const RatedProducts = () => {
+  return (
+    <div className="top-most">
+      <ProductList  title="Trending" highlight="Items" items={trending} />
+      <ProductList  title="Top" highlight="Rated" items={topRated} />
+      <ProductList  title="Top" highlight="Selling" items={topSelling} />
+    </div>
+  );
+};
+
+function HomeFashion() {
+  
+    const handlePrev = (setter, Fashion) => {
+      setter(Fashion === 0 ? 0 : Fashion - 1);
+    };
+  
+    const handleNext = (setter, Fashion, length) => {
+      setter(Fashion < length - 3 ? Fashion + 1 : Fashion);
+    };
+  const categoryIcons = [
+  { title: "Clothes", items: "320 Items", bgColor: "#FFF6EC", icon: "https://api.builder.io/api/v1/image/assets/TEMP/30fd5a6db3f077d38aef59d99d39b711a1aaf3d4?width=100", discount: "30%" },
+  { title: "watches", items: "65 Items", bgColor: "#E2FDE2", icon: "https://api.builder.io/api/v1/image/assets/TEMP/8af9e988851ca11027932b07a8be03f17ca96dd1?width=100" },
+  { title: "Dresses", items: "548 Items", bgColor: "#FFEAE9", icon: "https://api.builder.io/api/v1/image/assets/TEMP/8aa09231cf0ca40b138a50581abb4dcd4c6e44e1?width=100", discount: "15%" },
+  { title: "glasses", items: "48 Items", bgColor: "#FDE1F5", icon: "https://api.builder.io/api/v1/image/assets/TEMP/1d3342705bbdaf3567eb05a69941245c30dae0fa?width=100", discount: "10%" },
+  { title: "hat & caps", items: "59 Items", bgColor: "#ECF0FF", icon: "https://api.builder.io/api/v1/image/assets/TEMP/b94c4036d8cdd627a9c68183143e4f6ebff49d9b?width=100" },
+];
+const newArrivals = [
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f960537c2c30c95cda9d00e65ced3c87357b0f7f?width=548", category: "men's wear", title: "Men's stylish printed shirt", price: "$87.00", originalPrice: "$59.00", rating: 4 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f78eaa31a2e0b32f9c103686701c5482810c8ea7?width=548", category: "jewellery", title: "Rose Gold Earring", price: "$80.00", originalPrice: "$60.00", rating: 4, badge: "sale" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/7b8898a8deccf0da2aa552d375ea501f6ab5564f?width=548", category: "Lipstick", title: "Liquid Matte Lipstick", price: "$30.00", originalPrice: "$20.00", rating: 2 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/0e147dea831c27a8746d616456303725dd946baa?width=548", category: "women's wear", title: "Stylish printed women's dress", price: "$85.00", originalPrice: "$78.00", rating: 4 },
+  { image: shirt, title: "Printed Round Neck Tshirt", category: "Unisex", price: "$32.00", originalPrice: "$45.00",rating: 2 },
+  { image: perfume, title: "Long lasting perfume", category: "Baby Wear", price: "$25.00", originalPrice: "$30.00",rating:3 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/c9a427cc1be0ea377b13f006b63c79fa1c1c58db?width=548", category: "Body Lotion", title: "Women's Sport Shoes", price: "$500.00", originalPrice: "$600.00", badge: "new",rating:4 },
+  { image: belt, title: "Men's Leather Belt", category: "Belt", price: "$65.00", originalPrice: "$62.00",rating: 3 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f960537c2c30c95cda9d00e65ced3c87357b0f7f?width=548", category: "men's wear", title: "Men's stylish printed shirt", price: "$87.00", originalPrice: "$59.00", rating: 4 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/f78eaa31a2e0b32f9c103686701c5482810c8ea7?width=548", category: "jewellery", title: "Rose Gold Earring", price: "$80.00", originalPrice: "$60.00", rating: 4, badge: "sale" },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/733159971dd19cfccd9a44667a1370375db7bda8?width=548", category: " Wallet ", title: "Women's Wallet Hand Purse", price: "$50.00", originalPrice: "$70.00",rating:3 },
+  { image: makeup, category: "Makeup Kit", title: "Compact Makeup Kit", price: "$78.00", originalPrice: "$85.00", rating: 2 },
+];
+;
+const dayOfDealProducts = [
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/c9a427cc1be0ea377b13f006b63c79fa1c1c58db?width=548", category: "Body Lotion", title: "Women's Casual Shoes", price: "$500.00", originalPrice: "$600.00", badge: "new",rating: 3 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/733159971dd19cfccd9a44667a1370375db7bda8?width=548", category: "women's wear", title: "Princess Look fashion Dress", price: "$65.00", originalPrice: "$58.00", badge: "sale",rating: 2 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/410cb337ad853a4405d2e8107329d3238e5c6b7e?width=548", category: "Sports", title: "Women's casual shoes", price: "$600.00", originalPrice: "$500.00", badge: "sale",rating: 4 },
+  { image: "https://api.builder.io/api/v1/image/assets/TEMP/26a715316be1cf0b14db019519e2ff2a427ac3b4?width=548", category: "Fashion", title: "Mixed Nuts Berries Pack", price: "$56.00", originalPrice: "$45.00", badge: "sale",rating:3 },
+];
+
+
+  return (
+    <div className="fashion-page">
+      <div className="fashion-container">
+
+        <div 
+          style={{
+          position: "relative",
+          width: "100%",
+          height: "100%",
+          overflow: "hidden",
+          borderRadius: "8px",
+          marginBottom:"5rem"
+          }}>
+          <img src={fashion1} 
+            style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            display: "block",
+            borderRadius: "8px",
+            }}  />
+            <div className="back-text" 
+            style={{
+            width:"20rem",
+            position: "absolute",
+            top: "50%",
+            left: "5%",
+            transform: "translateY(-50%)",
+            textAlign: "left",
+            }} >
+            <p style={{lineHeight:"2.5"}}>Starting at $ 29.99</p>
+            <h1 style={{color:"#45a388"}}>Explore jackets <br /> sale for men's</h1>
+            <button 
+             style={{
+             background: "#45a388",
+             padding: "10px 15px",
+             marginTop: "1rem",
+             color: "#eee",
+             borderRadius: "5px",
+             border: "none",
+             cursor: "pointer",
+             }} >Shop Now<FaChevronRight/><FaChevronRight/></button>
+          </div>
+        </div>
+
+
+        <div className="fashion-layout">
+
+          <div className="sidebar">
+
+            <div className="filter-card">
+              <div className="filter-header">
+                <h3>Category</h3>
+                <ChevronDown className="icon" />
+              </div>
+              <div className="filter-content">
+                <h6>Clothes</h6>
+                {[
+                  { name: "men's wear", count: 3 },
+                  { name: "women's wear", count: 2 },
+                  { name: "Baby Wear", count: 1 },
+                  { name: "Winter Wear", count: 1 },
+                  { name: "unisex", count: 1 },
+                ].map((item) => (
+                  <div key={item.name} className="filter-item">
+                    <div className="filter-item-left">
+                      <div className="checkbox" />
+                      <span>{item.name}</span>
+                    </div>
+                    <span>({item.count})</span>
+                  </div>
+                ))}
+                <h6>Footwear</h6>
+                {[
+                  { name: "Sports", count: 3 },
+                  { name: "party wear", count: 2 },
+                  { name: "Casual", count: 1 },
+                  { name: "Baby shoes", count: 1 },
+                ].map((item) => (
+                  <div key={item.name} className="filter-item">
+                    <div className="filter-item-left">
+                      <div className="checkbox" />
+                      <span>{item.name}</span>
+                    </div>
+                    <span>({item.count})</span>
+                  </div>
+                ))}
+                <h6>Accessories</h6>
+                {[
+                  { name: "Wallet", count: 1 },
+                  { name: "Belt", count: 1 },
+                  { name: "Perfume", count: 1 },
+                  { name: "Shampoo", count: 1 },
+                  { name: "Body Lotion", count: 1 },
+                  { name: "Jewellery", count: 1 },
+                  { name: "Lipstick", count: 1 },
+                  { name: "Makeup Kit", count: 1 },
+                ].map((item) => (
+                  <div key={item.name} className="filter-item">
+                    <div className="filter-item-left">
+                      <div className="checkbox" />
+                      <span>{item.name}</span>
+                    </div>
+                    <span>({item.count})</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="filter-card">
+              <div className="filter-header">
+                <h3>Brand</h3>
+                <ChevronDown className="icon" />
+              </div>
+              <div className="filter-content">
+                {[{ name: "Bhisma Organice" }, { name: "Darsh Mart" }].map((item) => (
+                  <div key={item.name} className="filter-item">
+                    <div className="checkbox" />
+                    <span>{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="filter-card">
+              <div className="filter-header">
+                <h3>Price</h3>
+                <ChevronDown className="icon" />
+              </div>
+              <div className="filter-content">
+                {[
+                  { name: "Under $50" },
+                  { name: "$50 to $100" },
+                  { name: "$100 to $200" },
+                  { name: "Above $200" },
+                ].map((item) => (
+                  <div key={item.name} className="filter-item">
+                    <div className="checkbox" />
+                    <span>{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="filter-card">
+              <div className="filter-header">
+                <h3>Tags</h3>
+                <ChevronDown className="icon" />
+              </div>
+              <div className="filter-content">
+                <div className="tags">
+                  {["men", "women", "clothes", "shirt", "shoes", "sports", "wallet", "belt", "perfume", "shampoo", "skin", "earring", "lipstick", "makeup"].map((tag) => (
+                    <button key={tag} className="tag-btn">{tag}</button>
+                  ))}
+                </div>
+                <button className="filter-btn" style={{background:"#205d8f"}}>Filter</button>
+              </div>
+            </div>
+
+            <div className="promo-banner" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/37f03bf6bc71b8d859625b80c12b510b9607ca99?width=752')" }}>
+              <div className="promo-content">
+                <h3>Our top most products<br />check it now</h3>
+                <button>Shop Now</button>
+              </div>
+            </div>
+          </div>
+
+          <div className="main-section">
+
+            <div className="category-icons">
+              {categoryIcons.map((cat) => (
+                <div key={cat.title} className="category-card" style={{ backgroundColor: cat.bgColor }}>
+                  <div className="category-inner">
+                    <img src={cat.icon} alt={cat.title} />
+                    <h4>{cat.title}</h4>
+                    <p>{cat.items}</p>
+                    {cat.discount && <div className="discount-badge">{cat.discount}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="section">
+              <div className="section-header">
+                <h2>New <span>Arrivals</span></h2>
+                <div className="tabs">
+                  <button className="active" style={{background:"#205d8f"}}>All</button>
+                  <button>Clothes</button>
+                  <button>Footwear</button>
+                  <button>Accessories</button>
+                </div>
+              </div>
+              <div className="product-grid">
+                {newArrivals.map((product, idx) => (
+                  <div key={idx} className="product-card">
+                    <div className="product-image">
+                      <img src={product.image} alt={product.title} />
+                      {product.badge && <div className={`badge ${product.badge}`}>{product.badge}</div>}
+                    </div>
+                    <div className="product-info">
+                      <p className="category">{product.category}</p>
+                      <h5>{product.title}</h5>
+                      <div className="stars">
+                        {[...Array(5)].map((_, i) => (
+                          <FaStar key={i} className={i < product.rating ? "star filled" : "star"} />
+                        ))}
+                      </div>
+                      <div className="price">
+                        <span className="current">{product.price}</span>
+                        <span className="old">{product.originalPrice}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+          <div style={{width: "100%",display:"flex",justifyContent: "center",alignItems: "center",gap: "1rem",flexWrap: "noWrap",}}>
+
+         <div style={{position: "relative",width: "48%",minWidth: "300px",height: "16rem",borderRadius:"10px",overflow:"hidden",}} >
+         <img src={watch} alt="Wrist watch"
+          style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          display: "block" }} />
+
+         <div style={{position: "absolute",top: "50%",right: "5%",width:"8",transform: "translateY(-50%)",}} >
+         <h2 style={{ marginBottom: "0.5rem",color:"#43a588" }}>Digital <br />Smartwatch</h2>
+          <p style={{ marginBottom: "1rem",color:"#6b7280" }}> 50% OFF </p>
+         <button
+          style={{
+          background: "#205d8f",
+          padding: "10px 15px",
+          color: "#eee",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer",
+          }}> Shop Now </button>
+        </div>
+       </div>
+  
+       <div
+        style={{ position: "relative",width: "48%",minWidth: "300px",height: "16rem",borderRadius:"10px",overflow:"hidden", }}>
+       <img src={menshoes} alt="shoes"
+        style={{
+        width: "100%",
+        height: "100%",
+        objectFit: "cover",
+        display: "block",
+        }} />
+
+         <div style={{ position:"absolute",top:"50%",right: "5%",width:"8",transform:"translateY(-50%)",}}>
+         <h2 style={{ marginBottom: "0.5rem",color:"#43a588" }}>Men's Sport <br /> Shoes </h2>
+         <p style={{ marginBottom: "1rem",color:"#6b7280" }}>70% OFF </p>
+         <button style={{
+          background: "#205d8f",
+          padding: "10px 15px",
+          color: "#eee",
+          borderRadius: "5px",
+          border: "none",
+          cursor: "pointer", }}> Shop Now </button>
+         </div>
+        </div>
+       </div>
+
+
+          <div className="section">
+              <div className="section-header">
+                <h2>
+                  Day Of The <span>Deal</span>
+                </h2>
+                <div className="nav-btns">
+                  <button onClick={handlePrev}>
+                    <ChevronLeft />
+                  </button>
+                  <button onClick={handleNext}>
+                    <ChevronRight />
+                  </button>
+                </div>
+              </div>
+
+              <div className="product-grid">
+                {dayOfDealProducts.map((product, idx) => (
+                  <div key={idx} className="product-card">
+                    <div className="product-image">
+                      <img src={product.image} alt={product.title} />
+                      {product.badge && (
+                        <div className={`badge ${product.badge}`}>{product.badge}</div>
+                      )}
+                    </div>
+                    <div className="product-info">
+                      <p className="category">{product.category}</p>
+                      <h5>{product.title}</h5>
+                      <div className="stars">
+                        {[...Array(5)].map((_, i) => (
+                          <FaStar 
+                          key={i} 
+                          size={12} className={i < product.rating ? "star filled" : "star"} />
+                        ))}
+                      </div>
+                      <div className="price">
+                        <span className="current">{product.price}</span>
+                        <span className="old">{product.originalPrice}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+              <div
+                style={{
+                position: "relative",
+                width: "100%",
+                height: "16rem",
+                overflow: "hidden",
+                borderRadius: "8px",
+                }}>
+              <img src={fashion2} alt="banner"
+              style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              display: "block",
+              borderRadius: "8px",
+               }}/>
+      
+             <div
+              style={{
+              width:"20rem",
+              position: "absolute",
+              top: "50%",
+              right: "5%",
+              transform: "translateY(-50%)",
+              textAlign: "right",
+              }}>
+             <h1 style={{color:"#45a388"}}>Shopping Today <br />Fashion sale</h1>
+             <p style={{lineHeight:"2"}}>
+             <span style={{ color: "#205d8f", fontWeight: "bold" }}>30% off sale</span>{" "}
+             Hurry up!!!
+             </p>
+             <button
+              style={{
+              background: "#205d8f",
+              padding: "10px 15px",
+              marginTop: "1rem",
+              color: "#eee",
+              borderRadius: "5px",
+              border: "none",
+              cursor: "pointer",
+                }} > Shop Now</button>
+              </div>
+             </div>
+
+           <RatedProducts/>
+
+
+          </div>
+        </div>
+
+        <div style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"center",gap:"2rem",textAlign:"center",marginTop:"3rem"}}>
+        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
+          justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)",}}>
+          <FaTruckMoving color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}}  />
+          <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>Free Shipping</h4>
+           <p style={{fontSize:"0.75rem",lineHeight:"1.5",color:"#9ca3af"}}>Free shipping on all US order or order above $200</p>
+        </div>
+        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
+          justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
+          <FaHandHoldingMedical color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
+          <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>24X7 Support</h4>
+          <p style={{fontSize:"0.75rem",lineHeight:"1.5",color:"#9ca3af"}}>Contact us 24 hours a day, 7 days a week </p>
+        </div>
+        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
+          justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
+          <CircleDivideIcon color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
+          <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>30 Days Return</h4>
+          <p style={{fontSize:"0.75rem",lineHeight:"1.5",color:"#9ca3af"}}>Simply return it within 30 days for an exchange </p>
+        </div>
+        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
+          justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
+          <DollarSignIcon color='#5799d0ff' style={{marginBottom:"0.5rem", width:"25px",height:"2rem"}} /> 
+          <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>Payment Secure</h4>
+          <p style={{fontSize:"0.75rem",lineHeight:"1.5",color:"#9ca3af"}}>Contact us 24 hours a day, 7 days a week </p>
+        </div>
+      </div>
+
+             <div style={{display:"flex",gap:"33rem",margin:"3rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
+                <span>
+                  <h2 className='green'>Latest <span style={{color:"#5799d0ff"}}>Blog</span></h2>
+                  <p>We tackle interesting topics every day in 2023.</p>
+                </span>
+                <span style={{cursor:"pointer"}}>All Blogs {">>"} </span>
+              </div>
+      
+              <div className='last-sect'>
+                <div className='last-text'>
+                  <img src={last1} alt="" />
+                  <h4 style={{color:"#45a388"}}>Marketing Guide: 5 Steps to Success to way.</h4>
+                  <p>Read More {">>"} </p>
+                </div>
+                <div className='last-text'>
+                  <img src={last2} alt="" />
+                  <h4 style={{color:"#45a388"}}>Best way to solve business deal issue in market.</h4>
+                  <p>Read More {">>"} </p>
+                </div>
+                <div className='last-text'>
+                  <img src={last3} alt="" />
+                  <h4 style={{color:"#45a388"}}>31 grocery customer service stats know in 2019.</h4>
+                  <p>Read More {">>"} </p>
+                </div>
+                <div className='last-text'>
+                  <img src={last4} alt="" />
+                  <h4 style={{color:"#45a388"}}>Business ideas to grow your business traffic.</h4>
+                  <p>Read More {">>"} </p>
+                </div>
+                <div className='last-text'>
+                  <img src={last5} alt="" />
+                  <h4 style={{color:"#45a388"}}>Marketing Guide: 5 Steps to Success to way.</h4>
+                  <p>Read More {">>"} </p>
+                </div>
+              </div>
+
+      </div>
+    </div>
+  );
+}
+
+export default HomeFashion;
