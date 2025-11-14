@@ -118,7 +118,8 @@ body {
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
-  font-weight: 500;
+  font-weight: 100;
+  font-size: 10px;
   transition: background 0.3s;
 }
 .categories-btn:hover,
@@ -460,11 +461,13 @@ body {
 }
 .footer-section ul {
   list-style: none;
+  margin-top: 1rem;
   padding: 0;
   line-height: 2;
 }
 .footer-section ul li {
   cursor: pointer;
+  font-size: 14px;
   transition: color 0.3s;
 }
 .footer-section ul li:hover {

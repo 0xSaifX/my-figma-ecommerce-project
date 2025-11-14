@@ -144,10 +144,10 @@ return(
         <div className="sidebar-section">
           <h4>Categories</h4>
           <ul>
-            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Organic</span> <span style={{marginLeft:"9.8rem"}}>-2</span></li>
-            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Fruits</span> <span style={{marginLeft:"11rem"}}>-3</span></li>
-            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Vegetables</span> <span style={{marginLeft:"8.3rem"}}>-2</span></li>
-            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Fastfood</span> <span style={{marginLeft:"9.5rem"}}>-2</span></li>
+            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Organic</span> <span style={{marginLeft:"6.8rem"}}>-2</span></li>
+            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Fruits</span> <span style={{marginLeft:"8rem"}}>-3</span></li>
+            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Vegetables</span> <span style={{marginLeft:"5.3rem"}}>-2</span></li>
+            <li> <span><input type="checkbox" name="organic" id="" style={{margin:"5px"}} />Fastfood</span> <span style={{marginLeft:"6.5rem"}}>-2</span></li>
           </ul>
           <button className="filter-btn">Filter</button>
         </div>

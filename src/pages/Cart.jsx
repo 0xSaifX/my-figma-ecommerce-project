@@ -11,14 +11,14 @@ import category5 from "../assets/category5.png";
 const wishitem = [
     {
       image:  "https://api.builder.io/api/v1/image/assets/TEMP/733159971dd19cfccd9a44667a1370375db7bda8?width=200" , 
-      name: "Women's wallet Hand Purse",
+      name: "Women's wallet",
       price: "$70",
       quantity: "- 1 +",
       total: "$70",
     },
     {
       image: "https://api.builder.io/api/v1/image/assets/TEMP/f78eaa31a2e0b32f9c103686701c5482810c8ea7?width=200", 
-      name: "Rose Gold Earring",
+      name: "Gold Earring",
       price: "$80",
       quantity: "- 1 +",
       total: "$80",
@@ -209,7 +209,9 @@ function Cart () {
                 </td>
                 <td style={{margin:"5px 10px",fontSize:"10px"}}>{item.name}</td>
                 <td style={{padding:"5px 10px"}}>{item.price}</td>
-                <td style={{padding:"5px 10px"}}>{item.quantity}</td>
+                <td style={{padding:"5px 10px"}}>
+                  <button style={{padding:"5px 10px",cursor:"pointer"}}>{item.quantity}</button>
+                </td>
                 <td style={{padding:"5px 10px"}}>
                   {item.total}
                 </td>

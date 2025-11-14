@@ -309,7 +309,7 @@ const ProductGrid = () => {
                 <span>{quantity}</span>
                 <button onClick={() => setQuantity(quantity + 1)}>+</button>
               </div>
-              <button className="add-btn">Add to Cart</button>
+              <button className="add-btn" style={{fontSize:"10px"}}>Add to Cart</button>
               <button style={{padding:"7px 13px",background:"whitesmoke",border:"2px #555",borderRadius:"5px"}} ><FaHeart/></button>
               <button style={{padding:"7px 13px",background:"whitesmoke",border:"2px #555",borderRadius:"5px"}}><FaEye/></button>
             </div>

@@ -8,9 +8,9 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Skrill from "./assets/Skrill_logo.svg";
 import maestro from "./assets/maestro.svg";
 import visa from "./assets/visa_electron.svg";
-import { FaShoppingBag,FaPhoneAlt,FaMapMarkerAlt,FaFacebookF,FaTwitter,FaLinkedinIn,FaInstagram,FaEnvelope, FaWhatsapp,FaChevronDown,FaSearch,FaUser,FaHeart,FaShoppingCart,FaLocationArrow, FaList, FaSearchLocation, } from 'react-icons/fa';
+import { FaShoppingBag,FaPhoneAlt,FaMapMarkerAlt,FaFacebookF,FaTwitter,FaLinkedinIn,FaInstagram,FaEnvelope, FaWhatsapp,FaChevronDown,FaSearch,FaUser,FaHeart, FaList, } from 'react-icons/fa';
 import "./App.css";
-import { LocateFixed, LocationEdit } from 'lucide-react';
+import { LocationEdit } from 'lucide-react';
 import Plsidebar from './pages/Plsidebar';
 import Checkout from './pages/Checkout';
 import Wishlist from "./pages/Wishlist";
@@ -19,13 +19,17 @@ import Blog from "./pages/Blog";
 import BlogDetails from './pages/BlogDetails';
 import About from './pages/AboutUs';
 import Cart from './pages/Cart';
+import Orders from './pages/Orders';
+import Compare from './pages/Compare';
+import Faq from './pages/Faq';
+import Login from './pages/Login';
 
 
 function App () {
   return (
     <div>
       <div className='body-container'>
-        
+
         <header className='main-header'>
           <div className="top-bar">
         <div className="left-info">
@@ -75,6 +79,10 @@ function App () {
           <li><Link to="/blogDetails">P9 <FaChevronDown/></Link></li>
           <li><Link to="/aboutUs">P10 <FaChevronDown/></Link></li>
           <li><Link to="/cart">P11 <FaChevronDown/></Link></li>
+          <li><Link to="/ORDERS">P12 <FaChevronDown/></Link></li>
+          <li><Link to="/Compare">P13 <FaChevronDown/></Link></li>
+          <li><Link to="/Faq">P14 <FaChevronDown/></Link></li>
+          <li><Link to="/Login">P15 <FaChevronDown/></Link></li>
         </ul>
         <button className="location-btn"> <LocationEdit/> New York <FaChevronDown/></button>
       </nav>
@@ -94,6 +102,10 @@ function App () {
             <Route path='/blogDetails' element={<BlogDetails/>} />
             <Route path='/aboutUs' element={<About/>} />
             <Route path='/cart' element={<Cart/>} />
+            <Route path='/ORDERS' element={<Orders/>} />
+            <Route path='/Compare' element={<Compare/>} />
+            <Route path='/Faq' element={<Faq/>} />
+            <Route path='/Login' element={<Login/>} />
           </Routes>
 
 
