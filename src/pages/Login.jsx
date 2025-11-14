@@ -89,7 +89,7 @@ const styles = {
   container: { marginTop: "40px",
     border: "1px solid #ddd",
     padding: "20px",
-    borderRadius:"5px",
+    borderRadius:"",
     alignContent: "center"  },
   input: {
     display: "block",
