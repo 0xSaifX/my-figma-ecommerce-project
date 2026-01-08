@@ -358,30 +358,24 @@ const dayOfDealProducts = [
           </div>
 
             <div className="section">
-              <div
-  className="
+        <div
+    className="
     w-full 
     flex 
     flex-col 
     gap-4 
     md:flex-row 
     md:items-center 
-    md:justify-between
-  "
->
-  {/* Title */}
+    md:justify-between">
   <h2 className="text-2xl font-semibold text-gray-900">
     New <span className="text-[#45a388]">Arrivals</span>
   </h2>
 
-  {/* Tabs */}
   <div
     className="
       flex 
       flex-wrap 
-      gap-2
-    "
-  >
+      gap-2">
     <button
       className="
         px-4 
@@ -390,9 +384,7 @@ const dayOfDealProducts = [
         rounded-md 
         bg-[#205d8f] 
         text-white 
-        font-medium
-      "
-    >
+        font-medium">
       All
     </button>
 
@@ -404,9 +396,7 @@ const dayOfDealProducts = [
         rounded-md 
         border 
         text-gray-600 
-        hover:bg-gray-100
-      "
-    >
+        hover:bg-gray-100">
       Clothes
     </button>
 
@@ -418,9 +408,7 @@ const dayOfDealProducts = [
         rounded-md 
         border 
         text-gray-600 
-        hover:bg-gray-100
-      "
-    >
+        hover:bg-gray-100">
       Footwear
     </button>
 
@@ -432,13 +420,11 @@ const dayOfDealProducts = [
         rounded-md 
         border 
         text-gray-600 
-        hover:bg-gray-100
-      "
-    >
+        hover:bg-gray-100">
       Accessories
     </button>
   </div>
-</div>
+        </div>
 
               <div className="product-grid">
                 {newArrivals.map((product, idx) => (
