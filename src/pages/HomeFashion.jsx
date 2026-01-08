@@ -120,8 +120,8 @@ const dayOfDealProducts = [
 
 
   return (
-    <div className="fashion-page">
-      <div className="fashion-container">
+    <div className="bg-white font-poppins text-gray-800 px-4 md:px-8 lg:px-12 py-10">
+  <div className="max-w-[1400px] mx-auto space-y-16">
 
         <div 
           style={{
