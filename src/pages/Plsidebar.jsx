@@ -86,14 +86,13 @@ const products = [
 const ProductGrid = () => {
   return (
       <div className="product-grid">
-                  {products.map((product, idx) => (
-                  <div className="bg-gray-100 border rounded-xl overflow-hidden hover:scale-105 transition h-[22rem] flex flex-col">
+        {products.map((product, idx) => (
+        <div className="bg-gray-100 border rounded-xl overflow-hidden hover:scale-105 transition h-[22rem] flex flex-col">
         <div className="relative h-52">
           <img
             src={product.image}
             alt={product.title}
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover"/>
       
           {product.badge && (
             <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
@@ -128,9 +127,9 @@ const ProductGrid = () => {
             </span>
           </div>
         </div>
-                  </div>
-                      ))}
-                    </div>
+        </div>
+          ))}
+        </div>
   );
 };
 
