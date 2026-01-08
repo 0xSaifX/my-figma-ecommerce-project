@@ -191,7 +191,7 @@ const dayOfDealProducts = [
               </div>
             </div>
 
-            <div className="filter-card">
+            {/* <div className="filter-card">
               <div className="filter-header">
                 <h3>Price</h3>
                 <ChevronDown className="icon" />
@@ -209,7 +209,9 @@ const dayOfDealProducts = [
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
+
+            
 
             <div className="border border-gray-200 rounded-xl bg-white p-4">
   <div className="flex justify-between items-center mb-3">
