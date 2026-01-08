@@ -20,7 +20,7 @@ const navLinks = [
   { name: "PLSb", path: "/plsidebar" },
   { name: "Chk", path: "/checkout" },
   { name: "Wst", path: "/wishlist" },
-  { name: "prt", path: "/productFull" },
+  { name: "Pdt", path: "/productFull" },
   { name: "Blg", path: "/blog" },
   { name: "Blg D", path: "/blogDetails" },
   { name: "Abt", path: "/aboutUs" },
