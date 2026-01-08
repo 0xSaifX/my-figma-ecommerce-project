@@ -465,13 +465,20 @@ const dayOfDealProducts = [
         </div>
       </div>
 
-             <div style={{display:"flex",gap:"33rem",margin:"3rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
-                <span>
-                  <h2 className='green'>Latest <span style={{color:"#5799d0ff"}}>Blog</span></h2>
-                  <p>We tackle interesting topics every day in 2023.</p>
-                </span>
-                <span style={{cursor:"pointer"}}>All Blogs {">>"} </span>
-              </div>
+             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-12">
+  <div>
+    <h2 className="text-2xl font-semibold text-emerald-600">
+      Latest <span className="text-blue-500">Blog</span>
+    </h2>
+    <p className="text-gray-500 text-sm">
+      We tackle interesting topics every day in 2023.
+    </p>
+  </div>
+
+  <button className="text-blue-600 font-medium flex items-center gap-1 hover:underline">
+    All Blogs <FaChevronRight />
+  </button>
+</div>
       
               <div className='last-sect'>
                 <div className='last-text'>
