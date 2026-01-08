@@ -494,12 +494,18 @@ const dayOfDealProducts = [
         </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-center">
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
-          justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)",}}>
-          <FaTruckMoving color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}}  />
-          <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>Free Shipping</h4>
-           <p style={{fontSize:"0.75rem",lineHeight:"1.5",color:"#9ca3af"}}>Free shipping on all US order or order above $200</p>
-        </div>
+        <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
+        <FaTruckMoving className="text-blue-500 w-8 h-8 mb-2" />
+
+        <h4 className="text-emerald-600 font-semibold">
+         Free Shipping
+        </h4>
+
+       <p className="text-xs text-gray-400 mt-1">
+        Free shipping on orders above $200
+        </p>
+          </div>
+
         <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
           justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
           <FaHandHoldingMedical color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
