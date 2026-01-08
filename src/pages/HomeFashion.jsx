@@ -358,15 +358,88 @@ const dayOfDealProducts = [
           </div>
 
             <div className="section">
-              <div className="section-header">
-                <h2>New <span>Arrivals</span></h2>
-                <div className="tabs">
-                  <button className="active" style={{background:"#205d8f"}}>All</button>
-                  <button>Clothes</button>
-                  <button>Footwear</button>
-                  <button>Accessories</button>
-                </div>
-              </div>
+              <div
+  className="
+    w-full 
+    flex 
+    flex-col 
+    gap-4 
+    md:flex-row 
+    md:items-center 
+    md:justify-between
+  "
+>
+  {/* Title */}
+  <h2 className="text-2xl font-semibold text-gray-900">
+    New <span className="text-[#45a388]">Arrivals</span>
+  </h2>
+
+  {/* Tabs */}
+  <div
+    className="
+      flex 
+      flex-wrap 
+      gap-2
+    "
+  >
+    <button
+      className="
+        px-4 
+        py-1.5 
+        text-sm 
+        rounded-md 
+        bg-[#205d8f] 
+        text-white 
+        font-medium
+      "
+    >
+      All
+    </button>
+
+    <button
+      className="
+        px-4 
+        py-1.5 
+        text-sm 
+        rounded-md 
+        border 
+        text-gray-600 
+        hover:bg-gray-100
+      "
+    >
+      Clothes
+    </button>
+
+    <button
+      className="
+        px-4 
+        py-1.5 
+        text-sm 
+        rounded-md 
+        border 
+        text-gray-600 
+        hover:bg-gray-100
+      "
+    >
+      Footwear
+    </button>
+
+    <button
+      className="
+        px-4 
+        py-1.5 
+        text-sm 
+        rounded-md 
+        border 
+        text-gray-600 
+        hover:bg-gray-100
+      "
+    >
+      Accessories
+    </button>
+  </div>
+</div>
+
               <div className="product-grid">
                 {newArrivals.map((product, idx) => (
             <div className="bg-gray-100 border rounded-xl overflow-hidden hover:scale-105 transition h-[22rem] flex flex-col">
