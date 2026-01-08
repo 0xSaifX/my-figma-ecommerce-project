@@ -487,7 +487,6 @@ const dayOfDealProducts = [
           </div>
 
           <div className="w-full space-y-6">
-  {/* Section Header */}
   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-5 sm:mt-10 gap-4">
     <h2 className="text-2xl font-semibold text-[#459a88]">
       Day Of The <span className="text-[#205d8f]">Deal</span>
@@ -496,29 +495,24 @@ const dayOfDealProducts = [
     <div className="flex gap-2">
       <button
         onClick={handlePrev}
-        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
-      >
+        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition">
         <ChevronLeft />
       </button>
       <button
         onClick={handleNext}
-        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
-      >
+        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition">
         <ChevronRight />
       </button>
     </div>
   </div>
 
-  {/* Product Grid */}
   <div
     className="
       grid 
       grid-cols-2 
       sm:grid-cols-3 
       lg:grid-cols-4 
-      gap-5
-    "
-  >
+      gap-5">
     {dayOfDealProducts.map((product, idx) => (
       <div
         key={idx}
@@ -529,16 +523,12 @@ const dayOfDealProducts = [
           overflow-hidden 
           hover:scale-105 
           transition 
-          duration-300
-        "
-      >
-        {/* Image */}
+          duration-300">
         <div className="relative h-44">
           <img
             src={product.image}
             alt={product.title}
-            className="w-full h-full object-cover"
-          />
+            className="w-full h-full object-cover"/>
 
           {product.badge && (
             <span
@@ -549,22 +539,18 @@ const dayOfDealProducts = [
                 text-xs 
                 text-white 
                 rounded
-                ${product.badge === "sale" ? "bg-red-400" : "bg-[#459a88]"}
-              `}
-            >
+                ${product.badge === "sale" ? "bg-red-400" : "bg-[#459a88]"}`}>
               {product.badge}
             </span>
           )}
         </div>
 
-        {/* Info */}
         <div className="p-3 space-y-1">
           <p className="text-xs text-gray-400">{product.category}</p>
           <h5 className="text-sm font-medium text-[#459a88] line-clamp-2">
             {product.title}
           </h5>
 
-          {/* Stars */}
           <div className="flex gap-1">
             {[...Array(5)].map((_, i) => (
               <FaStar
@@ -574,8 +560,7 @@ const dayOfDealProducts = [
                   i < product.rating
                     ? "text-orange-400"
                     : "text-gray-300"
-                }
-              />
+                }/>
             ))}
           </div>
 
@@ -595,14 +580,12 @@ const dayOfDealProducts = [
           </div>
 
           <div className="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden mt-5 sm:mt-20 rounded-lg">
-  {/* Background Image */}
-  <img
+    <img
     src={fashion2}
     alt="banner"
     className="w-full h-full object-cover rounded-lg" />
 
-  {/* Content */}
-  <div
+    <div
     className="
       absolute 
       top-1/2 
@@ -642,7 +625,7 @@ const dayOfDealProducts = [
           </div>
         </div>
 
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-center">
 
     <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
   <FaTruckMoving className="text-green-500 w-8 h-8 mb-2" />
@@ -713,7 +696,7 @@ const dayOfDealProducts = [
       </div>
 
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-12">
-  <div>
+    <div>
     <h2 className="text-2xl font-semibold text-emerald-600">
       Latest <span className="text-blue-500">Blog</span>
     </h2>
@@ -727,18 +710,16 @@ const dayOfDealProducts = [
   </button>
         </div>
       
-          <div className="w-full mt-12">
-  <div
-    className="
+        <div className="w-full mt-12">
+      <div
+      className="
       grid 
       grid-cols-1 
       sm:grid-cols-2 
       md:grid-cols-3 
       lg:grid-cols-5 
-      gap-6
-    "
-  >
-    {[last1, last2, last3, last4, last5].map((img, index) => (
+      gap-6">
+      {[last1, last2, last3, last4, last5].map((img, index) => (
       <div
         key={index}
         className="
@@ -753,17 +734,12 @@ const dayOfDealProducts = [
           duration-300
           cursor-pointer
           flex 
-          flex-col
-        "
-      >
-        {/* Image */}
+          flex-col">
         <img
           src={img}
           alt="Blog"
-          className="w-full h-40 object-cover"
-        />
+          className="w-full h-40 object-cover"/>
 
-        {/* Content */}
         <div className="p-4 flex flex-col justify-between flex-1">
           <h4 className="text-[#45a388] font-semibold text-sm leading-snug mb-2">
             {[
@@ -782,7 +758,7 @@ const dayOfDealProducts = [
       </div>
     ))}
   </div>
-      </div>
+        </div>
 
       </div>
     </div>
