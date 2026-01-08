@@ -443,14 +443,11 @@ function HomeGrocery () {
 
        <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden rounded-lg">
   
-  {/* Background Image */}
   <img
     src={contain}
     alt="banner"
-    className="w-full h-full object-cover rounded-lg"
-  />
+    className="w-full h-full object-cover rounded-lg" />
 
-  {/* Content Overlay */}
   <div className="absolute inset-y-0 right-4 md:right-10 flex items-center">
     <div className="text-right max-w-xs md:max-w-sm">
       <h1 className="text-lg md:text-2xl font-semibold text-gray-900">
@@ -467,20 +464,37 @@ function HomeGrocery () {
     </div>
   </div>
 
-</div>
+      </div>
 
-        <div style={{display:"flex",gap:"20rem",margin:"5rem 0rem",width:"100%",alignItems:"center"}}>
-          <span>
-            <h2>New <span className='green'>Arrivals</span></h2>
-            <p>Shop online for new arrivals and get free shipping!</p>
-          </span>
-          <span style={{display:"flex"}}>
-            <h4 className='green'>All</h4>
-            <h4 style={{marginLeft:"10px"}}>Snack & Spices</h4>
-            <h4 style={{marginLeft:"10px"}}>Fruits</h4>
-            <h4 style={{marginLeft:"10px"}}>Vegetables</h4>
-          </span>
-        </div>
+        <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-32 my-12">
+
+  {/* Left Content */}
+  <div>
+    <h2 className="text-2xl md:text-3xl font-semibold">
+      New <span className="text-green-600">Arrivals</span>
+    </h2>
+    <p className="text-gray-600 mt-1">
+      Shop online for new arrivals and get free shipping!
+    </p>
+  </div>
+
+  {/* Category Filters */}
+  <div className="flex flex-wrap gap-4 text-sm md:text-base">
+    <h4 className="text-green-600 font-semibold cursor-pointer">
+      All
+    </h4>
+    <h4 className="cursor-pointer hover:text-green-600 transition">
+      Snack & Spices
+    </h4>
+    <h4 className="cursor-pointer hover:text-green-600 transition">
+      Fruits
+    </h4>
+    <h4 className="cursor-pointer hover:text-green-600 transition">
+      Vegetables
+    </h4>
+  </div>
+
+</div>
 
           <ProductGrid2/>
 
