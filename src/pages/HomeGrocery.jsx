@@ -329,9 +329,9 @@ const trending = [
 ];
 
 const topRated = [
-  { id: 1, name: "Ginger - Organic Natural", category: "Vegetables", price: "$65.00", oldPrice: "$62.00", image: toprated1 },
-  { id: 2, name: "Natural Dates Value Pouch", category: "Driedfruit", price: "$78.00", oldPrice: "$56.00", image: toprated2 },
-  { id: 3, name: "Blue Berry Fruits With Natural extract", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
+  { id: 1, name: "Ginger - Organic", category: "Vegetables", price: "$65.00", oldPrice: "$62.00", image: toprated1 },
+  { id: 2, name: "Dates Value Pouch", category: "Driedfruit", price: "$78.00", oldPrice: "$56.00", image: toprated2 },
+  { id: 3, name: "Blue Berry", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
 ];
 
 const topSelling = [
@@ -340,72 +340,32 @@ const topSelling = [
   { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: topsell3 },
 ];
 
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-  <ProductList title="Trending" highlight="Items" items={trending} />
-  <ProductList title="Top" highlight="Rated" items={topRated} />
-  <ProductList title="Top" highlight="Selling" items={topSelling} />
-</div>
-
-const ProductList = ({ title, highlight, items }) => {
-  return (
-    <div className="flex flex-col h-full border border-gray-200 rounded-xl p-4 bg-white">
-
-      {/* Header */}
-      <div className="flex items-center justify-between mb-4">
-        <h3 className="text-lg font-semibold text-gray-800">
-          {title} <span className="text-green-600">{highlight}</span>
-        </h3>
-
-        <div className="flex gap-2">
-          <button className="w-7 h-7 flex items-center justify-center border border-gray-300 rounded text-gray-500 hover:bg-gray-100">
-            &lt;
-          </button>
-          <button className="w-7 h-7 flex items-center justify-center border border-gray-300 rounded text-gray-500 hover:bg-gray-100">
-            &gt;
-          </button>
+const ProductList = ({ title, highlight, items }) => (
+  <div className="product-column">
+    <div className="product-header">
+      <h3>
+        {title} <span>{highlight}</span>
+      </h3>
+      <div className="nav-icons">
+        <button>{"<"}</button>
+        <button>{">"}</button>
+      </div>
+    </div>
+    {items.map((item) => (
+      <div key={item.id} className="product-row">
+        <img src={item.image} alt={item.name} />
+        <div className="product-text">
+          <h4>{item.name}</h4>
+          <p className="category">{item.category}</p>
+          <div className="price">
+            <span className="new">{item.price}</span>
+            <span className="old">{item.oldPrice}</span>
+          </div>
         </div>
       </div>
-
-      {/* Product Rows */}
-      <div className="flex flex-col gap-3 flex-grow">
-        {items.map((item) => (
-          <div
-            key={item.id}
-            className="flex items-center gap-4 border border-gray-200 rounded-lg p-3 h-[90px] hover:shadow-sm transition"
-          >
-            {/* Image */}
-            <img
-              src={item.image}
-              alt={item.name}
-              className="w-14 h-14 object-contain flex-shrink-0"
-            />
-
-            {/* Text */}
-            <div className="flex flex-col justify-between h-full">
-              <h4 className="text-sm font-medium text-gray-700 line-clamp-2">
-                {item.name}
-              </h4>
-
-              <p className="text-xs text-gray-400">
-                {item.category}
-              </p>
-
-              <div className="flex items-center gap-2 text-sm">
-                <span className="font-semibold text-gray-700">
-                  {item.price}
-                </span>
-                <span className="text-gray-400 line-through">
-                  {item.oldPrice}
-                </span>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-    </div>
-  );
-};
+    ))}
+  </div>
+);
 
 const TopProducts = () => {
   return (
@@ -436,6 +396,7 @@ const TopProducts = () => {
   <ProductList title="Top" highlight="Selling" items={topSelling} />
 
 </div>
+
   );
 };
 
