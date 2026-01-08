@@ -441,49 +441,33 @@ function HomeGrocery () {
 
         <ProductGrid products={products} />
 
-       <div
-          style={{
-          position: "relative",
-          width: "100%",
-          height: "16rem",
-          overflow: "hidden",
-          borderRadius: "8px",
-          }}>
-        <img src={contain} alt="banner"
-        style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-        borderRadius: "8px",
-        }}/>
+       <div className="relative w-full h-56 md:h-64 lg:h-72 overflow-hidden rounded-lg">
+  
+  {/* Background Image */}
+  <img
+    src={contain}
+    alt="banner"
+    className="w-full h-full object-cover rounded-lg"
+  />
 
-       <div
-        style={{
-        width:"20rem",
-        position: "absolute",
-        top: "50%",
-        right: "5%",
-        transform: "translateY(-50%)",
-        textAlign: "right",
-        }}>
-       <h1>Fresh Fruits Healthy Products</h1>
-       <p>
-       <span style={{ color: "#45a388", fontWeight: "bold" }}>30% off sale</span>{" "}
-       Hurry up!!!
-       </p>
-       <button
-        style={{
-        background: "#45a388",
-        padding: "10px 15px",
-        marginTop: "1rem",
-        color: "#eee",
-        borderRadius: "5px",
-        border: "none",
-        cursor: "pointer",
-          }} > Shop Now</button>
-        </div>
-       </div>
+  {/* Content Overlay */}
+  <div className="absolute inset-y-0 right-4 md:right-10 flex items-center">
+    <div className="text-right max-w-xs md:max-w-sm">
+      <h1 className="text-lg md:text-2xl font-semibold text-gray-900">
+        Fresh Fruits Healthy Products
+      </h1>
+
+      <p className="mt-2 text-sm md:text-base text-gray-700">
+        <span className="text-[#45a388] font-bold">30% off sale</span> Hurry up!!!
+      </p>
+
+      <button className="mt-4 bg-[#45a388] text-white px-5 py-2 rounded-md text-sm md:text-base hover:bg-[#3b8f78] transition">
+        Shop Now
+      </button>
+    </div>
+  </div>
+
+</div>
 
         <div style={{display:"flex",gap:"20rem",margin:"5rem 0rem",width:"100%",alignItems:"center"}}>
           <span>
