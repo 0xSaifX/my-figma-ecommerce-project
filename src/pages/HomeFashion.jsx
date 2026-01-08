@@ -577,7 +577,7 @@ const dayOfDealProducts = [
         </div> */}
       </div>
 
-             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-12">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-12">
   <div>
     <h2 className="text-2xl font-semibold text-emerald-600">
       Latest <span className="text-blue-500">Blog</span>
@@ -590,35 +590,65 @@ const dayOfDealProducts = [
   <button className="text-blue-600 font-medium flex items-center gap-1 hover:underline">
     All Blogs <FaChevronRight />
   </button>
-</div>
+        </div>
       
-              <div className='last-sect'>
-                <div className='last-text'>
-                  <img src={last1} alt="" />
-                  <h4 style={{color:"#45a388"}}>Marketing Guide: 5 Steps to Success to way.</h4>
-                  <p>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last2} alt="" />
-                  <h4 style={{color:"#45a388"}}>Best way to solve business deal issue in market.</h4>
-                  <p>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last3} alt="" />
-                  <h4 style={{color:"#45a388"}}>31 grocery customer service stats know in 2019.</h4>
-                  <p>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last4} alt="" />
-                  <h4 style={{color:"#45a388"}}>Business ideas to grow your business traffic.</h4>
-                  <p>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last5} alt="" />
-                  <h4 style={{color:"#45a388"}}>Marketing Guide: 5 Steps to Success to way.</h4>
-                  <p>Read More {">>"} </p>
-                </div>
-              </div>
+          <div className="w-full mt-12">
+  <div
+    className="
+      grid 
+      grid-cols-1 
+      sm:grid-cols-2 
+      md:grid-cols-3 
+      lg:grid-cols-5 
+      gap-6
+    "
+  >
+    {[last1, last2, last3, last4, last5].map((img, index) => (
+      <div
+        key={index}
+        className="
+          bg-white 
+          border 
+          border-gray-200 
+          rounded-lg 
+          overflow-hidden 
+          shadow-sm 
+          hover:shadow-lg 
+          transition-shadow 
+          duration-300
+          cursor-pointer
+          flex 
+          flex-col
+        "
+      >
+        {/* Image */}
+        <img
+          src={img}
+          alt="Blog"
+          className="w-full h-40 object-cover"
+        />
+
+        {/* Content */}
+        <div className="p-4 flex flex-col justify-between flex-1">
+          <h4 className="text-[#45a388] font-semibold text-sm leading-snug mb-2">
+            {[
+              "Marketing Guide: 5 Steps to Success to way.",
+              "Best way to solve business deal issue in market.",
+              "31 grocery customer service stats know in 2019.",
+              "Business ideas to grow your business traffic.",
+              "Marketing Guide: 5 Steps to Success to way.",
+            ][index]}
+          </h4>
+
+          <p className="text-sm text-gray-500 hover:text-[#205d8f] transition-colors">
+            Read More <span className="ml-1">{">>"}</span>
+          </p>
+        </div>
+      </div>
+    ))}
+  </div>
+      </div>
+
       </div>
     </div>
   );
