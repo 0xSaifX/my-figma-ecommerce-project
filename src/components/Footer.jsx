@@ -47,16 +47,16 @@ const Footer = () => {
         <div>
           <h3 className="text-white mb-3">Contact</h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-2"><FaMapMarkerAlt /> New York, USA</li>
-            <li className="flex gap-2"><FaWhatsapp /> +00 9876543210</li>
-            <li className="flex gap-2"><FaEnvelope /> example@email.com</li>
+            <li className="flex gap-2"><FaMapMarkerAlt className="hover:text-green-300" /> New York, USA</li>
+            <li className="flex gap-2"><FaWhatsapp className="hover:text-green-300" /> +00 9876543210</li>
+            <li className="flex gap-2"><FaEnvelope className="hover:text-green-300" /> example@email.com</li>
           </ul>
 
           <div className="flex gap-4 mt-4">
-            <FaFacebookF />
-            <FaTwitter />
-            <FaLinkedinIn />
-            <FaInstagram />
+            <FaFacebookF className="hover:text-green-300" />
+            <FaTwitter className="hover:text-green-300" />
+            <FaLinkedinIn className="hover:text-green-300" />
+            <FaInstagram className="hover:text-green-300" />
           </div>
         </div>
       </div>
