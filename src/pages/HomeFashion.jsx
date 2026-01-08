@@ -231,6 +231,7 @@ const dayOfDealProducts = [
             <span className="w-3.5 h-3.5 border rounded-sm" />
             <span>{item.name}</span>
           </div>
+          <span>({item.count})</span>
         </div>
       ))}
     </div>
