@@ -599,14 +599,46 @@ function HomeGrocery () {
 
         <TopProducts/>
 
-        <div style={{display:"flex",gap:"35rem",margin:"3rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
-          <span>
-            <h2>Latest <span className='green'>Blog</span></h2>
-            <p>We tackle interesting topics every day in 2023.</p>
-          </span>
-          <span>All Blogs<FaChevronRight style={{cursor:"pointer"}}/>
-          <FaChevronRight style={{cursor:"pointer"}}/></span>
-        </div>
+        import { FaChevronRight } from "react-icons/fa";
+
+<div
+  className="
+    w-full 
+    flex 
+    flex-col 
+    gap-4 
+    my-12
+    md:flex-row 
+    md:items-center 
+    md:justify-between
+  "
+>
+  {/* Left Text */}
+  <div>
+    <h2 className="text-2xl font-semibold text-gray-900">
+      Latest <span className="text-[#45a388]">Blog</span>
+    </h2>
+    <p className="text-gray-600 mt-1">
+      We tackle interesting topics every day in 2023.
+    </p>
+  </div>
+
+  {/* Right Link */}
+  <div
+    className="
+      flex 
+      items-center 
+      gap-2 
+      text-[#45a388] 
+      font-medium 
+      cursor-pointer
+      hover:underline
+    "
+  >
+    <span>All Blogs</span>
+    <FaChevronRight />
+  </div>
+</div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
   {[latest1, latest2, latest3, latest4, latest5].map((img, i) => (
