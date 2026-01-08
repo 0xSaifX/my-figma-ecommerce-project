@@ -255,7 +255,7 @@ const dayOfDealProducts = [
         </div>
 
         <div className="flex flex-wrap gap-2">
-        {["men", "women", "shirt", "shoes", "wallet"].map(tag => (
+          {["men", "women", "clothes", "shirt", "shoes", "sports", "wallet", "belt", "perfume", "shampoo", "skin", "earring", "lipstick", "makeup"].map((tag) => (
         <button
         key={tag}
         className="bg-green-600 text-white text-xs px-3 py-1 rounded-md hover:bg-green-900" >
