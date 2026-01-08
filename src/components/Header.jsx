@@ -14,7 +14,7 @@ import { useState } from "react";
 
 const navLinks = [
   { name: "Grocery", path: "/homeGrocery" },
-  { name: "F1", path: "/homeFashion" },
+  { name: "Fahion", path: "/homeFashion" },
   { name: "F2", path: "/homeFashion2" },
   { name: "Sb", path: "/leftSidebar" },
   { name: "PLSb", path: "/plsidebar" },
