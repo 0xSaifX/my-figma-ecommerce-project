@@ -572,34 +572,19 @@ function HomeGrocery () {
           <FaChevronRight style={{cursor:"pointer"}}/></span>
         </div>
 
-        <div className='last-sect'>
-          <div className='last-text'>
-            <img src={latest1} alt="" />
-            <p>June 30,2022-organic</p>
-            <h4>Marketing Guide: 5 Steps to Success to way.</h4>
-          </div>
-          <div className='last-text'>
-            <img src={latest2} alt="" />
-            <p>April 02,2022-Fruits</p>
-            <h4>Best way to solve business deal issue in market.</h4>
-          </div>
-          <div className='last-text'>
-            <img src={latest3} alt="" />
-            <p>Mar 09,2022-Vegetables</p>
-            <h4>31 grocery customer service stats know in 2019.</h4>
-          </div>
-          <div className='last-text'>
-            <img src={latest4} alt="" />
-            <p>January 25,2022-Fastfood</p>
-            <h4>Business ideas to grow your business traffic.</h4>
-          </div>
-          <div className='last-text'>
-            <img src={latest5} alt="" />
-            <p>December 10,2021-Fruits</p>
-            <h4>Marketing Guide: 5 Steps to Success to way.</h4>
-          </div>
-        </div>
-
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+  {[latest1, latest2, latest3, latest4, latest5].map((img, i) => (
+    <div key={i}>
+      <img src={img} className="rounded-md w-full" />
+      <p className="text-xs text-gray-500 mt-2">
+        June 2023 · Organic
+      </p>
+      <h4 className="text-sm font-semibold mt-1">
+        Marketing Guide: 5 Steps to Success
+      </h4>
+    </div>
+  ))}
+</div>
           
 
       </div>
