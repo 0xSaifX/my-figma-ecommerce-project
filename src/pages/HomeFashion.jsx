@@ -200,16 +200,14 @@ const dayOfDealProducts = [
       <div className="space-y-4 text-sm">
     <div>
       {[
-        { name: "men's wear", count: 3 },
-        { name: "women's wear", count: 2 },
-        { name: "Baby Wear", count: 1 },
+        { name: "Bhisma Organice" },
+        { name: "Darsh Mart" },
       ].map(item => (
         <div key={item.name} className="flex justify-between py-1">
           <div className="flex items-center gap-2">
             <span className="w-3.5 h-3.5 border rounded-sm" />
             <span>{item.name}</span>
           </div>
-          <span>({item.count})</span>
         </div>
           ))}
         </div>
