@@ -147,7 +147,6 @@ const dayOfDealProducts = [
       </div>
       </div>
 
-
         <div className="fashion-layout">
 
           <div className="sidebar">
