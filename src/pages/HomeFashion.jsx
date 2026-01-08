@@ -127,8 +127,7 @@ const dayOfDealProducts = [
   <img
     src={fashion1}
     alt="fashion"
-    className="w-full h-full object-cover"
-  />
+    className="w-full h-full object-cover"/>
 
   <div className="absolute top-1/2 left-5 -translate-y-1/2 max-w-xs">
     <p className="text-blue-700 font-semibold mb-2">
