@@ -516,7 +516,7 @@ const dayOfDealProducts = [
   </h4>
 
   <p className="text-xs text-gray-400 mt-1">
-    Free shipping on orders above $200
+    Free shipping within the country for orders above $200
   </p>
 </div>
 
