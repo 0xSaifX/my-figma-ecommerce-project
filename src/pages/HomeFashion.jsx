@@ -318,9 +318,13 @@ const dayOfDealProducts = [
               </div>
               <div className="product-grid">
                 {newArrivals.map((product, idx) => (
-                  <div className="bg-gray-100 rounded-xl overflow-hidden border hover:scale-105 transition">
-  <div className="relative">
-    <img src={product.image} className="h-52 w-full object-cover" />
+            <div className="bg-gray-100 border rounded-xl overflow-hidden hover:scale-105 transition h-[22rem] flex flex-col">
+  <div className="relative h-52">
+    <img
+      src={product.image}
+      alt={product.title}
+      className="w-full h-full object-cover"
+    />
 
     {product.badge && (
       <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
@@ -329,26 +333,33 @@ const dayOfDealProducts = [
     )}
   </div>
 
-  <div className="p-3 space-y-1">
-    <p className="text-xs text-gray-400">{product.category}</p>
-    <h5 className="text-emerald-600 font-semibold text-sm">
-      {product.title}
-    </h5>
+  <div className="p-3 flex flex-col justify-between flex-1">
+    <div>
+      <p className="text-xs text-gray-400">{product.category}</p>
+      <h5 className="text-sm font-semibold text-emerald-600 leading-tight">
+        {product.title}
+      </h5>
 
-    <div className="flex gap-1 text-orange-400">
-      {[...Array(5)].map((_, i) => (
-        <FaStar key={i} className={i < product.rating ? "" : "opacity-30"} />
-      ))}
+      <div className="flex gap-1 mt-1 text-orange-400">
+        {[...Array(5)].map((_, i) => (
+          <FaStar
+            key={i}
+            className={i < product.rating ? "" : "opacity-30"}
+          />
+        ))}
+      </div>
     </div>
 
-        <div className="flex gap-2 items-center">
-        <span className="text-emerald-600 font-semibold">{product.price}</span>
-        <span className="line-through text-gray-400 text-sm">
+    <div className="flex gap-2 items-center mt-2">
+      <span className="text-emerald-600 font-semibold">
+        {product.price}
+      </span>
+      <span className="text-xs line-through text-gray-400">
         {product.originalPrice}
-          </span>
-          </div>
-          </div>
-            </div>
+      </span>
+    </div>
+  </div>
+</div>
                 ))}
               </div>
             </div>
