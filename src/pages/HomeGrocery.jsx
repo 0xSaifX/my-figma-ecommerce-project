@@ -360,17 +360,28 @@ function HomeGrocery () {
     <div className='main-body'>
       <div className='section' style={{padding:"2rem 4rem"}}>
 
-        <div className='image-section' style={{display:"flex"}}>
-        <div style={{display:"flex",overflow:"hidden",}}>
-            <img src={background} style={{width:"100%",position:"relative",borderRadius:"5px",objectFit:"cover",display:"block"}} />
-            <span style={{position:"absolute",marginTop:"7rem",width:"25rem",padding:"4rem 4rem"}}>
-              <p className='logo-green'>Starting at $ <b>29.99</b></p>
-              <p></p>
-              <h1>Explore fresh & juicy fruits</h1>
-            <button style={{marginTop:"2rem",padding:"10px 15px",background:"#495567",color:"#eee",borderRadius:"5px",border:"none",cursor:"pointer"}}>Shop Now <FaChevronRight/><FaChevronRight/></button>
-            </span>
-        </div>
-        </div>
+        <div className="relative rounded-lg overflow-hidden">
+  <img
+    src={background}
+    className="w-full h-[300px] md:h-[400px] object-cover"
+    alt=""
+  />
+
+  <div className="absolute inset-0 flex items-center">
+    <div className="px-6 md:px-16 max-w-md">
+      <p className="text-green-500 font-semibold">
+        Starting at $ <b>29.99</b>
+      </p>
+      <h1 className="text-2xl md:text-4xl font-bold my-2">
+        Explore fresh & juicy fruits
+      </h1>
+
+      <button className="mt-4 bg-slate-700 text-white px-4 py-2 rounded flex items-center gap-1">
+        Shop Now <FaChevronRight />
+      </button>
+    </div>
+  </div>
+</div>
 
          <div className="category-icons">
              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr 1fr",gap:"1rem",marginTop:"4rem"}}>
