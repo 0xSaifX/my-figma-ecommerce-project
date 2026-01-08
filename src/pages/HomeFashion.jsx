@@ -548,8 +548,7 @@ const dayOfDealProducts = [
   <img
     src={fashion2}
     alt="banner"
-    className="w-full h-full object-cover rounded-lg"
-  />
+    className="w-full h-full object-cover rounded-lg" />
 
   {/* Content */}
   <div
@@ -562,9 +561,7 @@ const dayOfDealProducts = [
       -translate-y-1/2 
       text-right 
       max-w-xs 
-      sm:max-w-sm
-    "
-  >
+      sm:max-w-sm" >
     <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#45a388] leading-tight">
       Shopping Today <br /> Fashion Sale
     </h1>
@@ -583,13 +580,11 @@ const dayOfDealProducts = [
         py-2 
         rounded-md 
         hover:opacity-90 
-        transition
-      "
-    >
+        transition" >
       Shop Now
     </button>
   </div>
-</div>
+          </div>
 
            <RatedProducts/>
 
