@@ -258,13 +258,13 @@ const dayOfDealProducts = [
         {["men", "women", "shirt", "shoes", "wallet"].map(tag => (
         <button
         key={tag}
-        className="bg-blue-800 text-white text-xs px-3 py-1 rounded-md hover:bg-blue-900" >
+        className="bg-green-600 text-white text-xs px-3 py-1 rounded-md hover:bg-green-900" >
         {tag}
         </button>
            ))}
         </div>
 
-        <button className="mt-4 w-full bg-blue-800 text-white py-2 rounded-md">
+        <button className="mt-4 w-full bg-green-600 text-white py-2 rounded-md">
           Filter
         </button>
         </div>
