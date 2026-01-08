@@ -383,20 +383,30 @@ function HomeGrocery () {
   </div>
 </div>
 
-         <div className="category-icons">
-             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr 1fr",gap:"1rem",marginTop:"4rem"}}>
-               {categoryIcons.map((cat) => (
-                <div key={cat.title} className="category-card" style={{ backgroundColor: cat.bgColor }}>
-                  <div className="category-inner">
-                    <img src={cat.icon} alt={cat.title} />
-                    <h4>{cat.title}</h4>
-                    <p>{cat.items}</p>
-                    {cat.discount && <div className="discount-badge">{cat.discount}</div>}
-                 </div>
-              </div>
-              ))}
-             </div>
-        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-12">
+  {categoryIcons.map((cat) => (
+    <div
+      key={cat.title}
+      className="relative rounded-xl p-4 text-center"
+      style={{ backgroundColor: cat.bgColor }}
+    >
+      <img
+        src={cat.icon}
+        alt={cat.title}
+        className="mx-auto w-14 h-14 object-contain mb-2"
+      />
+
+      <h4 className="text-green-600 font-semibold">{cat.title}</h4>
+      <p className="text-gray-700 text-sm">{cat.items}</p>
+
+      {cat.discount && (
+        <span className="absolute top-2 right-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded-md">
+          {cat.discount}
+        </span>
+      )}
+    </div>
+  ))}
+</div>
 
         <div style={{display:"flex",gap:"33rem",margin:"5rem 0rem",width:"100%",alignItems:"center"}}>
             <span>
