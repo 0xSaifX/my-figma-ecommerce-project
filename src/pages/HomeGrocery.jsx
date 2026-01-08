@@ -423,13 +423,21 @@ function HomeGrocery () {
   ))}
 </div>
 
-        <div style={{display:"flex",gap:"33rem",margin:"5rem 0rem",width:"100%",alignItems:"center"}}>
-            <span>
-              <span>Day Of The <span className='logo-green'>Deal</span></span>
-            <p>Don't wait. The time will never be just right.</p>
-            </span>
-            <span style={{background:"#f9f9fb",padding:"10px 10px",borderRadius:"5px"}}><b>25</b> Days <b>23 : 59 : 54</b></span>
-        </div>
+        <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between my-20 w-full">
+    <div>
+    <h2 className="text-xl md:text-2xl font-semibold">
+      Day Of The <span className="text-green-600">Deal</span>
+    </h2>
+    <p className="text-gray-500 mt-1 text-sm md:text-base">
+      Don't wait. The time will never be just right.
+    </p>
+  </div>
+
+  <div className="bg-gray-100 px-4 py-2 rounded-md text-sm md:text-base font-medium">
+    <b>25</b> Days <b>23 : 59 : 54</b>
+  </div>
+
+</div>
 
         <ProductGrid products={products} />
 
