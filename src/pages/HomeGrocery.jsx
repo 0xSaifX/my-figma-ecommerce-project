@@ -371,13 +371,11 @@ const TopProducts = () => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-white mt-16 font-['Poppins']">
 
-  {/* Promo Section */}
   <div className="relative rounded-xl overflow-hidden h-full sm:col-span-2 lg:col-span-1">
     <img
       src={topmost}
       alt="Top Products"
-      className="w-full h-[85%] object-cover rounded-xl"
-    />
+      className="w-full h-[85%] object-cover rounded-xl"/>
 
     <div className="absolute top-6 left-6 text-gray-800">
       <h2 className="text-lg font-semibold leading-snug mb-4">
@@ -444,13 +442,11 @@ function HomeGrocery () {
     <div
       key={cat.title}
       className="relative rounded-xl p-4 text-center"
-      style={{ backgroundColor: cat.bgColor }}
-    >
+      style={{ backgroundColor: cat.bgColor }}>
       <img
         src={cat.icon}
         alt={cat.title}
-        className="mx-auto w-14 h-14 object-contain mb-2"
-      />
+        className="mx-auto w-14 h-14 object-contain mb-2"/>
 
       <h4 className="text-green-600 font-semibold">{cat.title}</h4>
       <p className="text-gray-700 text-sm">{cat.items}</p>
@@ -593,8 +589,7 @@ function HomeGrocery () {
   ].map((item, i) => (
     <div
       key={i}
-      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition"
-    >
+      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition">
       <div className="text-green-500 items-center text-3xl mb-2">{item.icon}</div>
       <h4 className="font-semibold">{item.title}</h4>
       <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
