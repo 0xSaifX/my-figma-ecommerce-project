@@ -396,7 +396,6 @@ const TopProducts = () => {
   <ProductList title="Top" highlight="Selling" items={topSelling} />
 
 </div>
-
   );
 };
 
