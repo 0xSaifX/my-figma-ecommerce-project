@@ -202,20 +202,27 @@ const dayOfDealProducts = [
               </div>
             </div>
 
-            <div className="filter-card">
-              <div className="filter-header">
-                <h3>Tags</h3>
-                <ChevronDown className="icon" />
-              </div>
-              <div className="filter-content">
-                <div className="tags">
-                  {["men", "women", "clothes", "shirt", "shoes", "sports", "wallet", "belt", "perfume", "shampoo", "skin", "earring", "lipstick", "makeup"].map((tag) => (
-                    <button key={tag} className="tag-btn">{tag}</button>
-                  ))}
-                </div>
-                <button className="filter-btn" style={{background:"#205d8f"}}>Filter</button>
-              </div>
-            </div>
+            <div className="border border-gray-200 rounded-xl bg-white p-4">
+  <div className="flex justify-between items-center mb-3">
+    <h3 className="text-lg font-semibold">Tags</h3>
+    <ChevronDown className="w-4 h-4 text-gray-500" />
+  </div>
+
+  <div className="flex flex-wrap gap-2">
+    {["men", "women", "shirt", "shoes", "wallet"].map(tag => (
+      <button
+        key={tag}
+        className="bg-blue-800 text-white text-xs px-3 py-1 rounded-md hover:bg-blue-900"
+      >
+        {tag}
+      </button>
+    ))}
+  </div>
+
+  <button className="mt-4 w-full bg-blue-800 text-white py-2 rounded-md">
+    Filter
+  </button>
+</div>
 
             <div
   className="relative h-48 rounded-xl overflow-hidden bg-cover bg-center"
