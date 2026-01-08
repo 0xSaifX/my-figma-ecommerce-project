@@ -543,49 +543,53 @@ const dayOfDealProducts = [
   </div>
           </div>
 
-              <div
-                style={{
-                position: "relative",
-                width: "100%",
-                height: "16rem",
-                overflow: "hidden",
-                borderRadius: "8px",
-                }}>
-              <img src={fashion2} alt="banner"
-              style={{
-              width: "100%",
-              height: "100%",
-              objectFit: "cover",
-              display: "block",
-              borderRadius: "8px",
-               }}/>
-      
-             <div
-              style={{
-              width:"20rem",
-              position: "absolute",
-              top: "50%",
-              right: "5%",
-              transform: "translateY(-50%)",
-              textAlign: "right",
-              }}>
-             <h1 style={{color:"#45a388"}}>Shopping Today <br />Fashion sale</h1>
-             <p style={{lineHeight:"2"}}>
-             <span style={{ color: "#205d8f", fontWeight: "bold" }}>30% off sale</span>{" "}
-             Hurry up!!!
-             </p>
-             <button
-              style={{
-              background: "#205d8f",
-              padding: "10px 15px",
-              marginTop: "1rem",
-              color: "#eee",
-              borderRadius: "5px",
-              border: "none",
-              cursor: "pointer",
-                }} > Shop Now</button>
-              </div>
-             </div>
+          <div className="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden rounded-lg">
+  {/* Background Image */}
+  <img
+    src={fashion2}
+    alt="banner"
+    className="w-full h-full object-cover rounded-lg"
+  />
+
+  {/* Content */}
+  <div
+    className="
+      absolute 
+      top-1/2 
+      right-4 
+      sm:right-8 
+      transform 
+      -translate-y-1/2 
+      text-right 
+      max-w-xs 
+      sm:max-w-sm
+    "
+  >
+    <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-[#45a388] leading-tight">
+      Shopping Today <br /> Fashion Sale
+    </h1>
+
+    <p className="mt-2 text-sm sm:text-base leading-relaxed">
+      <span className="text-[#205d8f] font-bold">30% off sale</span>{" "}
+      Hurry up!!!
+    </p>
+
+    <button
+      className="
+        mt-4 
+        bg-[#205d8f] 
+        text-white 
+        px-4 
+        py-2 
+        rounded-md 
+        hover:opacity-90 
+        transition
+      "
+    >
+      Shop Now
+    </button>
+  </div>
+</div>
 
            <RatedProducts/>
 
