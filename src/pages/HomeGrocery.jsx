@@ -554,7 +554,7 @@ function HomeGrocery () {
       key={i}
       className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition"
     >
-      <div className="text-green-500 text-3xl mb-2">{item.icon}</div>
+      <div className="text-green-500 items-center text-3xl mb-2">{item.icon}</div>
       <h4 className="font-semibold">{item.title}</h4>
       <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
     </div>
