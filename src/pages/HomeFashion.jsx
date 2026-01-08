@@ -359,7 +359,7 @@ const dayOfDealProducts = [
       </span>
     </div>
   </div>
-</div>
+            </div>
                 ))}
               </div>
             </div>
