@@ -435,49 +435,114 @@ const dayOfDealProducts = [
   </div>
           </div>
 
-          <div className="section">
-              <div className="section-header">
-                <h2>
-                  Day Of The <span>Deal</span>
-                </h2>
-                <div className="nav-btns">
-                  <button onClick={handlePrev}>
-                    <ChevronLeft />
-                  </button>
-                  <button onClick={handleNext}>
-                    <ChevronRight />
-                  </button>
-                </div>
-              </div>
+          <div className="w-full space-y-6">
+  {/* Section Header */}
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <h2 className="text-2xl font-semibold text-[#459a88]">
+      Day Of The <span className="text-[#205d8f]">Deal</span>
+    </h2>
 
-              <div className="product-grid">
-                {dayOfDealProducts.map((product, idx) => (
-                  <div key={idx} className="product-card">
-                    <div className="product-image">
-                      <img src={product.image} alt={product.title} />
-                      {product.badge && (
-                        <div className={`badge ${product.badge}`}>{product.badge}</div>
-                      )}
-                    </div>
-                    <div className="product-info">
-                      <p className="category">{product.category}</p>
-                      <h5>{product.title}</h5>
-                      <div className="stars">
-                        {[...Array(5)].map((_, i) => (
-                          <FaStar 
-                          key={i} 
-                          size={12} className={i < product.rating ? "star filled" : "star"} />
-                        ))}
-                      </div>
-                      <div className="price">
-                        <span className="current">{product.price}</span>
-                        <span className="old">{product.originalPrice}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+    <div className="flex gap-2">
+      <button
+        onClick={handlePrev}
+        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
+      >
+        <ChevronLeft />
+      </button>
+      <button
+        onClick={handleNext}
+        className="p-2 rounded-md bg-gray-100 hover:bg-gray-200 transition"
+      >
+        <ChevronRight />
+      </button>
+    </div>
+  </div>
+
+  {/* Product Grid */}
+  <div
+    className="
+      grid 
+      grid-cols-2 
+      sm:grid-cols-3 
+      md:grid-cols-4 
+      lg:grid-cols-5 
+      gap-5
+    "
+  >
+    {dayOfDealProducts.map((product, idx) => (
+      <div
+        key={idx}
+        className="
+          bg-gray-100 
+          border 
+          rounded-xl 
+          overflow-hidden 
+          hover:scale-105 
+          transition 
+          duration-300
+        "
+      >
+        {/* Image */}
+        <div className="relative h-44">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-full h-full object-cover"
+          />
+
+          {product.badge && (
+            <span
+              className={`
+                absolute 
+                top-2 left-2 
+                px-2 py-0.5 
+                text-xs 
+                text-white 
+                rounded
+                ${product.badge === "sale" ? "bg-red-400" : "bg-[#459a88]"}
+              `}
+            >
+              {product.badge}
+            </span>
+          )}
+        </div>
+
+        {/* Info */}
+        <div className="p-3 space-y-1">
+          <p className="text-xs text-gray-400">{product.category}</p>
+          <h5 className="text-sm font-medium text-[#459a88] line-clamp-2">
+            {product.title}
+          </h5>
+
+          {/* Stars */}
+          <div className="flex gap-1">
+            {[...Array(5)].map((_, i) => (
+              <FaStar
+                key={i}
+                size={12}
+                className={
+                  i < product.rating
+                    ? "text-orange-400"
+                    : "text-gray-300"
+                }
+              />
+            ))}
+          </div>
+
+          {/* Price */}
+          <div className="flex items-center gap-2 text-sm">
+            <span className="text-[#459a88] font-semibold">
+              {product.price}
+            </span>
+            <span className="line-through text-gray-400">
+              {product.originalPrice}
+            </span>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
 
               <div
                 style={{
