@@ -468,18 +468,16 @@ function HomeGrocery () {
 
         <div className="w-full flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-32 my-12">
 
-  {/* Left Content */}
-  <div>
+    <div>
     <h2 className="text-2xl md:text-3xl font-semibold">
       New <span className="text-green-600">Arrivals</span>
     </h2>
     <p className="text-gray-600 mt-1">
       Shop online for new arrivals and get free shipping!
     </p>
-  </div>
+    </div>
 
-  {/* Category Filters */}
-  <div className="flex flex-wrap gap-4 text-sm md:text-base">
+    <div className="flex flex-wrap gap-4 text-sm md:text-base">
     <h4 className="text-green-600 font-semibold cursor-pointer">
       All
     </h4>
@@ -489,12 +487,12 @@ function HomeGrocery () {
     <h4 className="cursor-pointer hover:text-green-600 transition">
       Fruits
     </h4>
-    <h4 className="cursor-pointer hover:text-green-600 transition">
+      <h4 className="cursor-pointer hover:text-green-600 transition">
       Vegetables
-    </h4>
-  </div>
+      </h4>
+    </div>
 
-</div>
+        </div>
 
           <ProductGrid2/>
 
