@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaChevronRight, FaStar, FaTruckMoving, FaHandHoldingMedical, } from 'react-icons/fa';
+import { FaApple, FaBreadSlice, FaCarrot, FaChevronRight, FaGlassWhiskey, FaStar, FaPepperHot, FaSpinner, FaShip, FaTruckMoving, FaHandHoldingMedical, FaCloudflare, FaCommentDollar, FaCloud, FaExclamationCircle, FaCircleNotch, FaChevronLeft, FaCommentMedical } from 'react-icons/fa';
 
 
 import background from "../assets/background1.jpg";
@@ -37,7 +37,7 @@ import topsell1 from "../assets/topsell1.jpg";
 import topsell2 from "../assets/topsell2.jpg";
 import topsell3 from "../assets/topsell3.jpg";
 import "../App.css";
-import { CircleDivideIcon, DollarSignIcon, } from 'lucide-react';
+import { CircleDivideIcon, DollarSignIcon, Fan, PersonStandingIcon } from 'lucide-react';
 
 const products = [
   {
@@ -98,7 +98,8 @@ const ProductGrid = () => {
   {products.map((product) => (
     <div
       key={product.id}
-      className="border rounded-xl bg-white shadow-sm hover:scale-105 transition" >
+      className="border rounded-xl bg-white shadow-sm hover:scale-105 transition"
+    >
       <div className="relative bg-gray-50 h-56 flex items-center justify-center p-4">
         {product.tag && (
           <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
@@ -117,6 +118,7 @@ const ProductGrid = () => {
         <p className="text-xs text-gray-400">{product.category}</p>
         <h3 className="font-semibold text-sm text-gray-700">{product.title}</h3>
 
+        {/* Rating */}
         <div className="flex gap-1 mt-1">
           {[...Array(5)].map((_, i) => (
             <FaStar
@@ -127,6 +129,7 @@ const ProductGrid = () => {
           ))}
         </div>
 
+        {/* Price */}
         <div className="flex justify-between items-center mt-2 text-sm">
           <div className="flex gap-2">
             <span className="font-bold">{product.newPrice}</span>
@@ -441,11 +444,13 @@ function HomeGrocery () {
     <div
       key={cat.title}
       className="relative rounded-xl p-4 text-center"
-      style={{ backgroundColor: cat.bgColor }} >
+      style={{ backgroundColor: cat.bgColor }}
+    >
       <img
         src={cat.icon}
         alt={cat.title}
-        className="mx-auto w-14 h-14 object-contain mb-2"/>
+        className="mx-auto w-14 h-14 object-contain mb-2"
+      />
 
       <h4 className="text-green-600 font-semibold">{cat.title}</h4>
       <p className="text-gray-700 text-sm">{cat.items}</p>
@@ -455,9 +460,9 @@ function HomeGrocery () {
           {cat.discount}
         </span>
       )}
-       </div>
-         ))}
-        </div>
+    </div>
+  ))}
+</div>
 
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between my-20 w-full">
     <div>
@@ -473,7 +478,7 @@ function HomeGrocery () {
     <b>25</b> Days <b>23 : 59 : 54</b>
   </div>
 
-        </div>
+</div>
 
         <ProductGrid products={products} />
 
@@ -588,7 +593,8 @@ function HomeGrocery () {
   ].map((item, i) => (
     <div
       key={i}
-      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition">
+      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition"
+    >
       <div className="text-green-500 items-center text-3xl mb-2">{item.icon}</div>
       <h4 className="font-semibold">{item.title}</h4>
       <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
@@ -598,26 +604,14 @@ function HomeGrocery () {
 
         <TopProducts/>
 
-        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-0 my-12 w-full">
-
-  {/* Left Text */}
-  <div>
-    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
-      Latest <span className="text-green-600">Blog</span>
-    </h2>
-    <p className="text-sm md:text-base text-gray-500 mt-1">
-      We tackle interesting topics every day in 2023.
-    </p>
-  </div>
-
-  {/* Right Action */}
-  <div className="flex items-center gap-1 text-green-600 cursor-pointer text-sm md:text-base">
-    <span className="font-medium">All Blogs</span>
-    <FaChevronRight />
-    <FaChevronRight />
-  </div>
-
-</div>
+        <div style={{display:"flex",gap:"35rem",margin:"3rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
+          <span>
+            <h2>Latest <span className='green'>Blog</span></h2>
+            <p>We tackle interesting topics every day in 2023.</p>
+          </span>
+          <span>All Blogs<FaChevronRight style={{cursor:"pointer"}}/>
+          <FaChevronRight style={{cursor:"pointer"}}/></span>
+        </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
   {[latest1, latest2, latest3, latest4, latest5].map((img, i) => (
