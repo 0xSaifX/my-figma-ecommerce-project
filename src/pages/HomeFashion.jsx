@@ -25,6 +25,7 @@ import trend1 from "../assets/trend1.png";
 import trend2 from "../assets/trend2.jpg";
 import trend3 from "../assets/trend3.png";
 import { FaChevronRight, FaHandHoldingMedical, FaStar, FaTruckMoving } from "react-icons/fa";
+import { count } from "node:console";
 
 
 const trending = [
@@ -221,10 +222,10 @@ const dayOfDealProducts = [
     <div>
       <h6 className="font-semibold mb-2">Clothes</h6>
       {[
-                  { name: "Under $50" },
-                  { name: "$50 to $100" },
-                  { name: "$100 to $200" },
-                  { name: "Above $200" },
+                  { name: "Under $50", count: 2 },
+                  { name: "$50 to $100", count: 4 },
+                  { name: "$100 to $200", count: 3 },
+                  { name: "Above $200", count: 2 },
       ].map(item => (
         <div key={item.name} className="flex justify-between py-1">
           <div className="flex items-center gap-2">
