@@ -329,9 +329,9 @@ const trending = [
 ];
 
 const topRated = [
-  { id: 1, name: "Ginger - Organic", category: "Vegetables", price: "$65.00", oldPrice: "$62.00", image: toprated1 },
-  { id: 2, name: "Dates Value Pouch", category: "Driedfruit", price: "$78.00", oldPrice: "$56.00", image: toprated2 },
-  { id: 3, name: "Blue Berry", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
+  { id: 1, name: "Ginger - Organic Natural", category: "Vegetables", price: "$65.00", oldPrice: "$62.00", image: toprated1 },
+  { id: 2, name: "Natural Dates Value Pouch", category: "Driedfruit", price: "$78.00", oldPrice: "$56.00", image: toprated2 },
+  { id: 3, name: "Blue Berry Fruits With Natural extract", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
 ];
 
 const topSelling = [
