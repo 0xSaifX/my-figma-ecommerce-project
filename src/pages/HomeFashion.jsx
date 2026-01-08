@@ -476,7 +476,6 @@ const dayOfDealProducts = [
 
            <RatedProducts/>
 
-
           </div>
         </div>
 
@@ -542,7 +541,6 @@ const dayOfDealProducts = [
                   <p>Read More {">>"} </p>
                 </div>
               </div>
-
       </div>
     </div>
   );
