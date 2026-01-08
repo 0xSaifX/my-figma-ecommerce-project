@@ -604,14 +604,26 @@ function HomeGrocery () {
 
         <TopProducts/>
 
-        <div style={{display:"flex",gap:"35rem",margin:"3rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
-          <span>
-            <h2>Latest <span className='green'>Blog</span></h2>
-            <p>We tackle interesting topics every day in 2023.</p>
-          </span>
-          <span>All Blogs<FaChevronRight style={{cursor:"pointer"}}/>
-          <FaChevronRight style={{cursor:"pointer"}}/></span>
-        </div>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4 lg:gap-0 my-12 w-full">
+
+  {/* Left Text */}
+  <div>
+    <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
+      Latest <span className="text-green-600">Blog</span>
+    </h2>
+    <p className="text-sm md:text-base text-gray-500 mt-1">
+      We tackle interesting topics every day in 2023.
+    </p>
+  </div>
+
+  {/* Right Action */}
+  <div className="flex items-center gap-1 text-green-600 cursor-pointer text-sm md:text-base">
+    <span className="font-medium">All Blogs</span>
+    <FaChevronRight />
+    <FaChevronRight />
+  </div>
+
+</div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
   {[latest1, latest2, latest3, latest4, latest5].map((img, i) => (
