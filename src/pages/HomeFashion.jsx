@@ -123,46 +123,29 @@ const dayOfDealProducts = [
     <div className="bg-white font-poppins text-gray-800 px-4 md:px-8 lg:px-12 py-10">
   <div className="max-w-[1400px] mx-auto space-y-16">
 
-        <div 
-          style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          overflow: "hidden",
-          borderRadius: "8px",
-          marginBottom:"5rem"
-          }}>
-          <img src={fashion1} 
-            style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            display: "block",
-            borderRadius: "8px",
-            }}  />
-            <div className="back-text" 
-            style={{
-            width:"20rem",
-            position: "absolute",
-            top: "50%",
-            left: "5%",
-            transform: "translateY(-50%)",
-            textAlign: "left",
-            }} >
-            <p style={{lineHeight:"2.5"}}>Starting at $ 29.99</p>
-            <h1 style={{color:"#45a388"}}>Explore jackets <br /> sale for men's</h1>
-            <button 
-             style={{
-             background: "#45a388",
-             padding: "10px 15px",
-             marginTop: "1rem",
-             color: "#eee",
-             borderRadius: "5px",
-             border: "none",
-             cursor: "pointer",
-             }} >Shop Now<FaChevronRight/><FaChevronRight/></button>
-          </div>
-        </div>
+        <div className="relative w-full h-[18rem] md:h-[22rem] rounded-lg overflow-hidden">
+  <img
+    src={fashion1}
+    alt="fashion"
+    className="w-full h-full object-cover"
+  />
+
+  <div className="absolute top-1/2 left-5 -translate-y-1/2 max-w-xs">
+    <p className="text-blue-700 font-semibold mb-2">
+      Starting at $29.99
+    </p>
+
+    <h1 className="text-2xl md:text-3xl font-bold text-emerald-500 leading-tight">
+      Explore jackets <br /> sale for men's
+    </h1>
+
+    <button className="mt-4 inline-flex items-center gap-1 bg-emerald-500 text-white px-4 py-2 rounded-md hover:bg-emerald-600 transition">
+      Shop Now
+      <FaChevronRight />
+      <FaChevronRight />
+    </button>
+      </div>
+      </div>
 
 
         <div className="fashion-layout">
