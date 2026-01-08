@@ -543,7 +543,7 @@ function HomeGrocery () {
     </div>
   </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 items-center text-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 text-center">
   {[
     { icon: <FaTruckMoving />, title: "Free Shipping", desc: "Orders over $200" },
     { icon: <FaHandHoldingMedical />, title: "24X7 Support", desc: "Anytime help" },
@@ -552,7 +552,7 @@ function HomeGrocery () {
   ].map((item, i) => (
     <div
       key={i}
-      className="border rounded-lg p-6 shadow-sm hover:shadow-md transition"
+      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition"
     >
       <div className="text-green-500 text-3xl mb-2">{item.icon}</div>
       <h4 className="font-semibold">{item.title}</h4>
