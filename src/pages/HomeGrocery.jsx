@@ -449,8 +449,7 @@ function HomeGrocery () {
       <img
         src={cat.icon}
         alt={cat.title}
-        className="mx-auto w-14 h-14 object-contain mb-2"
-      />
+        className="mx-auto w-14 h-14 object-contain mb-2"/>
 
       <h4 className="text-green-600 font-semibold">{cat.title}</h4>
       <p className="text-gray-700 text-sm">{cat.items}</p>
@@ -460,9 +459,9 @@ function HomeGrocery () {
           {cat.discount}
         </span>
       )}
-    </div>
-  ))}
-</div>
+       </div>
+         ))}
+        </div>
 
         <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between my-20 w-full">
     <div>
@@ -478,7 +477,7 @@ function HomeGrocery () {
     <b>25</b> Days <b>23 : 59 : 54</b>
   </div>
 
-</div>
+        </div>
 
         <ProductGrid products={products} />
 
@@ -593,8 +592,7 @@ function HomeGrocery () {
   ].map((item, i) => (
     <div
       key={i}
-      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition"
-    >
+      className="border rounded-lg p-6 shadow-sm hover:shadow-md justify-center transition">
       <div className="text-green-500 items-center text-3xl mb-2">{item.icon}</div>
       <h4 className="font-semibold">{item.title}</h4>
       <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
