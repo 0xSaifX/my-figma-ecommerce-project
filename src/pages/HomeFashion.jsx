@@ -211,7 +211,33 @@ const dayOfDealProducts = [
               </div>
             </div> */}
 
-            
+            <div className="border border-gray-200 rounded-xl bg-white p-4">
+  <div className="flex justify-between items-center mb-3">
+    <h3 className="text-lg font-semibold">Price</h3>
+    <ChevronDown className="w-4 h-4 text-gray-500" />
+  </div>
+
+  <div className="space-y-4 text-sm">
+    <div>
+      <h6 className="font-semibold mb-2">Clothes</h6>
+      {[
+                  { name: "Under $50" },
+                  { name: "$50 to $100" },
+                  { name: "$100 to $200" },
+                  { name: "Above $200" },
+      ].map(item => (
+        <div key={item.name} className="flex justify-between py-1">
+          <div className="flex items-center gap-2">
+            <span className="w-3.5 h-3.5 border rounded-sm" />
+            <span>{item.name}</span>
+          </div>
+          <span>({item.count})</span>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>
+
 
             <div className="border border-gray-200 rounded-xl bg-white p-4">
   <div className="flex justify-between items-center mb-3">
