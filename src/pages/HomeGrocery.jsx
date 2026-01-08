@@ -369,21 +369,33 @@ const ProductList = ({ title, highlight, items }) => (
 
 const TopProducts = () => {
   return (
-    <div className="top-products">
-      <div className="promo-section">
-        <img src={topmost}  />
-        <div className="promo-text">
-          <h2>
-            Our Top Most Products <br /> Check It Now
-          </h2>
-          <button>Shop Now</button>
-        </div>
-      </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 bg-white mt-16 font-['Poppins']">
 
-      <ProductList title="Trending" highlight="Items" items={trending} />
-      <ProductList title="Top" highlight="Rated" items={topRated} />
-      <ProductList title="Top" highlight="Selling" items={topSelling} />
+  {/* Promo Section */}
+  <div className="relative rounded-xl overflow-hidden h-full sm:col-span-2 lg:col-span-1">
+    <img
+      src={topmost}
+      alt="Top Products"
+      className="w-full h-[85%] object-cover rounded-xl"
+    />
+
+    <div className="absolute top-6 left-6 text-gray-800">
+      <h2 className="text-lg font-semibold leading-snug mb-4">
+        Our Top Most Products <br /> Check It Now
+      </h2>
+
+      <button className="bg-[#45a388] hover:bg-[#3b8f7c] transition text-white px-5 py-2 rounded-md text-sm">
+        Shop Now
+      </button>
     </div>
+  </div>
+
+  {/* Product Columns */}
+  <ProductList title="Trending" highlight="Items" items={trending} />
+  <ProductList title="Top" highlight="Rated" items={topRated} />
+  <ProductList title="Top" highlight="Selling" items={topSelling} />
+
+</div>
   );
 };
 
