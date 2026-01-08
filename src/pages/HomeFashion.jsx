@@ -520,7 +520,43 @@ const dayOfDealProducts = [
   </p>
 </div>
 
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
+<div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
+  <FaHandHoldingMedical className="text-blue-500 w-8 h-8 mb-2" />
+
+  <h4 className="text-emerald-600 font-semibold">
+    24X7 Support
+  </h4>
+
+  <p className="text-xs text-gray-400 mt-1">
+     Contact us 24 hours a day, 7 days a week
+  </p>
+</div>
+
+<div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
+  <CircleDivideIcon className="text-blue-500 w-8 h-8 mb-2" />
+
+  <h4 className="text-emerald-600 font-semibold">
+    30 Days Return
+  </h4>
+
+  <p className="text-xs text-gray-400 mt-1">
+     Simply return it within 30 days for an exchange
+  </p>
+</div>
+
+<div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
+  < className="text-blue-500 w-8 h-8 mb-2" />
+
+  <h4 className="text-emerald-600 font-semibold">
+    30 Days Return
+  </h4>
+
+  <p className="text-xs text-gray-400 mt-1">
+     Simply return it within 30 days for an exchange
+  </p>
+</div>
+
+        {/* <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
           justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
           <FaHandHoldingMedical color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
           <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>24X7 Support</h4>
@@ -537,7 +573,7 @@ const dayOfDealProducts = [
           <DollarSignIcon color='#5799d0ff' style={{marginBottom:"0.5rem", width:"25px",height:"2rem"}} /> 
           <h4 style={{lineHeight:"1.5rem",color:"#45a388"}}>Payment Secure</h4>
           <p style={{fontSize:"0.75rem",lineHeight:"1.5",color:"#9ca3af"}}>Contact us 24 hours a day, 7 days a week </p>
-        </div>
+        </div> */}
       </div>
 
              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-12">
