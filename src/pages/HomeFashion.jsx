@@ -44,32 +44,83 @@ const topSelling = [
   { id: 2, name: "Mango - Kesar", category: "Fruits", price: "$65.00", oldPrice: "$62.00", image: topsell2 },
   { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: topsell3 },
 ]; 
-const ProductList = ({ title, highlight, items }) => (
-  <div className="product-column">
-    <div className="product-header">
-      <h3>
-        {title} <span>{highlight}</span>
-      </h3>
-      <div className="nav-icons">
-        <button>{"<"}</button>
-        <button>{">"}</button>
-      </div>
-    </div>
-    {items.map((item) => (
-      <div key={item.id} className="product-row">
-        <img src={item.image} alt={item.name} />
-        <div className="product-text">
-          <h4>{item.name}</h4>
-          <p className="category">{item.category}</p>
-          <div className="price">
-            <span className="new">{item.price}</span>
-            <span className="old">{item.oldPrice}</span>
-          </div>
+const ProductList = ({ title, highlight, items }) => {
+  return (
+    <div
+      className="
+        w-full 
+        max-w-sm 
+        bg-white 
+        rounded-lg 
+        shadow-sm 
+        p-4 
+        flex 
+        flex-col
+      "
+    >
+      {/* Header */}
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="text-lg font-semibold text-gray-800">
+          {title}{" "}
+          <span className="text-[#45a388]">{highlight}</span>
+        </h3>
+
+        <div className="flex gap-2">
+          <button className="w-7 h-7 flex items-center justify-center rounded border text-gray-500 hover:bg-gray-100">
+            {"<"}
+          </button>
+          <button className="w-7 h-7 flex items-center justify-center rounded border text-gray-500 hover:bg-gray-100">
+            {">"}
+          </button>
         </div>
       </div>
-    ))}
-  </div>
-);
+
+      {/* Products */}
+      <div className="flex flex-col gap-4">
+        {items.map((item) => (
+          <div
+            key={item.id}
+            className="
+              flex 
+              items-center 
+              gap-3 
+              border 
+              rounded-md 
+              p-2 
+              hover:shadow 
+              transition
+            "
+          >
+            {/* Image */}
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-16 h-16 object-cover rounded"
+            />
+
+            {/* Text */}
+            <div className="flex-1">
+              <h4 className="text-sm font-medium text-gray-800 line-clamp-1">
+                {item.name}
+              </h4>
+              <p className="text-xs text-gray-500">{item.category}</p>
+
+              <div className="flex items-center gap-2 mt-1">
+                <span className="text-sm font-semibold text-[#45a388]">
+                  {item.price}
+                </span>
+                <span className="text-xs text-gray-400 line-through">
+                  {item.oldPrice}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
 const RatedProducts = () => {
   return (
     <div className="top-most">
