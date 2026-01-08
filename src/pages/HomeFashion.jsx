@@ -282,15 +282,14 @@ const dayOfDealProducts = [
       ))}
     </div>
 
-    <div className="flex gap-2 items-center">
-      <span className="text-emerald-600 font-semibold">{product.price}</span>
-      <span className="line-through text-gray-400 text-sm">
+        <div className="flex gap-2 items-center">
+        <span className="text-emerald-600 font-semibold">{product.price}</span>
+        <span className="line-through text-gray-400 text-sm">
         {product.originalPrice}
-      </span>
-    </div>
-  </div>
-</div>
-
+          </span>
+          </div>
+          </div>
+            </div>
                 ))}
               </div>
             </div>
