@@ -32,7 +32,6 @@ const Header = () => {
   return (
     <header className="w-full">
 
-      {/* Top Bar */}
       <div className="hidden md:flex justify-between items-center bg-gray-100 text-sm px-6 py-2">
         <div className="flex gap-4">
           <span className="flex items-center gap-1"><FaPhoneAlt /> +91 987 654 3210</span>
@@ -47,10 +46,8 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Middle Bar */}
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-4">
 
-        {/* ✅ FIXED Logo Alignment */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
           <FaShoppingBag className="text-green-600" />
           <span>
@@ -58,18 +55,15 @@ const Header = () => {
           </span>
         </Link>
 
-        {/* Search */}
         <div className="w-full md:w-1/2 flex">
           <input
             className="flex-grow border border-gray-300 px-4 py-2 rounded-l-md focus:outline-none"
-            placeholder="Search Products..."
-          />
+            placeholder="Search Products..." />
           <button className="bg-green-600 px-4 text-white rounded-r-md">
             <FaSearch />
           </button>
         </div>
 
-        {/* Icons */}
         <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-2 cursor-pointer">
             <FaUser /> <span>Account</span>
@@ -83,26 +77,21 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Navigation */}
       <nav className="bg-green-600 text-white">
         <div className="flex items-center justify-center px-4 py-3">
 
-          {/* Mobile Toggle */}
           <button
             className="flex items-center gap-2 lg:hidden"
-            onClick={() => setOpen(!open)}
-          >
+            onClick={() => setOpen(!open)} >
             <FaList /> Menu
           </button>
 
-          {/* Desktop Nav */}
           <ul className="hidden lg:flex flex items-center gap-5 text-sm">
             {navLinks.map((link) => (
               <li key={link.path}>
                 <Link
                   to={link.path}
-                  className="hover:text-yellow-300 transition"
-                >
+                  className="hover:text-yellow-300 transition" >
                   {link.name}
                 </Link>
               </li>
@@ -114,7 +103,6 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {open && (
           <div className="lg:hidden bg-green-700 px-4 py-4 space-y-3">
             {navLinks.map((link) => (
@@ -122,8 +110,7 @@ const Header = () => {
                 key={link.path}
                 to={link.path}
                 className="block"
-                onClick={() => setOpen(false)}
-              >
+                onClick={() => setOpen(false)} >
                 {link.name}
               </Link>
             ))}
