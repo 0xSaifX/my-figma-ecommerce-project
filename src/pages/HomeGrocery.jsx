@@ -543,7 +543,7 @@ function HomeGrocery () {
     </div>
   </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 text-center">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 items-center text-center">
   {[
     { icon: <FaTruckMoving />, title: "Free Shipping", desc: "Orders over $200" },
     { icon: <FaHandHoldingMedical />, title: "24X7 Support", desc: "Anytime help" },
