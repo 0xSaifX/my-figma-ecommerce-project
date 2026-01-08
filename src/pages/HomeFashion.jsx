@@ -509,7 +509,7 @@ const dayOfDealProducts = [
 
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-center">
         <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
-  <FaTruckMoving className="text-blue-500 w-8 h-8 mb-2" />
+  <FaTruckMoving className="text-green-500 w-8 h-8 mb-2" />
 
   <h4 className="text-emerald-600 font-semibold">
     Free Shipping
@@ -521,7 +521,7 @@ const dayOfDealProducts = [
 </div>
 
 <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
-  <FaHandHoldingMedical className="text-blue-500 w-8 h-8 mb-2" />
+  <FaHandHoldingMedical className="text-green-500 w-8 h-8 mb-2" />
 
   <h4 className="text-emerald-600 font-semibold">
     24X7 Support
@@ -533,7 +533,7 @@ const dayOfDealProducts = [
 </div>
 
 <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
-  <CircleDivideIcon className="text-blue-500 w-8 h-8 mb-2" />
+  <CircleDivideIcon className="text-green-500 w-8 h-8 mb-2" />
 
   <h4 className="text-emerald-600 font-semibold">
     30 Days Return
@@ -545,7 +545,7 @@ const dayOfDealProducts = [
 </div>
 
 <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
-  <DollarSignIcon className="text-blue-500 w-8 h-8 mb-2" />
+  <DollarSignIcon className="text-green-500 w-8 h-8 mb-2" />
 
   <h4 className="text-emerald-600 font-semibold">
     Payment Secure
