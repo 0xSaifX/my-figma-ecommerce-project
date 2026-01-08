@@ -543,28 +543,23 @@ function HomeGrocery () {
     </div>
   </div>
 
-      <div style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"center",gap:"2rem",textAlign:"center"}}>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)",}}>
-          <FaTruckMoving color='#45a388' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}}  />
-          <h4>Free Shipping</h4>
-           <p style={{fontSize:"0.75rem"}}>Free shipping on all US order or order above $200</p>
-        </div>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
-          <FaHandHoldingMedical color='#45a388' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
-          <h4>24X7 Support</h4>
-          <p style={{fontSize:"0.75rem"}}>Contact us 24 hours a day, 7 days a week </p>
-        </div>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
-          <CircleDivideIcon color='#45a388' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
-          <h4>30 Days Return</h4>
-          <p style={{fontSize:"0.75rem"}}>Simply return it within 30 days for an exchange </p>
-        </div>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
-          <DollarSignIcon color='#45a388' style={{marginBottom:"0.5rem", width:"25px",height:"2rem"}} /> 
-          <h4>Payment Secure</h4>
-          <p style={{fontSize:"0.75rem"}}>Contact us 24 hours a day, 7 days a week </p>
-        </div>
-      </div>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 text-center">
+  {[
+    { icon: <FaTruckMoving />, title: "Free Shipping", desc: "Orders over $200" },
+    { icon: <FaHandHoldingMedical />, title: "24X7 Support", desc: "Anytime help" },
+    { icon: <CircleDivideIcon />, title: "30 Days Return", desc: "Easy returns" },
+    { icon: <DollarSignIcon />, title: "Secure Payment", desc: "100% safe" },
+  ].map((item, i) => (
+    <div
+      key={i}
+      className="border rounded-lg p-6 shadow-sm hover:shadow-md transition"
+    >
+      <div className="text-green-500 text-3xl mb-2">{item.icon}</div>
+      <h4 className="font-semibold">{item.title}</h4>
+      <p className="text-xs text-gray-500 mt-1">{item.desc}</p>
+    </div>
+  ))}
+</div>
 
         <TopProducts/>
 
