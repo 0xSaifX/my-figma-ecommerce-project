@@ -527,13 +527,11 @@ function HomeGrocery () {
 
         <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 flex-wrap my-16 px-4">
 
-  {/* Left Banner */}
-  <div className="relative w-full lg:w-[48%] min-w-[320px] h-64 rounded-xl overflow-hidden">
+      <div className="relative w-full lg:w-[48%] min-w-[320px] h-64 rounded-xl overflow-hidden">
     <img
       src={leftback}
       alt="Tasty Snacks"
-      className="w-full h-full object-cover"
-    />
+      className="w-full h-full object-cover" />
 
     <div className="absolute top-1/2 right-5 -translate-y-1/2 text-right">
       <h2 className="text-xl md:text-2xl font-semibold mb-2">
@@ -550,13 +548,11 @@ function HomeGrocery () {
     </div>
   </div>
 
-  {/* Right Banner */}
   <div className="relative w-full lg:w-[48%] min-w-[320px] h-64 rounded-xl overflow-hidden">
     <img
       src={rightback}
       alt="Fresh Fruits & Veggies"
-      className="w-full h-full object-cover"
-    />
+      className="w-full h-full object-cover" />
 
     <div className="absolute top-1/2 right-5 -translate-y-1/2 text-right">
       <h2 className="text-xl md:text-2xl font-semibold mb-2">
