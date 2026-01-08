@@ -146,7 +146,7 @@ const dayOfDealProducts = [
       </div>
       </div>
 
-        <div className="fashion-layout">
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
 
           <div className="sidebar">
 
