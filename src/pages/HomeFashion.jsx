@@ -120,113 +120,52 @@ const dayOfDealProducts = [
 
 
   return (
-    <div className="fashion-page">
-      <div className="fashion-container">
+    <div className="bg-white font-poppins text-gray-800 px-4 md:px-8 lg:px-12 py-10">
+  <div className="max-w-[1400px] mx-auto space-y-16">
 
-        <div 
-          style={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          overflow: "hidden",
-          borderRadius: "8px",
-          marginBottom:"5rem"
-          }}>
-          <img src={fashion1} 
-            style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            display: "block",
-            borderRadius: "8px",
-            }}  />
-            <div className="back-text" 
-            style={{
-            width:"20rem",
-            position: "absolute",
-            top: "50%",
-            left: "5%",
-            transform: "translateY(-50%)",
-            textAlign: "left",
-            }} >
-            <p style={{lineHeight:"2.5"}}>Starting at $ 29.99</p>
-            <h1 style={{color:"#45a388"}}>Explore jackets <br /> sale for men's</h1>
-            <button 
-             style={{
-             background: "#45a388",
-             padding: "10px 15px",
-             marginTop: "1rem",
-             color: "#eee",
-             borderRadius: "5px",
-             border: "none",
-             cursor: "pointer",
-             }} >Shop Now<FaChevronRight/><FaChevronRight/></button>
-          </div>
-        </div>
+        <div className="relative w-full h-[18rem] md:h-[22rem] rounded-lg overflow-hidden">
+  <img
+    src={fashion1}
+    alt="fashion"
+    className="w-full h-full object-cover"/>
 
+  <div className="absolute top-1/2 left-5 -translate-y-1/2 max-w-xs">
+    <p className="text-blue-700 font-semibold mb-2">
+      Starting at $29.99
+    </p>
 
-        <div className="fashion-layout">
+    <h1 className="text-2xl md:text-3xl font-bold text-emerald-500 leading-tight">
+      Explore jackets <br /> sale for men's
+    </h1>
 
-          <div className="sidebar">
+    <button className="mt-4 inline-flex items-center gap-1 bg-emerald-500 text-white px-4 py-2 rounded-md hover:bg-emerald-600 transition">
+      Shop Now
+      <FaChevronRight />
+      <FaChevronRight />
+    </button>
+      </div>
+      </div>
 
-            <div className="filter-card">
-              <div className="filter-header">
-                <h3>Category</h3>
-                <ChevronDown className="icon" />
-              </div>
-              <div className="filter-content">
-                <h6>Clothes</h6>
-                {[
-                  { name: "men's wear", count: 3 },
-                  { name: "women's wear", count: 2 },
-                  { name: "Baby Wear", count: 1 },
-                  { name: "Winter Wear", count: 1 },
-                  { name: "unisex", count: 1 },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                    <span>({item.count})</span>
-                  </div>
-                ))}
-                <h6>Footwear</h6>
-                {[
-                  { name: "Sports", count: 3 },
-                  { name: "party wear", count: 2 },
-                  { name: "Casual", count: 1 },
-                  { name: "Baby shoes", count: 1 },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                    <span>({item.count})</span>
-                  </div>
-                ))}
-                <h6>Accessories</h6>
-                {[
-                  { name: "Wallet", count: 1 },
-                  { name: "Belt", count: 1 },
-                  { name: "Perfume", count: 1 },
-                  { name: "Shampoo", count: 1 },
-                  { name: "Body Lotion", count: 1 },
-                  { name: "Jewellery", count: 1 },
-                  { name: "Lipstick", count: 1 },
-                  { name: "Makeup Kit", count: 1 },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                    <span>({item.count})</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+        <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
+
+          <div className="">
+
+            <div className="border border-gray-200 rounded-xl bg-white p-4 space-y-3">
+  <div className="flex items-center justify-between">
+    <h3 className="text-lg font-semibold">Category</h3>
+    <ChevronDown className="w-4 h-4 text-gray-500" />
+  </div>
+
+  <div className="space-y-2 text-sm">
+    <div className="flex justify-between items-center">
+      <div className="flex items-center gap-2">
+        <span className="w-3.5 h-3.5 border rounded-sm"></span>
+        <span>Men's wear</span>
+      </div>
+      <span>(3)</span>
+    </div>
+  </div>
+</div>
 
             <div className="filter-card">
               <div className="filter-header">
@@ -286,20 +225,27 @@ const dayOfDealProducts = [
             </div>
           </div>
 
-          <div className="main-section">
+          <div className="">
 
-            <div className="category-icons">
-              {categoryIcons.map((cat) => (
-                <div key={cat.title} className="category-card" style={{ backgroundColor: cat.bgColor }}>
-                  <div className="category-inner">
-                    <img src={cat.icon} alt={cat.title} />
-                    <h4>{cat.title}</h4>
-                    <p>{cat.items}</p>
-                    {cat.discount && <div className="discount-badge">{cat.discount}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+  {categoryIcons.map(cat => (
+    <div
+      key={cat.title}
+      style={{ backgroundColor: cat.bgColor }}
+      className="relative rounded-xl p-4 text-center"
+    >
+      {cat.discount && (
+        <span className="absolute top-2 right-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded">
+          {cat.discount}
+        </span>
+      )}
+
+      <img src={cat.icon} className="w-12 h-12 mx-auto mb-2" />
+      <h4 className="text-emerald-600 font-semibold capitalize">{cat.title}</h4>
+      <p className="text-sm text-gray-600">{cat.items}</p>
+    </div>
+  ))}
+</div>
 
             <div className="section">
               <div className="section-header">
@@ -313,25 +259,38 @@ const dayOfDealProducts = [
               </div>
               <div className="product-grid">
                 {newArrivals.map((product, idx) => (
-                  <div key={idx} className="product-card">
-                    <div className="product-image">
-                      <img src={product.image} alt={product.title} />
-                      {product.badge && <div className={`badge ${product.badge}`}>{product.badge}</div>}
-                    </div>
-                    <div className="product-info">
-                      <p className="category">{product.category}</p>
-                      <h5>{product.title}</h5>
-                      <div className="stars">
-                        {[...Array(5)].map((_, i) => (
-                          <FaStar key={i} className={i < product.rating ? "star filled" : "star"} />
-                        ))}
-                      </div>
-                      <div className="price">
-                        <span className="current">{product.price}</span>
-                        <span className="old">{product.originalPrice}</span>
-                      </div>
-                    </div>
-                  </div>
+                  <div className="bg-gray-100 rounded-xl overflow-hidden border hover:scale-105 transition">
+  <div className="relative">
+    <img src={product.image} className="h-52 w-full object-cover" />
+
+    {product.badge && (
+      <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+        {product.badge}
+      </span>
+    )}
+  </div>
+
+  <div className="p-3 space-y-1">
+    <p className="text-xs text-gray-400">{product.category}</p>
+    <h5 className="text-emerald-600 font-semibold text-sm">
+      {product.title}
+    </h5>
+
+    <div className="flex gap-1 text-orange-400">
+      {[...Array(5)].map((_, i) => (
+        <FaStar key={i} className={i < product.rating ? "" : "opacity-30"} />
+      ))}
+    </div>
+
+    <div className="flex gap-2 items-center">
+      <span className="text-emerald-600 font-semibold">{product.price}</span>
+      <span className="line-through text-gray-400 text-sm">
+        {product.originalPrice}
+      </span>
+    </div>
+  </div>
+</div>
+
                 ))}
               </div>
             </div>
@@ -476,7 +435,6 @@ const dayOfDealProducts = [
 
            <RatedProducts/>
 
-
           </div>
         </div>
 
@@ -507,13 +465,20 @@ const dayOfDealProducts = [
         </div>
       </div>
 
-             <div style={{display:"flex",gap:"33rem",margin:"3rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
-                <span>
-                  <h2 className='green'>Latest <span style={{color:"#5799d0ff"}}>Blog</span></h2>
-                  <p>We tackle interesting topics every day in 2023.</p>
-                </span>
-                <span style={{cursor:"pointer"}}>All Blogs {">>"} </span>
-              </div>
+             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 my-12">
+  <div>
+    <h2 className="text-2xl font-semibold text-emerald-600">
+      Latest <span className="text-blue-500">Blog</span>
+    </h2>
+    <p className="text-gray-500 text-sm">
+      We tackle interesting topics every day in 2023.
+    </p>
+  </div>
+
+  <button className="text-blue-600 font-medium flex items-center gap-1 hover:underline">
+    All Blogs <FaChevronRight />
+  </button>
+</div>
       
               <div className='last-sect'>
                 <div className='last-text'>
@@ -542,7 +507,6 @@ const dayOfDealProducts = [
                   <p>Read More {">>"} </p>
                 </div>
               </div>
-
       </div>
     </div>
   );
