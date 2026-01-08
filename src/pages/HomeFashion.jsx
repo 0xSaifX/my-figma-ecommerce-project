@@ -545,14 +545,14 @@ const dayOfDealProducts = [
 </div>
 
 <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
-  < className="text-blue-500 w-8 h-8 mb-2" />
+  <DollarSignIcon className="text-blue-500 w-8 h-8 mb-2" />
 
   <h4 className="text-emerald-600 font-semibold">
-    30 Days Return
+    Payment Secure
   </h4>
 
   <p className="text-xs text-gray-400 mt-1">
-     Simply return it within 30 days for an exchange
+     Contact us 24 hours a day, 7 days a week
   </p>
 </div>
 
