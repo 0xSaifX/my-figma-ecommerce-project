@@ -148,66 +148,24 @@ const dayOfDealProducts = [
 
         <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-8">
 
-          <div className="sidebar">
+          <div className="">
 
-            <div className="filter-card">
-              <div className="filter-header">
-                <h3>Category</h3>
-                <ChevronDown className="icon" />
-              </div>
-              <div className="filter-content">
-                <h6>Clothes</h6>
-                {[
-                  { name: "men's wear", count: 3 },
-                  { name: "women's wear", count: 2 },
-                  { name: "Baby Wear", count: 1 },
-                  { name: "Winter Wear", count: 1 },
-                  { name: "unisex", count: 1 },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                    <span>({item.count})</span>
-                  </div>
-                ))}
-                <h6>Footwear</h6>
-                {[
-                  { name: "Sports", count: 3 },
-                  { name: "party wear", count: 2 },
-                  { name: "Casual", count: 1 },
-                  { name: "Baby shoes", count: 1 },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                    <span>({item.count})</span>
-                  </div>
-                ))}
-                <h6>Accessories</h6>
-                {[
-                  { name: "Wallet", count: 1 },
-                  { name: "Belt", count: 1 },
-                  { name: "Perfume", count: 1 },
-                  { name: "Shampoo", count: 1 },
-                  { name: "Body Lotion", count: 1 },
-                  { name: "Jewellery", count: 1 },
-                  { name: "Lipstick", count: 1 },
-                  { name: "Makeup Kit", count: 1 },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                    <span>({item.count})</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <div className="border border-gray-200 rounded-xl bg-white p-4 space-y-3">
+  <div className="flex items-center justify-between">
+    <h3 className="text-lg font-semibold">Category</h3>
+    <ChevronDown className="w-4 h-4 text-gray-500" />
+  </div>
+
+  <div className="space-y-2 text-sm">
+    <div className="flex justify-between items-center">
+      <div className="flex items-center gap-2">
+        <span className="w-3.5 h-3.5 border rounded-sm"></span>
+        <span>Men's wear</span>
+      </div>
+      <span>(3)</span>
+    </div>
+  </div>
+</div>
 
             <div className="filter-card">
               <div className="filter-header">
