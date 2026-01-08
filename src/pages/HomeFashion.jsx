@@ -433,7 +433,7 @@ const dayOfDealProducts = [
       </button>
     </div>
   </div>
-</div>
+          </div>
 
           <div className="section">
               <div className="section-header">
