@@ -413,7 +413,6 @@ const dayOfDealProducts = [
         </div>
        </div>
 
-
           <div className="section">
               <div className="section-header">
                 <h2>
