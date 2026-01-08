@@ -227,18 +227,25 @@ const dayOfDealProducts = [
 
           <div className="main-section">
 
-            <div className="category-icons">
-              {categoryIcons.map((cat) => (
-                <div key={cat.title} className="category-card" style={{ backgroundColor: cat.bgColor }}>
-                  <div className="category-inner">
-                    <img src={cat.icon} alt={cat.title} />
-                    <h4>{cat.title}</h4>
-                    <p>{cat.items}</p>
-                    {cat.discount && <div className="discount-badge">{cat.discount}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+  {categoryIcons.map(cat => (
+    <div
+      key={cat.title}
+      style={{ backgroundColor: cat.bgColor }}
+      className="relative rounded-xl p-4 text-center"
+    >
+      {cat.discount && (
+        <span className="absolute top-2 right-2 bg-blue-700 text-white text-xs px-2 py-0.5 rounded">
+          {cat.discount}
+        </span>
+      )}
+
+      <img src={cat.icon} className="w-12 h-12 mx-auto mb-2" />
+      <h4 className="text-emerald-600 font-semibold capitalize">{cat.title}</h4>
+      <p className="text-sm text-gray-600">{cat.items}</p>
+    </div>
+  ))}
+</div>
 
             <div className="section">
               <div className="section-header">
