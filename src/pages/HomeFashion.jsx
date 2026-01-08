@@ -508,7 +508,8 @@ const dayOfDealProducts = [
         </div>
 
 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-center">
-        <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
+
+    <div className="border border-gray-200 rounded-lg shadow-sm p-6 h-40 flex flex-col items-center justify-center hover:shadow-md transition">
   <FaTruckMoving className="text-green-500 w-8 h-8 mb-2" />
 
   <h4 className="text-gray-700 font-semibold">
