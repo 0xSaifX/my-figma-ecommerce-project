@@ -13,6 +13,7 @@ import { LocationEdit } from "lucide-react";
 import { useState } from "react";
 
 const navLinks = [
+  { name: "H", path: "/homeGrocery" },
   { name: "F1", path: "/homeFashion" },
   { name: "F2", path: "/homeFashion2" },
   { name: "Sb", path: "/leftSidebar" },
