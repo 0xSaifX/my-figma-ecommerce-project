@@ -488,7 +488,7 @@ const dayOfDealProducts = [
 
           <div className="w-full space-y-6">
   {/* Section Header */}
-  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mt-5 sm:mt-10 gap-4">
     <h2 className="text-2xl font-semibold text-[#459a88]">
       Day Of The <span className="text-[#205d8f]">Deal</span>
     </h2>
