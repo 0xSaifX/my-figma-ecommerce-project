@@ -269,12 +269,22 @@ const dayOfDealProducts = [
         </button>
         </div>
 
-            <div className="promo-banner" style={{ backgroundImage: "url('https://api.builder.io/api/v1/image/assets/TEMP/37f03bf6bc71b8d859625b80c12b510b9607ca99?width=752')" }}>
-              <div className="promo-content">
-                <h3>Our top most products<br />check it now</h3>
-                <button>Shop Now</button>
-              </div>
-            </div>
+            <div
+  className="relative h-48 rounded-xl overflow-hidden bg-cover bg-center"
+  style={{
+    backgroundImage:
+      "url('https://api.builder.io/api/v1/image/assets/TEMP/37f03bf6bc71b8d859625b80c12b510b9607ca99?width=752')",
+  }}
+>
+  <div className="absolute bottom-4 left-4">
+    <h3 className="text-emerald-600 font-semibold text-sm mb-2">
+      Our top most products <br /> check it now
+    </h3>
+    <button className="bg-green-600 text-white text-sm px-3 py-1 rounded">
+      Shop Now
+    </button>
+  </div>
+</div>
           </div>
 
           <div className="">
