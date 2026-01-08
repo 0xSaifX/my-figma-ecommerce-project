@@ -94,43 +94,58 @@ const products = [
 
 const ProductGrid = () => {
   return (
-      <div className="product-grid">
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <div className="product-image">
-            {product.tag && (
-              <span className={`badge ${product.tagColor}`}>{product.tag}{product.tagnew} </span>
-            )}
-            <img src={product.image} alt={product.title} />
-          </div>
+     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 my-20">
+  {products.map((product) => (
+    <div
+      key={product.id}
+      className="border rounded-xl bg-white shadow-sm hover:scale-105 transition"
+    >
+      <div className="relative bg-gray-50 h-56 flex items-center justify-center p-4">
+        {product.tag && (
+          <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+            {product.tag}
+          </span>
+        )}
 
-          <div className="product-info">
-            <p className="category">{product.category}</p>
-            <h3 className="title">{product.title}</h3>
+        <img
+          src={product.image}
+          alt={product.title}
+          className="h-40 object-contain"
+        />
+      </div>
 
-            <div className="rating">
-              {[...Array(5)].map((_, i) => (
-                <FaStar
-                  key={i}
-                  size={12}
-                  className={i < product.rating ? "star filled" : "star"}
-                />
-              ))}
-            </div>
+      <div className="bg-gray-50 p-4">
+        <p className="text-xs text-gray-400">{product.category}</p>
+        <h3 className="font-semibold text-sm text-gray-700">{product.title}</h3>
 
-            <div className="price-section">
-              <div className="price">
-                <span className="new-price">{product.newPrice}</span>
-                <span className="old-price">{product.oldPrice}</span>
-              </div>
-              {product.quantity && (
-                <span className="quantity">{product.quantity}</span>
-              )}
-            </div>
-          </div>
+        {/* Rating */}
+        <div className="flex gap-1 mt-1">
+          {[...Array(5)].map((_, i) => (
+            <FaStar
+              key={i}
+              size={12}
+              className={i < product.rating ? "text-orange-400" : "text-gray-400"}
+            />
+          ))}
         </div>
-      ))}
+
+        {/* Price */}
+        <div className="flex justify-between items-center mt-2 text-sm">
+          <div className="flex gap-2">
+            <span className="font-bold">{product.newPrice}</span>
+            <span className="line-through text-gray-400">
+              {product.oldPrice}
+            </span>
+          </div>
+
+          {product.quantity && (
+            <span className="text-gray-400">{product.quantity}</span>
+          )}
+        </div>
+      </div>
     </div>
+  ))}
+</div>
   );
 };
 
