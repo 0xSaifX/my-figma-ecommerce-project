@@ -257,16 +257,14 @@ const ProductGrid2 = ({}) => {
       {prod.map((product) => (
         <div
           key={product.id}
-          className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden"
-        >
-          {/* Image */}
+          className="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden" >
+
           <div className="relative p-4">
             {product.tag && (
               <span
                 className={`absolute top-3 left-3 text-xs font-semibold px-2 py-1 rounded text-white ${
                   product.tagColor || "bg-green-600"
-                }`}
-              >
+                }`} >
                 {product.tag} {product.tagnew}
               </span>
             )}
@@ -274,11 +272,9 @@ const ProductGrid2 = ({}) => {
             <img
               src={product.image}
               alt={product.title}
-              className="w-full h-40 object-contain"
-            />
+              className="w-full h-40 object-contain" />
           </div>
 
-          {/* Info */}
           <div className="px-4 pb-4">
             <p className="text-xs text-gray-500 uppercase">
               {product.category}
@@ -288,7 +284,6 @@ const ProductGrid2 = ({}) => {
               {product.title}
             </h3>
 
-            {/* Rating */}
             <div className="flex items-center gap-1 mt-2">
               {[...Array(5)].map((_, i) => (
                 <FaStar
@@ -298,12 +293,10 @@ const ProductGrid2 = ({}) => {
                     i < product.rating
                       ? "text-yellow-400"
                       : "text-gray-300"
-                  }
-                />
+                  }/>
               ))}
             </div>
 
-            {/* Price */}
             <div className="flex items-center justify-between mt-3">
               <div className="flex items-center gap-2">
                 <span className="text-green-600 font-bold text-lg">
@@ -532,56 +525,56 @@ function HomeGrocery () {
 
           <ProductGrid2/>
 
-        <div style={{width: "100%",display:"flex",justifyContent: "center",alignItems: "center",gap: "2rem",flexWrap: "wrap", margin: "4rem 0",}}>
+        <div className="w-full flex flex-col lg:flex-row justify-center items-center gap-6 flex-wrap my-16 px-4">
 
-     <div style={{position: "relative",width: "48%",minWidth: "320px",height: "16rem",borderRadius:"10px",overflow:"hidden",}} >
-    <img src={leftback} alt="Tasty Snacks"
-        style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block" }} />
+  {/* Left Banner */}
+  <div className="relative w-full lg:w-[48%] min-w-[320px] h-64 rounded-xl overflow-hidden">
+    <img
+      src={leftback}
+      alt="Tasty Snacks"
+      className="w-full h-full object-cover"
+    />
 
-    <div style={{position: "absolute",top: "50%",right: "5%",width:"8",transform: "translateY(-50%)",}} >
-      <h2 style={{ marginBottom: "0.5rem" }}>Tasty Snack <br /> & Fastfood</h2>
-      <p style={{ marginBottom: "1rem" }}>The Flavor Of <br /> Something Special</p>
-      <button
-          style={{
-          background: "#45a388",
-          padding: "10px 15px",
-          color: "#eee",
-          borderRadius: "5px",
-          border: "none",
-          cursor: "pointer",
-        }}>
+    <div className="absolute top-1/2 right-5 -translate-y-1/2 text-right">
+      <h2 className="text-xl md:text-2xl font-semibold mb-2">
+        Tasty Snack <br /> & Fastfood
+      </h2>
+
+      <p className="text-sm md:text-base mb-4">
+        The Flavor Of <br /> Something Special
+      </p>
+
+      <button className="bg-[#45a388] hover:bg-[#3b8f7c] transition text-white px-4 py-2 rounded-md text-sm md:text-base">
         Shop Now
       </button>
     </div>
   </div>
-  
-  <div
-    style={{ position: "relative",width: "48%",minWidth: "320px",height: "16rem",borderRadius:"10px",overflow:"hidden", }}>
-    <img src={rightback} alt="Fresh Fruits & Veggies"
-        style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-      }} />
 
-    <div style={{ position:"absolute",top:"50%",right: "5%",width:"8",transform:"translateY(-50%)",}}>
-      <h2 style={{ marginBottom: "0.5rem" }}>Fresh Fruits <br /> & Veggies</h2>
-      <p style={{ marginBottom: "1rem" }}>A Healthy Meal <br /> For Everyone</p>
-      <button style={{
-          background: "#45a388",
-          padding: "10px 15px",
-          color: "#eee",
-          borderRadius: "5px",
-          border: "none",
-          cursor: "pointer", }}> Shop Now </button>
+  {/* Right Banner */}
+  <div className="relative w-full lg:w-[48%] min-w-[320px] h-64 rounded-xl overflow-hidden">
+    <img
+      src={rightback}
+      alt="Fresh Fruits & Veggies"
+      className="w-full h-full object-cover"
+    />
+
+    <div className="absolute top-1/2 right-5 -translate-y-1/2 text-right">
+      <h2 className="text-xl md:text-2xl font-semibold mb-2">
+        Fresh Fruits <br /> & Veggies
+      </h2>
+
+      <p className="text-sm md:text-base mb-4">
+        A Healthy Meal <br /> For Everyone
+      </p>
+
+      <button className="bg-[#45a388] hover:bg-[#3b8f7c] transition text-white px-4 py-2 rounded-md text-sm md:text-base">
+        Shop Now
+      </button>
       </div>
     </div>
-  </div>
+
+      </div>
+
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 my-16 text-center">
   {[
