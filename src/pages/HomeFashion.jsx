@@ -151,30 +151,30 @@ const dayOfDealProducts = [
           <div className="">
 
             <div className="border border-gray-200 rounded-xl bg-white p-4">
-  <div className="flex justify-between items-center mb-3">
-    <h3 className="text-lg font-semibold">Category</h3>
-    <ChevronDown className="w-4 h-4 text-gray-500" />
-  </div>
+          <div className="flex justify-between items-center mb-3">
+        <h3 className="text-lg font-semibold">Category</h3>
+        <ChevronDown className="w-4 h-4 text-gray-500" />
+        </div>
 
-  <div className="space-y-4 text-sm">
-    <div>
-      <h6 className="font-semibold mb-2">Clothes</h6>
-      {[
+        <div className="space-y-4 text-sm">
+        <div>
+        <h6 className="font-semibold mb-2">Clothes</h6>
+        {[
         { name: "men's wear", count: 3 },
         { name: "women's wear", count: 2 },
         { name: "Baby Wear", count: 1 },
-      ].map(item => (
+        ].map(item => (
         <div key={item.name} className="flex justify-between py-1">
           <div className="flex items-center gap-2">
             <span className="w-3.5 h-3.5 border rounded-sm" />
             <span>{item.name}</span>
           </div>
           <span>({item.count})</span>
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
+          </div>
+           ))}
+           </div>
+          </div>
+          </div>
 
             <div className="filter-card">
               <div className="filter-header">
