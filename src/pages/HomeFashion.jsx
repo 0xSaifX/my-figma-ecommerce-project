@@ -364,54 +364,76 @@ const dayOfDealProducts = [
               </div>
             </div>
 
-          <div style={{width: "100%",display:"flex",justifyContent: "center",alignItems: "center",gap: "1rem",flexWrap: "noWrap",}}>
+          <div
+  className="
+    w-full 
+    flex 
+    flex-col 
+    md:flex-row 
+    justify-center 
+    items-center 
+    gap-6 
+    mt-10
+  "
+>
+  {/* Card 1 */}
+  <div
+    className="
+      relative 
+      w-full 
+      md:w-1/2 
+      min-w-[280px] 
+      h-64 
+      rounded-xl 
+      overflow-hidden
+    "
+  >
+    <img
+      src={watch}
+      alt="Wrist watch"
+      className="w-full h-full object-cover"
+    />
 
-         <div style={{position: "relative",width: "48%",minWidth: "300px",height: "16rem",borderRadius:"10px",overflow:"hidden",}} >
-         <img src={watch} alt="Wrist watch"
-          style={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          display: "block" }} />
+    <div className="absolute top-1/2 right-5 -translate-y-1/2 text-right">
+      <h2 className="text-[#43a588] text-xl font-semibold leading-tight mb-2">
+        Digital <br /> Smartwatch
+      </h2>
+      <p className="text-gray-500 mb-4">50% OFF</p>
+      <button className="bg-[#205d8f] text-white px-4 py-2 rounded-md hover:bg-[#184b73] transition">
+        Shop Now
+      </button>
+    </div>
+  </div>
 
-         <div style={{position: "absolute",top: "50%",right: "5%",width:"8",transform: "translateY(-50%)",}} >
-         <h2 style={{ marginBottom: "0.5rem",color:"#43a588" }}>Digital <br />Smartwatch</h2>
-          <p style={{ marginBottom: "1rem",color:"#6b7280" }}> 50% OFF </p>
-         <button
-          style={{
-          background: "#205d8f",
-          padding: "10px 15px",
-          color: "#eee",
-          borderRadius: "5px",
-          border: "none",
-          cursor: "pointer",
-          }}> Shop Now </button>
-        </div>
-       </div>
-  
-       <div
-        style={{ position: "relative",width: "48%",minWidth: "300px",height: "16rem",borderRadius:"10px",overflow:"hidden", }}>
-       <img src={menshoes} alt="shoes"
-        style={{
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        display: "block",
-        }} />
+  {/* Card 2 */}
+  <div
+    className="
+      relative 
+      w-full 
+      md:w-1/2 
+      min-w-[280px] 
+      h-64 
+      rounded-xl 
+      overflow-hidden
+    "
+  >
+    <img
+      src={menshoes}
+      alt="Men's shoes"
+      className="w-full h-full object-cover"
+    />
 
-         <div style={{ position:"absolute",top:"50%",right: "5%",width:"8",transform:"translateY(-50%)",}}>
-         <h2 style={{ marginBottom: "0.5rem",color:"#43a588" }}>Men's Sport <br /> Shoes </h2>
-         <p style={{ marginBottom: "1rem",color:"#6b7280" }}>70% OFF </p>
-         <button style={{
-          background: "#205d8f",
-          padding: "10px 15px",
-          color: "#eee",
-          borderRadius: "5px",
-          border: "none",
-          cursor: "pointer", }}> Shop Now </button>
-         </div>
-        </div>
-       </div>
+    <div className="absolute top-1/2 right-5 -translate-y-1/2 text-right">
+      <h2 className="text-[#43a588] text-xl font-semibold leading-tight mb-2">
+        Men's Sport <br /> Shoes
+      </h2>
+      <p className="text-gray-500 mb-4">70% OFF</p>
+      <button className="bg-[#205d8f] text-white px-4 py-2 rounded-md hover:bg-[#184b73] transition">
+        Shop Now
+      </button>
+    </div>
+  </div>
+</div>
 
           <div className="section">
               <div className="section-header">
