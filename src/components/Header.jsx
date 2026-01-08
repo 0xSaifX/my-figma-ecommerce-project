@@ -50,9 +50,9 @@ const Header = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-4 px-4 py-4">
 
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold">
-          <FaShoppingBag className="text-green-600" />
+          <FaShoppingBag className="text-green-700" />
           <span>
-            <span className="text-green-600">Grab</span>it
+            <span className="text-green-700">Grab</span>it
           </span>
         </Link>
 
@@ -60,7 +60,7 @@ const Header = () => {
           <input
             className="flex-grow border border-gray-300 px-4 py-2 rounded-l-md focus:outline-none"
             placeholder="Search Products..." />
-          <button className="bg-green-600 px-4 text-white rounded-r-md">
+          <button className="bg-green-700 px-4 text-white rounded-r-md">
             <FaSearch />
           </button>
         </div>
@@ -78,7 +78,7 @@ const Header = () => {
         </div>
       </div>
 
-      <nav className="bg-green-600 text-white">
+      <nav className="bg-green-700 text-white">
         <div className="flex items-center justify-center px-4 py-3">
 
           <button
