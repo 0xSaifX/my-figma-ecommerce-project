@@ -341,60 +341,30 @@ const topSelling = [
 ];
 
 const ProductList = ({ title, highlight, items }) => (
-  <div className="flex flex-col gap-4 w-full">
-
-  {/* Header */}
-  <div className="flex items-center justify-between">
-    <h3 className="text-base sm:text-lg font-semibold text-gray-800">
-      {title} <span className="text-green-600">{highlight}</span>
-    </h3>
-
-    <div className="flex gap-1">
-      <button className="border border-gray-300 text-gray-500 px-2 py-1 rounded hover:bg-gray-200 transition">
-        &lt;
-      </button>
-      <button className="border border-gray-300 text-gray-500 px-2 py-1 rounded hover:bg-gray-200 transition">
-        &gt;
-      </button>
-    </div>
-  </div>
-
-  {/* Product Rows */}
-  {items.map((item) => (
-    <div
-      key={item.id}
-      className="flex items-center gap-3 sm:gap-4 border border-gray-200 rounded-lg p-3 hover:shadow-md transition"
-    >
-      {/* Image */}
-      <img
-        src={item.image}
-        alt={item.name}
-        className="w-14 h-14 sm:w-16 sm:h-16 object-contain"
-      />
-
-      {/* Text */}
-      <div className="flex-1">
-        <h4 className="text-sm sm:text-base font-medium text-gray-700 leading-snug">
-          {item.name}
-        </h4>
-
-        <p className="text-xs text-gray-400 mt-1">
-          {item.category}
-        </p>
-
-        <div className="flex items-center gap-2 mt-1 text-sm">
-          <span className="font-semibold text-gray-700">
-            {item.price}
-          </span>
-          <span className="text-gray-400 line-through">
-            {item.oldPrice}
-          </span>
-        </div>
+  <div className="product-column">
+    <div className="product-header">
+      <h3>
+        {title} <span>{highlight}</span>
+      </h3>
+      <div className="nav-icons">
+        <button>{"<"}</button>
+        <button>{">"}</button>
       </div>
     </div>
-  ))}
-
+    {items.map((item) => (
+      <div key={item.id} className="product-row">
+        <img src={item.image} alt={item.name} />
+        <div className="product-text">
+          <h4>{item.name}</h4>
+          <p className="category">{item.category}</p>
+          <div className="price">
+            <span className="new">{item.price}</span>
+            <span className="old">{item.oldPrice}</span>
+          </div>
         </div>
+      </div>
+    ))}
+  </div>
 );
 
 const TopProducts = () => {
