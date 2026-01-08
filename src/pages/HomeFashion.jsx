@@ -594,7 +594,7 @@ const dayOfDealProducts = [
   </div>
           </div>
 
-          <div className="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden rounded-lg">
+          <div className="relative w-full h-64 md:h-72 lg:h-80 overflow-hidden mt-5 sm:mt-20 rounded-lg">
   {/* Background Image */}
   <img
     src={fashion2}
