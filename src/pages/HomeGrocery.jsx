@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaApple, FaBreadSlice, FaCarrot, FaChevronRight, FaGlassWhiskey, FaStar, FaPepperHot, FaSpinner, FaShip, FaTruckMoving, FaHandHoldingMedical, FaCloudflare, FaCommentDollar, FaCloud, FaExclamationCircle, FaCircleNotch, FaChevronLeft, FaCommentMedical } from 'react-icons/fa';
+import { FaChevronRight, FaStar, FaTruckMoving, FaHandHoldingMedical, } from 'react-icons/fa';
 
 
 import background from "../assets/background1.jpg";
@@ -37,7 +37,7 @@ import topsell1 from "../assets/topsell1.jpg";
 import topsell2 from "../assets/topsell2.jpg";
 import topsell3 from "../assets/topsell3.jpg";
 import "../App.css";
-import { CircleDivideIcon, DollarSignIcon, Fan, PersonStandingIcon } from 'lucide-react';
+import { CircleDivideIcon, DollarSignIcon, } from 'lucide-react';
 
 const products = [
   {
@@ -98,8 +98,7 @@ const ProductGrid = () => {
   {products.map((product) => (
     <div
       key={product.id}
-      className="border rounded-xl bg-white shadow-sm hover:scale-105 transition"
-    >
+      className="border rounded-xl bg-white shadow-sm hover:scale-105 transition" >
       <div className="relative bg-gray-50 h-56 flex items-center justify-center p-4">
         {product.tag && (
           <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
@@ -118,7 +117,6 @@ const ProductGrid = () => {
         <p className="text-xs text-gray-400">{product.category}</p>
         <h3 className="font-semibold text-sm text-gray-700">{product.title}</h3>
 
-        {/* Rating */}
         <div className="flex gap-1 mt-1">
           {[...Array(5)].map((_, i) => (
             <FaStar
@@ -129,7 +127,6 @@ const ProductGrid = () => {
           ))}
         </div>
 
-        {/* Price */}
         <div className="flex justify-between items-center mt-2 text-sm">
           <div className="flex gap-2">
             <span className="font-bold">{product.newPrice}</span>
@@ -444,8 +441,7 @@ function HomeGrocery () {
     <div
       key={cat.title}
       className="relative rounded-xl p-4 text-center"
-      style={{ backgroundColor: cat.bgColor }}
-    >
+      style={{ backgroundColor: cat.bgColor }} >
       <img
         src={cat.icon}
         alt={cat.title}
