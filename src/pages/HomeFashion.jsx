@@ -507,7 +507,7 @@ const dayOfDealProducts = [
           </div>
         </div>
 
-        <div style={{display:"flex",width:"100%",alignItems:"center",justifyContent:"center",gap:"2rem",textAlign:"center",marginTop:"3rem"}}>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16 text-center">
         <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",width:"260px",
           justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)",}}>
           <FaTruckMoving color='#5799d0ff' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}}  />
