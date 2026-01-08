@@ -90,7 +90,7 @@ const Header = () => {
 
       {/* Navigation */}
       <nav className="bg-green-600 text-white">
-        <div className="flex items-center justify-between px-4 py-3">
+        <div className="flex items-center justify-center px-4 py-3">
 
           {/* Mobile Toggle */}
           <button
@@ -114,7 +114,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <button className="hidden lg:flex items-center gap-2">
+          <button className="hidden lg:flex items-center ml-20 gap-2">
             <LocationEdit /> New York
           </button>
         </div>
