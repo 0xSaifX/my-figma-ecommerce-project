@@ -86,42 +86,51 @@ const products = [
 const ProductGrid = () => {
   return (
       <div className="product-grid">
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <div className="product-image">
-            {product.tag && (
-              <span className={`badge ${product.tagColor}`}>{product.tag}{product.tagnew} </span>
-            )}
-            <img src={product.image} alt={product.title} />
-          </div>
-
-          <div className="product-info">
-            <p className="category">{product.category}</p>
-            <h3 className="title">{product.title}</h3>
-
-            <div className="rating">
+                  {products.map((product, idx) => (
+                  <div className="bg-gray-100 border rounded-xl overflow-hidden hover:scale-105 transition h-[22rem] flex flex-col">
+        <div className="relative h-52">
+          <img
+            src={product.image}
+            alt={product.title}
+            className="w-full h-full object-cover"
+          />
+      
+          {product.badge && (
+            <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+              {product.badge}
+            </span>
+          )}
+        </div>
+      
+        <div className="p-3 flex flex-col justify-between flex-1">
+          <div>
+            <p className="text-xs text-gray-400">{product.category}</p>
+            <h5 className="text-sm font-semibold text-emerald-600 leading-tight">
+              {product.title}
+            </h5>
+      
+            <div className="flex gap-1 mt-1 text-orange-400">
               {[...Array(5)].map((_, i) => (
                 <FaStar
                   key={i}
-                  size={12}
-                  className={i < product.rating ? "star filled" : "star"}
+                  className={i < product.rating ? "" : "opacity-30"}
                 />
               ))}
             </div>
-
-            <div className="price-section">
-              <div className="price">
-                <span className="new-price">{product.newPrice}</span>
-                <span className="old-price">{product.oldPrice}</span>
-              </div>
-              {product.quantity && (
-                <span className="quantity" style={{fontWeight:"100"}}>{product.quantity}</span>
-              )}
-            </div>
+          </div>
+      
+          <div className="flex gap-2 items-center mt-2">
+            <span className="text-emerald-600 font-semibold">
+              {product.price}
+            </span>
+            <span className="text-xs line-through text-gray-400">
+              {product.originalPrice}
+            </span>
           </div>
         </div>
-      ))}
-    </div>
+                  </div>
+                      ))}
+                    </div>
   );
 };
 
