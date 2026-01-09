@@ -144,58 +144,59 @@ const TrendProducts = () => {
   </div>
 </div>
 
-              <div style={{justifyContent:"center",alignItems:"center",display:"flex",
-                 fontFamily:"poppins",gap:"1rem",width:"100%",background:"#fff",overflow:"hidden",objectFit:"cover", marginTop:"2rem",height:"18rem"}}>
-          
-                    <div style={{textAlign:"center",borderRadius:"5px",alignItems:"center", background:" whiteSmoke",border:"2px", width:"12rem",padding:"15px 15px"}}>
-                     <div className='card-start'>
-                      <button style={{float:"right",background:"#45a388",border:"none",padding:"4px"}}>30%</button>
-                       <img src={cloth} />
-                      <p><b>Clothes</b></p>
-                      <p>320 items</p>
-                     </div>
-                    </div>
-                    <div style={{textAlign:"center",borderRadius:"5px",alignItems:"center", backgroundColor:" whiteSmoke",border:"2px",width:"12rem",padding:"15px 15px",}}>
-                      <div className='card-start'>
-                        <p style={{padding:"10px"}}></p>
-                        <img src={watch} />
-                      <p><b>Watches</b></p>
-                      <p>65 items</p>
-                      </div>
-                    </div>
-                    <div style={{textAlign:"center",borderRadius:"5px",alignItems:"center", backgroundColor:" whiteSmoke",border:"2px",width:"12rem",padding:"15px 15px",}}>
-                     <div className='card-start'> 
-                      <button style={{float:"right",background:"#45a388",border:"none",padding:"4px"}}>15%</button>
-                      <img src={dress} />
-                      <p><b>Dresses</b></p>
-                      <p>548 items</p>
-                      </div>
-                    </div>
-                    <div style={{textAlign:"center",borderRadius:"5px",alignItems:"center", backgroundColor:" whiteSmoke",border:"2px",width:"12rem",padding:"15px 15px",}}>
-                      <div className='card-start'>
-                        <button style={{float:"right",background:"#45a388",border:"none",padding:"4px"}}>10%</button>
-                        <img src={glass} />
-                      <p><b>Glasses</b></p>
-                      <p>48 items</p>
-                      </div>
-                    </div>
-                    <div style={{textAlign:"center",borderRadius:"5px",alignItems:"center", backgroundColor:" whiteSmoke",border:"2px",width:"12rem",padding:"15px 15px",}}>
-                     <div className='card-start'>
-                      <p style={{padding:"10px"}}></p>
-                       <img src={hats}  />
-                      <p><b>Hat & Caps</b></p>
-                      <p>59 items</p>
-                     </div>
-                    </div>
-                    <div style={{textAlign:"center",borderRadius:"5px",alignItems:"center", backgroundColor:" whiteSmoke",border:"2px",width:"12rem",padding:"15px 15px",}}>
-                      <div className='card-start'>
-                        <p style={{padding:"10px"}}></p>
-                       <img src={short}  />
-                      <p><b>Juice & Drinks</b></p>
-                      <p>845 items</p>
-                      </div>
-                    </div>
-              </div>
+              <div className="w-full mt-8 bg-white overflow-hidden">
+  <div className="max-w-7xl mx-auto px-4">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 place-items-center">
+      
+      {/* Card */}
+      <div className="relative w-48 bg-gray-100 rounded-md p-4 text-center">
+        <button className="absolute top-2 right-2 bg-[#45a388] text-white text-xs px-2 py-0.5 rounded">
+          30%
+        </button>
+        <img src={cloth} alt="Clothes" className="mx-auto h-20 object-contain" />
+        <p className="mt-3 font-semibold">Clothes</p>
+        <p className="text-sm text-gray-600">320 items</p>
+      </div>
+
+      <div className="w-48 bg-gray-100 rounded-md p-4 text-center">
+        <img src={watch} alt="Watches" className="mx-auto h-20 object-contain" />
+        <p className="mt-3 font-semibold">Watches</p>
+        <p className="text-sm text-gray-600">65 items</p>
+      </div>
+
+      <div className="relative w-48 bg-gray-100 rounded-md p-4 text-center">
+        <button className="absolute top-2 right-2 bg-[#45a388] text-white text-xs px-2 py-0.5 rounded">
+          15%
+        </button>
+        <img src={dress} alt="Dresses" className="mx-auto h-20 object-contain" />
+        <p className="mt-3 font-semibold">Dresses</p>
+        <p className="text-sm text-gray-600">548 items</p>
+      </div>
+
+      <div className="relative w-48 bg-gray-100 rounded-md p-4 text-center">
+        <button className="absolute top-2 right-2 bg-[#45a388] text-white text-xs px-2 py-0.5 rounded">
+          10%
+        </button>
+        <img src={glass} alt="Glasses" className="mx-auto h-20 object-contain" />
+        <p className="mt-3 font-semibold">Glasses</p>
+        <p className="text-sm text-gray-600">48 items</p>
+      </div>
+
+      <div className="w-48 bg-gray-100 rounded-md p-4 text-center">
+        <img src={hats} alt="Hats & Caps" className="mx-auto h-20 object-contain" />
+        <p className="mt-3 font-semibold">Hat & Caps</p>
+        <p className="text-sm text-gray-600">59 items</p>
+      </div>
+
+      <div className="w-48 bg-gray-100 rounded-md p-4 text-center">
+        <img src={short} alt="Juice & Drinks" className="mx-auto h-20 object-contain" />
+        <p className="mt-3 font-semibold">Juice & Drinks</p>
+        <p className="text-sm text-gray-600">845 items</p>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
            <section style={{margin:"2rem 8rem"}}>
