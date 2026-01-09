@@ -79,33 +79,62 @@ const topSelling = [
   { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: cotton },
 ]; 
 const ProductList = ({ title, highlight, items }) => (
-  <div className="product-column" style={{background:"#f7f7f7"}}>
-    <div className="product-header">
-      <h3>
-        {title} <span>{highlight}</span>
+  <div className="bg-[#f7f7f7] p-4 rounded-md w-full">
+    
+    {/* Header */}
+    <div className="flex items-center justify-between mb-4">
+      <h3 className="text-lg font-semibold text-gray-800">
+        {title} <span className="text-[#45a388]">{highlight}</span>
       </h3>
-      <div className="nav-icons">
-        <button>{"<"}</button>
-        <button>{">"}</button>
+
+      <div className="flex gap-2">
+        <button className="w-8 h-8 flex items-center justify-center border rounded hover:bg-gray-200">
+          {"<"}
+        </button>
+        <button className="w-8 h-8 flex items-center justify-center border rounded hover:bg-gray-200">
+          {">"}
+        </button>
       </div>
     </div>
-    <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr",gap:"2rem"}}>
+
+    {/* Products Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {items.map((item) => (
-      <div key={item.id} className="product-row">
-        <img src={item.image} alt={item.name} />
-        <div className="product-text">
-          <h4>{item.name}</h4>
-          <p className="category">{item.category}</p>
-          <div className="price">
-            <span className="new">{item.price}</span>
-            <span className="old">{item.oldPrice}</span>
+        <div
+          key={item.id}
+          className="flex gap-3 bg-white p-3 rounded-md shadow-sm hover:shadow-md transition"
+        >
+          <img
+            src={item.image}
+            alt={item.name}
+            className="w-20 h-20 object-cover rounded"
+          />
+
+          <div className="flex flex-col justify-between">
+            <div>
+              <h4 className="text-sm font-medium text-gray-800">
+                {item.name}
+              </h4>
+              <p className="text-xs text-gray-500">
+                {item.category}
+              </p>
+            </div>
+
+            <div className="flex gap-2 items-center">
+              <span className="text-sm font-semibold text-[#45a388]">
+                {item.price}
+              </span>
+              <span className="text-xs line-through text-gray-400">
+                {item.oldPrice}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
+      ))}
     </div>
   </div>
 );
+
 const TrendProducts = () => {
   return (
     <div className="top-most" style={{background:"#f7f7f7",display:"flex",justifyContent:"space-between",gap:"1.5rem",flexWrap:"wrap"}}>
