@@ -335,8 +335,8 @@ const topRated = [
 ];
 
 const topSelling = [
-  { id: 1, name: "Lemon - Seedless", category: "Vegetables", price: "$45.00", oldPrice: "$42.00", image: topsell1 },
-  { id: 2, name: "Mango - Kesar", category: "Fruits", price: "$65.00", oldPrice: "$62.00", image: topsell2 },
+  { id: 1, name: "Lemon - Seedless Natural", category: "Vegetables", price: "$45.00", oldPrice: "$42.00", image: topsell1 },
+  { id: 2, name: "Mango - Kesar Natural", category: "Fruits", price: "$65.00", oldPrice: "$62.00", image: topsell2 },
   { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: topsell3 },
 ];
 
