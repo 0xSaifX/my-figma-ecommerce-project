@@ -120,45 +120,29 @@ const TrendProducts = () => {
       <div>
         <div style={{background:"#f7f7f7"}}> 
 
-              <div 
-                style={{
-                position: "relative",
-                width: "100%",
-                height: "70%",
-                background:"transparent",
-                overflow: "hidden",
-                marginBottom:"3rem"
-                }}>
-                <img src={back1} 
-                  style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  display: "block",
-                  }}  />
-                  <div className="back-text" 
-                  style={{
-                  width:"20rem",
-                  position: "absolute",
-                  top: "50%",
-                  left: "5%",
-                  transform: "translateY(-50%)",
-                  textAlign: "left",
-                  }} >
-                  <p style={{lineHeight:"2.5",color:"#45a388"}}>Starting at $ 29.99</p>
-                  <h1 style={{color:"#eee"}}>Explore glasses <br /> sale for Women's</h1>
-                  <button 
-                   style={{
-                   background: "#5d5d5eff",
-                   padding: "10px 15px",
-                   marginTop: "1rem",
-                   color: "#eee",
-                   borderRadius: "5px",
-                   border: "none",
-                   cursor: "pointer",
-                   }} >Shop Now {">>"}</button>
-                </div>
-              </div>
+              <div className="relative w-full h-[60vh] sm:h-[70vh] overflow-hidden mb-12">
+  {/* Background Image */}
+  <img
+    src={back1}
+    alt="Glasses sale"
+    className="w-full h-full object-cover"
+  />
+
+  {/* Text Overlay */}
+  <div className="absolute top-1/2 left-4 sm:left-10 -translate-y-1/2 max-w-xs sm:max-w-sm text-left">
+    <p className="text-[#45a388] text-sm sm:text-base leading-relaxed">
+      Starting at $ 29.99
+    </p>
+
+    <h1 className="mt-2 text-xl sm:text-3xl lg:text-4xl font-semibold text-gray-100 leading-snug">
+      Explore glasses <br /> sale for Women&apos;s
+    </h1>
+
+    <button className="mt-5 inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-gray-100 px-5 py-2 rounded-md transition duration-300">
+      Shop Now <span>{">>"}</span>
+    </button>
+  </div>
+</div>
 
               <div style={{justifyContent:"center",alignItems:"center",display:"flex",
                  fontFamily:"poppins",gap:"1rem",width:"100%",background:"#fff",overflow:"hidden",objectFit:"cover", marginTop:"2rem",height:"18rem"}}>
