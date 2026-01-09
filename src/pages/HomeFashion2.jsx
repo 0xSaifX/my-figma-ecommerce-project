@@ -78,6 +78,7 @@ const topSelling = [
   { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: perfume },
   { id: 3, name: "Mixed Nuts & Almonds Dry Fruits", category: "Driedfruit", price: "$11.00", oldPrice: "$10.00", image: cotton },
 ]; 
+
 const ProductList = ({ title, highlight, items }) => (
   <div className="bg-[#f7f7f7] p-4 rounded-md w-full">
     
