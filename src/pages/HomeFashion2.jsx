@@ -492,10 +492,6 @@ const TrendProducts = () => {
   </div>
 </section>
 
-      <div style={{height:"10px", width:"100%",background:"#f7f7f7"}}>
-
-      </div>
-
       </div>
     </div>
   )
