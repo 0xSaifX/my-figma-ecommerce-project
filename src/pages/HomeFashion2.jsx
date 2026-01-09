@@ -98,7 +98,7 @@ const ProductList = ({ title, highlight, items }) => (
     </div>
 
     {/* Products Grid */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
       {items.map((item) => (
         <div
           key={item.id}
@@ -138,7 +138,7 @@ const ProductList = ({ title, highlight, items }) => (
 const TrendProducts = () => {
   return (
     <section className="bg-[#f7f7f7] px-4 sm:px-6 lg:px-12 py-8">
-      <div className="grid grid-col-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-col-1 sm:grid-cols-3 lg:grid-cols-4 gap-6">
         <ProductList title="Trending" highlight="Items" items={trending} />
         <ProductList title="Top" highlight="Rated" items={topRated} />
         <ProductList title="Top" highlight="Selling" items={topSelling} />
