@@ -34,15 +34,15 @@ const Header = () => {
 
       <div className="hidden md:flex justify-between items-center bg-gray-100 text-sm px-6 py-2">
         <div className="flex gap-4">
-          <span className="flex items-center gap-1"><FaPhoneAlt /> +91 987 654 3210</span>
-          <span className="flex items-center gap-1"><FaWhatsapp /> +91 987 654 3210</span>
+          <span className="flex items-center gap-1 hover:text-green-400 cursor-pointer"><FaPhoneAlt /> +91 987 654 3210</span>
+          <span className="flex items-center gap-1 hover:text-green-400 cursor-pointer"><FaWhatsapp /> +91 987 654 3210</span>
         </div>
         <p>World's Fastest Online Shopping Destination</p>
         <div className="flex gap-4">
           <span className="hover:text-green-400 cursor-pointer">Help?</span>
           <span className="hover:text-green-400 cursor-pointer">Track Order?</span>
-          <span className="flex items-center gap-1">English <FaChevronDown /></span>
-          <span className="flex items-center gap-1">Dollar <FaChevronDown /></span>
+          <span className="flex items-center gap-1 hover:text-green-400 cursor-pointer">English <FaChevronDown /></span>
+          <span className="flex items-center gap-1 hover:text-green-400 cursor-pointer">Dollar <FaChevronDown /></span>
         </div>
       </div>
 
