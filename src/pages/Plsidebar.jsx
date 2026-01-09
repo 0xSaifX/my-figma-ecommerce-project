@@ -580,9 +580,6 @@ const ProductGrid = () => {
 
 </main>
 
-
-
-
     </div>
     <section>
         <div style={{textAlign:"center",justifyContent:"center",marginTop:"5rem"}}>
