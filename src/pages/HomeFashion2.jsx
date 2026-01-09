@@ -368,30 +368,47 @@ const TrendProducts = () => {
 
 </section>
 
-        <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr ",width:"100%",alignItems:"center",background:"#fff", 
-         padding:"2rem 8rem",alignItems:"center", justifyContent:"center",gap:"1rem",textAlign:"center"}}>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)",}}>
-          <FaTruckMoving color='#45a388' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}}  />
-          <h4 style={{lineHeight:"1.5"}}>Free Shipping</h4>
-           <p style={{fontSize:"0.75rem"}}>Free shipping on all US order or order above $200</p>
-        </div>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
-          <FaHandHoldingMedical color='#45a388' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
-          <h4 style={{lineHeight:"1.5"}}>24X7 Support</h4>
-          <p style={{fontSize:"0.75rem"}}>Contact us 24 hours a day, 7 days a week </p>
-        </div>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
-          <CircleDivideIcon color='#45a388' style={{marginBottom:"0.5rem", width:"3rem",height:"2rem"}} /> 
-          <h4 style={{lineHeight:"1.5"}}>30 Days Return</h4>
-          <p style={{fontSize:"0.75rem"}}>Simply return it within 30 days for an exchange </p>
-        </div>
-        <div style={{border:"1px solid #e5e7eb",borderRadius:"5px",height:"10rem",alignContent:"center",justifyItems:"center",alignItems:"center",transition:"box-shadow 0.5s ease",boxShadow:"0 2px 6px rgba(0, 0, 0, 0.1)"}}>
-          <DollarSignIcon color='#45a388' style={{marginBottom:"0.5rem", width:"25px",height:"2rem"}} /> 
-          <h4 style={{lineHeight:"1.5"}}>Payment Secure</h4>
-          <p style={{fontSize:"0.75rem"}}>Contact us 24 hours a day, 7 days a week </p>
-        </div>
-      </div>
+              <div className="w-full bg-white px-4 sm:px-6 lg:px-20 py-8">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
 
+    {/* Free Shipping */}
+    <div className="border border-gray-200 rounded-md h-40 flex flex-col items-center justify-center shadow-sm transition-shadow duration-300 hover:shadow-md">
+      <FaTruckMoving className="text-[#45a388] w-10 h-8 mb-2" />
+      <h4 className="font-medium leading-snug">Free Shipping</h4>
+      <p className="text-xs text-gray-600 px-4">
+        Free shipping on all US order or order above $200
+      </p>
+    </div>
+
+    {/* Support */}
+    <div className="border border-gray-200 rounded-md h-40 flex flex-col items-center justify-center shadow-sm transition-shadow duration-300 hover:shadow-md">
+      <FaHandHoldingMedical className="text-[#45a388] w-10 h-8 mb-2" />
+      <h4 className="font-medium leading-snug">24X7 Support</h4>
+      <p className="text-xs text-gray-600 px-4">
+        Contact us 24 hours a day, 7 days a week
+      </p>
+    </div>
+
+    {/* Return */}
+    <div className="border border-gray-200 rounded-md h-40 flex flex-col items-center justify-center shadow-sm transition-shadow duration-300 hover:shadow-md">
+      <CircleDivideIcon className="text-[#45a388] w-10 h-8 mb-2" />
+      <h4 className="font-medium leading-snug">30 Days Return</h4>
+      <p className="text-xs text-gray-600 px-4">
+        Simply return it within 30 days for an exchange
+      </p>
+    </div>
+
+    {/* Payment */}
+    <div className="border border-gray-200 rounded-md h-40 flex flex-col items-center justify-center shadow-sm transition-shadow duration-300 hover:shadow-md">
+      <DollarSignIcon className="text-[#45a388] w-8 h-8 mb-2" />
+      <h4 className="font-medium leading-snug">Payment Secure</h4>
+      <p className="text-xs text-gray-600 px-4">
+        Contact us 24 hours a day, 7 days a week
+      </p>
+    </div>
+
+  </div>
+</div>
 
       <div style={{margin:"2rem 5rem",justifyContent:"center",alignItems:"center"}}>
         <TrendProducts/>
