@@ -66,13 +66,13 @@ const Header = () => {
 
         <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-2 cursor-pointer">
-            <FaUser /> <span>Account</span>
+            <FaUser className="text-green-600" /> <span>Account</span>
           </div>
           <div className="flex items-center gap-2 cursor-pointer">
-            <FaHeart /> <span>Wishlist</span>
+            <FaHeart className="text-green-600" /> <span>Wishlist</span>
           </div>
           <div className="flex items-center gap-2 cursor-pointer">
-            <FaShoppingBag /> <span>Cart</span>
+            <FaShoppingBag className="text-green-600" /> <span>Cart</span>
           </div>
         </div>
       </div>
