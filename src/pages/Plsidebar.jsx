@@ -273,7 +273,7 @@ const ProductGrid = () => {
 </div>
 
       {/* Main content */}
-      <main className="main-content">
+      {/* <main className="main-content">
         <div className="top-section">
           <div className="image-section">
             <img
@@ -403,7 +403,175 @@ const ProductGrid = () => {
           </p>
         </div>
 
-      </main>
+      </main> */}
+
+<main className="max-w-7xl mx-auto px-4 py-6">
+
+  {/* TOP SECTION */}
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+    {/* IMAGE SECTION */}
+    <div>
+      <img
+        src={productImages[selectedImage]}
+        alt="Product"
+        className="w-full h-[350px] md:h-[420px] object-cover rounded-lg"
+      />
+
+      <div className="flex items-center justify-center gap-3 mt-4">
+        <FaChevronLeft className="cursor-pointer text-gray-500" />
+
+        {productImages.map((img, index) => (
+          <img
+            key={index}
+            src={img}
+            alt="thumb"
+            onClick={() => setSelectedImage(index)}
+            className={`w-16 h-16 object-cover rounded cursor-pointer border 
+              ${selectedImage === index ? "border-green-600" : "border-gray-300"}`}
+          />
+        ))}
+
+        <FaChevronRight className="cursor-pointer text-gray-500" />
+      </div>
+    </div>
+
+    {/* INFO SECTION */}
+    <div>
+      <h2 className="text-xl md:text-2xl font-semibold">
+        Potato Chips 52g, American Cream & Onion Flavour, Crunchy Chips & Snacks.
+      </h2>
+
+      {/* RATING */}
+      <div className="flex items-center gap-2 my-4">
+        {[...Array(5)].map((_, i) => (
+          <FaStar
+            key={i}
+            className={i < 4 ? "text-yellow-500" : "text-gray-300"}
+          />
+        ))}
+        <span className="text-sm text-gray-500">| 982 Ratings</span>
+      </div>
+
+      {/* PRICE */}
+      <div className="flex flex-wrap items-center gap-4">
+        <span className="text-2xl font-bold text-green-600">$664.00</span>
+        <span className="text-red-500 font-semibold">-78%</span>
+        <span className="text-sm font-semibold">SKU#: WH12</span>
+      </div>
+
+      <div className="flex items-center gap-4 mt-2">
+        <span className="line-through text-gray-400">$2,999.00</span>
+        <span className="text-green-600 font-medium">| IN STOCK</span>
+      </div>
+
+      {/* DESCRIPTION */}
+      <p className="text-sm text-gray-600 my-4">
+        Lorem ipsum dolor sit, voluptas quae, qui provident natus deserunt illo minus sequi,
+        impedit fuga lab cupiditate amet dolorem nihil odit.
+      </p>
+
+      <ul className="text-sm space-y-2">
+        <li>Closure: Hook & Loop</li>
+        <li>Sole: Polyvinyl Chloride</li>
+        <li>Width: Medium</li>
+        <li>Outer Material: A-Grade Standard Quality</li>
+      </ul>
+
+      {/* WEIGHT */}
+      <h3 className="font-semibold mt-4">Weight</h3>
+      <div className="flex flex-wrap gap-2 mt-2">
+        {["250g", "500g", "1kg", "2kg"].map((w, i) => (
+          <button
+            key={i}
+            className={`px-4 py-1 rounded border 
+              ${i === 0 ? "bg-green-600 text-white" : "bg-white"}`}
+          >
+            {w}
+          </button>
+        ))}
+      </div>
+
+      {/* BUY SECTION */}
+      <div className="flex flex-wrap items-center gap-3 mt-6">
+
+        <div className="flex items-center border rounded">
+          <button
+            className="px-3 py-1"
+            onClick={() => setQuantity(Math.max(1, quantity - 1))}
+          >-</button>
+
+          <span className="px-4">{quantity}</span>
+
+          <button
+            className="px-3 py-1"
+            onClick={() => setQuantity(quantity + 1)}
+          >+</button>
+        </div>
+
+        <button className="bg-green-600 text-white px-6 py-2 rounded text-sm">
+          Add to Cart
+        </button>
+
+        <button className="p-2 bg-gray-100 rounded">
+          <FaHeart />
+        </button>
+
+        <button className="p-2 bg-gray-100 rounded">
+          <FaEye />
+        </button>
+      </div>
+    </div>
+  </div>
+
+  {/* RELATED PRODUCTS */}
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 my-10">
+    {relatedProducts.map((item) => (
+      <div key={item.id} className="bg-gray-100 p-4 rounded">
+        <img src={item.img} alt={item.title} className="h-40 w-full object-cover rounded" />
+        <h4 className="mt-2 font-medium">{item.title}</h4>
+        <p className="text-sm text-gray-500">{item.category}</p>
+
+        <div className="flex gap-1 my-1">
+          {[...Array(5)].map((_, i) => (
+            <FaStar key={i} className={i < item.rating ? "text-red-500" : "text-gray-300"} />
+          ))}
+        </div>
+
+        <div className="flex gap-3">
+          <span className="text-green-600 font-semibold">{item.price}</span>
+          <span className="line-through text-gray-400">{item.oldPrice}</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {/* TABS */}
+  <div className="flex flex-wrap gap-3 mb-4">
+    {["Details", "Specifications", "Vendor", "Reviews"].map((tab, i) => (
+      <button
+        key={i}
+        className={`px-4 py-2 rounded border 
+          ${i === 0 ? "bg-green-600 text-white" : "bg-white"}`}
+      >
+        {tab}
+      </button>
+    ))}
+  </div>
+
+  {/* TAB CONTENT */}
+  <div className="text-sm text-gray-600 space-y-3">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+    <ul className="list-disc ml-5">
+      <li>Any product types you want</li>
+      <li>Downloadable/Digital products</li>
+      <li>Inventory management</li>
+      <li>Flatlock seams throughout</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+  </div>
+
+</main>
 
 
 
