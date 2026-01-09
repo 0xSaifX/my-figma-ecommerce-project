@@ -4,51 +4,6 @@ import shirt from "../assets/menshirt3.jpg";
 import berry from "../assets/berry.jpg";
 import { FaStar } from "react-icons/fa";
 
- const tableStyle = {
-    width: "100%",
-    borderCollapse: "collapse",
-    fontFamily: "Arial, sans-serif",
-    marginTop: "40px",
-  };
-  const leftHeaderStyle = {
-    width: "200px",
-    background: "#fafafa",
-    fontWeight: "bold",
-    padding: "15px",
-    border: "1px solid #eee",
-  };
-  const cellStyle = {
-    padding: "15px",
-    color:"#7e7b6b",
-    border: "1px solid #eee",
-    textAlign: "left",
-    fontSize: "11px",
-    lineHeight: "1.5"
-  };
-  const productImgContainer = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "200px",
-  };
-  const productImg = {
-    maxWidth: "140px",
-    height: "auto",
-    objectFit: "cover",
-    width: "100%",height:"100%"
-  };
-  const removeIcon = {
-    position: "absolute",
-    right: "15px",
-    top: "10px",
-    cursor: "pointer",
-    fontSize: "20px",
-  };
-
-  const greenText = { color: "green" };
-  const redText = { color: "red" };
-  const star = { color: "#f6a700", marginRight: "2px" };
-
 
 function Compare() {
   return (
@@ -56,7 +11,7 @@ function Compare() {
       <div className="overflow-x-auto">
         <table className="min-w-[900px] w-full border border-gray-200 text-sm">
           <tbody>
-            {/* Product Images */}
+
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-4 sticky left-0 z-10">
                 Product Image
@@ -76,7 +31,6 @@ function Compare() {
               ))}
             </tr>
 
-            {/* Name */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Name
@@ -86,7 +40,6 @@ function Compare() {
               <td className="p-4 border">Blue berry</td>
             </tr>
 
-            {/* Category */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Category
@@ -96,7 +49,6 @@ function Compare() {
               <td className="p-4 border">Fresh Fruits</td>
             </tr>
 
-            {/* Ratings */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Ratings
@@ -114,7 +66,6 @@ function Compare() {
               ))}
             </tr>
 
-            {/* Availability */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Availability
@@ -130,7 +81,6 @@ function Compare() {
               </td>
             </tr>
 
-            {/* Location */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Location
@@ -140,7 +90,6 @@ function Compare() {
               <td className="p-4 border">Online</td>
             </tr>
 
-            {/* Brand */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Brand
@@ -150,7 +99,6 @@ function Compare() {
               <td className="p-4 border">Bhisma Organice</td>
             </tr>
 
-            {/* SKU */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 SKU
@@ -160,7 +108,6 @@ function Compare() {
               <td className="p-4 border">23456</td>
             </tr>
 
-            {/* Quantity */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Quantity
@@ -170,7 +117,6 @@ function Compare() {
               <td className="p-4 border">1 Pack</td>
             </tr>
 
-            {/* Weight */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Weight
@@ -180,7 +126,6 @@ function Compare() {
               <td className="p-4 border">500 g</td>
             </tr>
 
-            {/* Description */}
             <tr>
               <td className="bg-gray-100 font-semibold px-4 py-3 sticky left-0 z-10">
                 Description
@@ -198,6 +143,5 @@ function Compare() {
     </div>
   );
 }
-
 
 export default Compare;

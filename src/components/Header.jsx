@@ -21,7 +21,7 @@ const navLinks = [
   { name: "Abt", path: "/aboutUs" },
   { name: "Cart", path: "/cart" },
   { name: "Odr", path: "/orders" },
-  { name: "Cmp", path: "/compare" },
+  { name: "Compare", path: "/compare" },
   { name: "FAQ", path: "/faq" },
   { name: "Login", path: "/login" },
 ];
