@@ -582,10 +582,14 @@ const ProductGrid = () => {
 
     </div>
     <section>
-        <div style={{textAlign:"center",justifyContent:"center",marginTop:"5rem"}}>
-            <h2 style={{margin:"1rem"}}>Related <span className="green">Products</span> </h2>
-            <p>Browse The Collection of Top Products</p>
-        </div>
+        <div className="flex flex-col items-center text-center mt-16 px-4">
+  <h2 className="text-2xl sm:text-3xl font-semibold mb-4">
+    Related <span className="text-green-500">Products</span>
+  </h2>
+  <p className="text-gray-600 text-sm sm:text-base">
+    Browse The Collection of Top Products
+  </p>
+</div>
         <ProductGrid products={products} />
     </section>
 
