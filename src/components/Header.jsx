@@ -16,7 +16,6 @@ const navLinks = [
   { name: "Grocery", path: "/homeGrocery" },
   { name: "Fashion", path: "/homeFashion" },
   { name: "Fashion2", path: "/homeFashion2" },
-  { name: "Sb", path: "/leftSidebar" },
   { name: "Product", path: "/plsidebar" },
   { name: "Chk", path: "/checkout" },
   { name: "Abt", path: "/aboutUs" },
