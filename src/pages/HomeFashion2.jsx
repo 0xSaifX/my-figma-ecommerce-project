@@ -35,12 +35,6 @@ import last4 from "../assets/last4.jpg";
 import last5 from "../assets/last5.jpg";
 
 
-
-
-
-
-
-
 function HomeFashion2 () {
 
 const dayOfDealProducts = [
