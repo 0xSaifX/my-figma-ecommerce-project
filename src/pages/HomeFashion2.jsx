@@ -449,43 +449,53 @@ const TrendProducts = () => {
       </div>
       </div>
       
-      <div style={{background:"#fff",padding:"1rem 8rem",marginBottom:"5rem",margin:"3rem 0rem"}}>
-             <div style={{display:"flex",gap:"29rem",margin:"2rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
-                <span>
-                  <h2>Latest <span className='green'>Blog</span></h2>
-                  <p>We tackle interesting topics every day in 2023.</p>
-                </span>
-                <span style={{cursor:"pointer"}}>All Blogs {">>"} </span>
-              </div>
-      
-              <div className='last-sect' style={{alignContent:"center"}}>
-                <div className='last-text'>
-                  <img src={last1} alt="" />
-                  <h4 style={{fontSize:"0.65rem"}}>Marketing Guide: 5 Steps to Success to way.</h4>
-                  <p style={{cursor:"pointer"}}>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last2} alt="" />
-                  <h4 style={{fontSize:"0.65rem"}}>Best way to solve business deal issue in market.</h4>
-                  <p style={{cursor:"pointer"}}>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last3} alt="" />
-                  <h4 style={{fontSize:"0.65rem"}}>31 grocery customer service stats know in 2019.</h4>
-                  <p style={{cursor:"pointer"}}>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last4} alt="" />
-                  <h4 style={{fontSize:"0.65rem"}}>Business ideas to grow your business traffic.</h4>
-                  <p style={{cursor:"pointer"}}>Read More {">>"} </p>
-                </div>
-                <div className='last-text'>
-                  <img src={last5} alt="" />
-                  <h4 style={{fontSize:"0.65rem"}}>Marketing Guide: 5 Steps to Success to way.</h4>
-                  <p style={{cursor:"pointer"}}>Read More {">>"} </p>
-                </div>
-              </div>
+      <section className="bg-white py-12">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    {/* Header */}
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
+      <div>
+        <h2 className="text-2xl font-semibold text-gray-800">
+          Latest <span className="text-[#45a388]">Blog</span>
+        </h2>
+        <p className="text-sm text-gray-500">
+          We tackle interesting topics every day in 2023.
+        </p>
       </div>
+
+      <button className="text-sm font-medium text-gray-700 hover:text-[#45a388] transition">
+        All Blogs &gt;&gt;
+      </button>
+    </div>
+
+    {/* Blog Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+
+      {/* Blog Card */}
+      {[last1, last2, last3, last4, last5].map((img, i) => (
+        <div
+          key={i}
+          className="bg-white rounded-md shadow-sm hover:shadow-md transition p-2 text-center"
+        >
+          <img
+            src={img}
+            alt=""
+            className="w-full h-36 object-cover rounded"
+          />
+
+          <h4 className="text-xs font-medium text-gray-800 mt-3 leading-snug">
+            Marketing Guide: 5 Steps to Success to way.
+          </h4>
+
+          <button className="mt-2 text-xs text-[#45a388] hover:underline">
+            Read More &gt;&gt;
+          </button>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
 
       <div style={{height:"10px", width:"100%",background:"#f7f7f7"}}>
 
