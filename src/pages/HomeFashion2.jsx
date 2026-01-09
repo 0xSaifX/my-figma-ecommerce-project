@@ -198,7 +198,6 @@ const TrendProducts = () => {
   </div>
 </div>
 
-
            <section style={{margin:"2rem 8rem"}}>
 
              <div className="section">
