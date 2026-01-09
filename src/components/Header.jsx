@@ -20,7 +20,7 @@ const navLinks = [
   { name: "Chk", path: "/checkout" },
   { name: "Abt", path: "/aboutUs" },
   { name: "Cart", path: "/cart" },
-  { name: "Odr", path: "/orders" },
+  { name: "Order", path: "/orders" },
   { name: "Compare", path: "/compare" },
   { name: "FAQ", path: "/faq" },
   { name: "Login", path: "/login" },
