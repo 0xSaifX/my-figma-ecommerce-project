@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import login from "../assets/Login.png";
 
 function LoginForm() {
@@ -22,83 +21,90 @@ function LoginForm() {
   }
 
   return (
-    <div>
-      <div style={{margin:"2rem 4rem"}}>
+    <section className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+      <div className="max-w-5xl w-full bg-white rounded-lg shadow-md p-6 md:p-10">
 
-       <div style={{textAlign:"center"}}>
-         <h2 style={{fontWeight:"600",
-            marginBottom:"1rem",fontSize:"2rem"}}>Login</h2>
-      <p>Get access to your Orders, Wishlist and Recommendations.</p>
-       </div>
-    <div 
-        style={{display:"flex",justifyContent:"center",
-        gap:"2rem",margin:"2rem 4rem",justifySelf:"center",width:"280px"
-      }}>
-        <div style={styles.container}>
-      <form onSubmit={handleSubmit}>
-        <span><b>Email Address *</b></span>
-        <input
-          type="text"
-          name="username"
-          placeholder="Enter your email add..."
-          value={formData.username}
-          onChange={handleChange}
-          style={styles.input}
-        />
-        <span><b>Password *</b></span>
-        <input
-          type="password"
-          name="password"
-          placeholder="Enter your password"
-          value={formData.password}
-          onChange={handleChange}
-          style={styles.input}/>
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-2">Login</h2>
+          <p className="text-sm text-gray-600">
+            Get access to your Orders, Wishlist and Recommendations.
+          </p>
+        </div>
 
-            <a href="www.grabitStore.com"
-              style={{textDecoration:"none",
-                color:"#333",float:"right"
-              }}>
-                Forgot Password?
-            </a>
-            <span style={{display:"flex",
-              justifyContent:"space-between",
-              marginTop:"3rem"}}>
-                <span><a href="www.grabitStore.com"
-                style={{textDecoration:"none",
-                color:"#333"
-                }}>Create Account</a></span>
-                <button className="add-btn">Login</button>
-            </span>
-      </form>
+        {/* Content */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8">
 
-    </div>
+          {/* Form */}
+          <div className="w-full max-w-sm">
+            <form
+              onSubmit={handleSubmit}
+              className="border border-gray-200 rounded-md p-6"
+            >
+              <label className="text-sm font-medium text-gray-700">
+                Email Address *
+              </label>
+              <input
+                type="email"
+                name="username"
+                placeholder="Enter your email address"
+                value={formData.username}
+                onChange={handleChange}
+                className="w-full mt-2 mb-4 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#45a388]"
+              />
 
-     <div>
-        <img src={login} 
-          style={{width:"19rem",marginTop:"2.5rem",
-          height:"16.5rem",borderRadius:"5px"}} />
-    </div>
-    </div>
+              <label className="text-sm font-medium text-gray-700">
+                Password *
+              </label>
+              <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full mt-2 mb-2 px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-[#45a388]"
+              />
 
+              <div className="text-right mb-6">
+                <a
+                  href="#"
+                  className="text-sm text-gray-600 hover:text-[#45a388]"
+                >
+                  Forgot Password?
+                </a>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <a
+                  href="#"
+                  className="text-sm text-gray-600 hover:text-[#45a388]"
+                >
+                  Create Account
+                </a>
+
+                <button
+                  type="submit"
+                  className="bg-[#45a388] text-white px-5 py-2 rounded-md hover:bg-[#3b8f76] transition"
+                >
+                  Login
+                </button>
+              </div>
+            </form>
+          </div>
+
+          {/* Image */}
+          <div className="hidden md:block">
+            <img
+              src={login}
+              alt="Login illustration"
+              className="w-72 h-auto rounded-md"
+            />
+          </div>
+
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
-
-const styles = {
-  container: { marginTop: "40px",
-    border: "1px solid #ddd",
-    padding: "20px",
-    borderRadius:"",
-    alignContent: "center"  },
-  input: {
-    display: "block",
-    margin: "10px auto",
-    padding: "10px",
-    border: "1px solid #ddd",
-    width: "280px",
-    borderRadius: "5px",
-  },
-};
 
 export default LoginForm;
