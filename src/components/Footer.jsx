@@ -17,7 +17,7 @@ const Footer = () => {
 
         <div>
           <h2 className="text-xl font-bold text-green-700 flex items-center gap-2">
-            <FaShoppingBag className="text-green-700"/> Grabit
+            <FaShoppingBag className="text-green-700"/> Grab<span className="text-white">it</span>
           </h2>
           <p className="mt-4 text-sm">
             Biggest grocery marketplace. Get your daily needs.
