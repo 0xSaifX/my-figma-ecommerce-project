@@ -134,7 +134,7 @@ const ProductGrid = () => {
 };
 
   return (
-    <main style={{margin:"2rem 6rem"}}>
+    <section style={{margin:"2rem 6rem"}}>
         <div className="product-page">
       {/* Sidebar */}
 <div className="w-full lg:w-[260px]">
@@ -597,7 +597,7 @@ const ProductGrid = () => {
         <ProductGrid products={products} />
     </section>
 
-    </main>
+    </section>
   );
 }
 
