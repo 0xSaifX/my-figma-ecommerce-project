@@ -134,8 +134,8 @@ const ProductGrid = () => {
 };
 
   return (
-    <section style={{margin:"2rem 6rem"}}>
-        <div className="product-page">
+<section className="w-full px-4 sm:px-6 lg:px-12 xl:px-24 py-8">
+  <div className="flex flex-col lg:flex-row gap-6">
       {/* Sidebar */}
 <div className="w-full lg:w-[260px]">
 
