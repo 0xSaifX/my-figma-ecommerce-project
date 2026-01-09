@@ -36,7 +36,7 @@ import toprated3 from "../assets/toprated3.jpg";
 import topsell1 from "../assets/topsell1.jpg";
 import topsell2 from "../assets/topsell2.jpg";
 import topsell3 from "../assets/topsell3.jpg";
-// import "../App.css";
+import "../App.css";
 import { CircleDivideIcon, DollarSignIcon, Fan, PersonStandingIcon } from 'lucide-react';
 
 const products = [
