@@ -31,128 +31,139 @@ const order =[
 ]
 
 function Orders() {
-    return(
-    <div style={{display:"block",gap:"0rem",padding:"0 auto",
-        margin:"0 auto"
-    }}>
-      <div className="wishlist-container">
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-12 space-y-10">
 
-        <div className="wishlist-header">
-        <h1>
-          Product <span className="highlight">Order List</span>
+      {/* Header */}
+      <div className="text-center space-y-2">
+        <h1 className="text-3xl font-bold">
+          Product <span className="text-green-600">Order List</span>
         </h1>
-        <p>Your product Order is our first priority.</p>
-        </div>
-
-        <div className="wishlist-card">
-            <div className="wishlist-title-row">
-          <h2>PENDING ORDERS</h2>
-          <button className="shop-btn"
-          onClick={() => {
-            document.getElementById("my-product").scrollIntoView({behavior:"smooth"});
-          }}>Shop Now</button>
-        </div>
-
-        <table className="wishlist-table">
-          <thead>
-            <tr>
-              <th>Orders ID</th>
-              <th>Shipping</th>
-              <th>Quantity</th>
-              <th>Date</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {wishitem.map((item) => (
-              <tr key={item.id}>
-                <td>{item.orderID}</td>
-                <td>
-                 {item.shipping}
-                </td>
-                <td>{item.quantity}</td>
-                <td>{item.date}</td>
-                <td>{item.price}</td>
-                <td
-                  className={
-                    item.status === "Pending"
-                      ? "Pending"
-                      : "Completed"
-                  }
-                >
-                  {item.status}
-                </td>
-                <td>
-                  <div className="action-buttons">
-                    <button className="delete-btn"
-                    style={{background:"#45a388"}}> View </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-            <tr style={{height:"2rem"}}><hr style={{color:"#ddd",width:"100%"}} /></tr>
-          </tbody>
-        </table>
-        </div>
-
+        <p className="text-gray-500">
+          Your product order is our first priority.
+        </p>
       </div>
 
-       <div className="wishlist-container"
-       style={{marginTop:"2rem"}}>
-        <div className="wishlist-card">
-          <div className="wishlist-title-row">
-          <h2>COMPLETED ORDERS</h2>
-          </div>
-
-        <table className="wishlist-table">
-          <thead>
-            <tr>
-              <th>Orders ID</th>
-              <th>Shipping</th>
-              <th>Quantity</th>
-              <th>Date</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            {order.map((item) => (
-              <tr key={item.id}>
-                <td>{item.ordersID}</td>
-                <td>
-                 {item.shipping}
-                </td>
-                <td>{item.quantity}</td>
-                <td>{item.date}</td>
-                <td>{item.price}</td>
-                <td
-                  className={
-                    item.status === "Pending"
-                      ? "Pending"
-                      : "Completed"
-                  }
-                >
-                  {item.status}
-                </td>
-                <td>
-                  <div className="action-buttons">
-                    <button className="delete-btn"
-                    style={{background:"#45a388"}}> View </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-            <tr style={{height:"2rem"}}><hr style={{color:"#ddd",width:"100%"}} /></tr>
-          </tbody>
-        </table>
+      {/* Pending Orders */}
+      <div className="bg-white shadow rounded-lg p-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6 gap-4">
+          <h2 className="text-lg font-semibold">PENDING ORDERS</h2>
+          <button
+            onClick={() =>
+              document
+                .getElementById("my-product")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="bg-green-600 text-white px-5 py-2 rounded hover:bg-green-700 transition"
+          >
+            Shop Now
+          </button>
         </div>
-       </div>
 
+        <div className="overflow-x-auto">
+          <table className="min-w-[800px] w-full text-sm border border-gray-200">
+            <thead className="bg-gray-100 text-gray-700">
+              <tr>
+                <th className="px-4 py-3 text-left">Order ID</th>
+                <th className="px-4 py-3 text-left">Shipping</th>
+                <th className="px-4 py-3 text-left">Quantity</th>
+                <th className="px-4 py-3 text-left">Date</th>
+                <th className="px-4 py-3 text-left">Price</th>
+                <th className="px-4 py-3 text-left">Status</th>
+                <th className="px-4 py-3 text-left">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {wishitem.map((item) => (
+                <tr
+                  key={item.id}
+                  className="border-t hover:bg-gray-50"
+                >
+                  <td className="px-4 py-3">{item.orderID}</td>
+                  <td className="px-4 py-3">{item.shipping}</td>
+                  <td className="px-4 py-3">{item.quantity}</td>
+                  <td className="px-4 py-3">{item.date}</td>
+                  <td className="px-4 py-3">{item.price}</td>
+                  <td className="px-4 py-3">
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium
+                        ${
+                          item.status === "Pending"
+                            ? "bg-yellow-100 text-yellow-700"
+                            : "bg-green-100 text-green-700"
+                        }`}
+                    >
+                      {item.status}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3">
+                    <button className="bg-green-600 text-white px-4 py-1.5 rounded text-xs hover:bg-green-700">
+                      View
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Completed Orders */}
+      <div className="bg-white shadow rounded-lg p-6">
+        <h2 className="text-lg font-semibold mb-6">COMPLETED ORDERS</h2>
+
+        <div className="overflow-x-auto">
+          <table className="min-w-[800px] w-full text-sm border border-gray-200">
+            <thead className="bg-gray-100 text-gray-700">
+              <tr>
+                <th className="px-4 py-3 text-left">Order ID</th>
+                <th className="px-4 py-3 text-left">Shipping</th>
+                <th className="px-4 py-3 text-left">Quantity</th>
+                <th className="px-4 py-3 text-left">Date</th>
+                <th className="px-4 py-3 text-left">Price</th>
+                <th className="px-4 py-3 text-left">Status</th>
+                <th className="px-4 py-3 text-left">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {order.map((item) => (
+                <tr
+                  key={item.id}
+                  className="border-t hover:bg-gray-50"
+                >
+                  <td className="px-4 py-3">{item.ordersID}</td>
+                  <td className="px-4 py-3">{item.shipping}</td>
+                  <td className="px-4 py-3">{item.quantity}</td>
+                  <td className="px-4 py-3">{item.date}</td>
+                  <td className="px-4 py-3">{item.price}</td>
+                  <td className="px-4 py-3">
+                    <span
+                      className={`px-3 py-1 rounded-full text-xs font-medium
+                        ${
+                          item.status === "Pending"
+                            ? "bg-yellow-100 text-yellow-700"
+                            : "bg-green-100 text-green-700"
+                        }`}
+                    >
+                      {item.status}
+                    </span>
+                  </td>
+                  <td className="px-4 py-3">
+                    <button className="bg-green-600 text-white px-4 py-1.5 rounded text-xs hover:bg-green-700">
+                      View
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-    )
+  );
 }
+
 
 export default Orders;
