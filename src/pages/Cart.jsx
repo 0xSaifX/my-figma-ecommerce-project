@@ -88,42 +88,79 @@ const wishitem = [
 
 const ProductGrid = () => {
   return (
-      <div className="product-grid" style={{margin:"2rem 3rem"}}>
-      {products.map((product) => (
-        <div key={product.id} className="product-card">
-          <div className="product-image">
-            {product.tag && (
-              <span className={`badge ${product.tagColor}`}>{product.tag}{product.tagnew} </span>
-            )}
-            <img src={product.image} alt={product.title} />
-          </div>
-
-          <div className="product-info">
-            <p className="category">{product.category}</p>
-            <h3 className="title">{product.title}</h3>
-
-            <div className="rating">
-              {[...Array(5)].map((_, i) => (
-                <FaStar
-                  key={i}
-                  size={12}
-                  className={i < product.rating ? "star filled" : "star"}
-                />
-              ))}
-            </div>
-
-            <div className="price-section">
-              <div className="price">
-                <span className="new-price">{product.newPrice}</span>
-                <span className="old-price">{product.oldPrice}</span>
-              </div>
-              {product.quantity && (
-                <span className="quantity" style={{fontWeight:"100"}}>{product.quantity}</span>
+    <div className="max-w-7xl mx-auto px-4 py-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.map((product) => (
+          <div
+            key={product.id}
+            className="bg-white rounded-lg border hover:shadow-lg transition overflow-hidden"
+          >
+            {/* Image */}
+            <div className="relative w-full h-52 bg-gray-100">
+              {product.tag && (
+                <span
+                  className={`absolute top-3 left-3 px-2 py-1 text-xs font-semibold text-white rounded ${
+                    product.tagColor || "bg-green-600"
+                  }`}
+                >
+                  {product.tag}
+                  {product.tagnew}
+                </span>
               )}
+
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            {/* Info */}
+            <div className="p-4 space-y-2">
+              <p className="text-xs uppercase text-gray-500">
+                {product.category}
+              </p>
+
+              <h3 className="text-sm font-semibold line-clamp-2">
+                {product.title}
+              </h3>
+
+              {/* Rating */}
+              <div className="flex items-center gap-1">
+                {[...Array(5)].map((_, i) => (
+                  <FaStar
+                    key={i}
+                    size={12}
+                    className={
+                      i < product.rating
+                        ? "text-yellow-400"
+                        : "text-gray-300"
+                    }
+                  />
+                ))}
+              </div>
+
+              {/* Price + Quantity */}
+              <div className="flex items-center justify-between pt-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-green-600 font-semibold">
+                    {product.newPrice}
+                  </span>
+                  <span className="text-gray-400 text-sm line-through">
+                    {product.oldPrice}
+                  </span>
+                </div>
+
+                {product.quantity && (
+                  <span className="text-xs text-gray-500 font-light">
+                    {product.quantity}
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
