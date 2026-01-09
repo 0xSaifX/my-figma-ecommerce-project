@@ -452,7 +452,6 @@ const TrendProducts = () => {
       <section className="bg-white py-12">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-    {/* Header */}
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
       <div>
         <h2 className="text-2xl font-semibold text-gray-800">
@@ -468,20 +467,16 @@ const TrendProducts = () => {
       </button>
     </div>
 
-    {/* Blog Grid */}
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
 
-      {/* Blog Card */}
       {[last1, last2, last3, last4, last5].map((img, i) => (
         <div
           key={i}
-          className="bg-white rounded-md shadow-sm hover:shadow-md transition p-2 text-center"
-        >
+          className="bg-white rounded-md shadow-sm hover:shadow-md transition p-2 text-center">
           <img
             src={img}
             alt=""
-            className="w-full h-36 object-cover rounded"
-          />
+            className="w-full h-36 object-cover rounded" />
 
           <h4 className="text-xs font-medium text-gray-800 mt-3 leading-snug">
             Marketing Guide: 5 Steps to Success to way.
