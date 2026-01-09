@@ -95,7 +95,6 @@ const ProductGrid = () => {
             key={product.id}
             className="bg-white rounded-lg border hover:shadow-lg transition overflow-hidden"
           >
-            {/* Image */}
             <div className="relative w-full h-52 bg-gray-100">
               {product.tag && (
                 <span
@@ -115,7 +114,6 @@ const ProductGrid = () => {
               />
             </div>
 
-            {/* Info */}
             <div className="p-4 space-y-2">
               <p className="text-xs uppercase text-gray-500">
                 {product.category}
@@ -125,7 +123,6 @@ const ProductGrid = () => {
                 {product.title}
               </h3>
 
-              {/* Rating */}
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, i) => (
                   <FaStar
@@ -140,7 +137,6 @@ const ProductGrid = () => {
                 ))}
               </div>
 
-              {/* Price + Quantity */}
               <div className="flex items-center justify-between pt-2">
                 <div className="flex items-center gap-2">
                   <span className="text-green-600 font-semibold">
@@ -169,10 +165,8 @@ function Cart() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-10 space-y-16">
 
-      {/* Cart Section */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-        {/* Summary */}
         <div className="bg-gray-100 rounded-lg p-6 w-full max-w-md">
           <h3 className="text-lg font-semibold mb-4">Summary</h3>
 
@@ -258,7 +252,6 @@ function Cart() {
           </div>
         </div>
 
-        {/* Cart Table */}
         <div className="w-full overflow-x-auto">
           <table className="min-w-[700px] w-full text-sm border border-gray-200">
             <thead className="bg-gray-100">
@@ -302,7 +295,6 @@ function Cart() {
             </tbody>
           </table>
 
-          {/* Actions */}
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
             <a href="#" className="text-gray-700">
               Continue Shopping
@@ -314,7 +306,6 @@ function Cart() {
         </div>
       </div>
 
-      {/* Related Products */}
       <div className="text-center space-y-2">
         <h2 className="text-2xl font-bold">
           Related <span className="text-green-600">Products</span>
