@@ -12,250 +12,145 @@ import team4 from "../assets/team4.jpg";
 
 function About() {
   return (
-    <div
-      style={{
-        margin: "3rem 3rem",
-        maxWidth: "1200px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        textAlign: "center",
-      }}
-    >
+    <div className="mx-auto max-w-7xl px-4 py-12 text-center">
+
+  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div className="flex gap-4">
+      <img
+        src={abt}
+        alt=""
+        className="w-3/5 rounded-md object-cover"
+      />
+      <div className="flex flex-col gap-4 w-2/5">
+        <img
+          src={abt2}
+          alt=""
+          className="h-1/2 rounded-md object-cover"
+        />
+        <img
+          src={abt3}
+          alt=""
+          className="h-1/2 rounded-md object-cover"
+        />
+      </div>
+    </div>
+
+    <div className="text-left">
+      <h3 className="text-xl font-semibold mt-6 lg:mt-0">
+        Who We <span className="text-[#45a388]">Are?</span>
+      </h3>
+
+      <p className="mt-4 text-sm font-bold leading-relaxed">
+        WE'RE HERE TO SERVE ONLY THE BEST PRODUCTS FOR YOU. ENRICHING YOUR
+        HOMES WITH THE BEST ESSENTIALS.
+      </p>
+
+      <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+        Lorem ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry standard dummy text since
+        the 1500s.
+      </p>
+
+      <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+        Lorem Ipsum has survived not only five centuries, but also the leap
+        into electronic typesetting.
+      </p>
+
+      <p className="mt-4 text-sm text-gray-600 leading-relaxed">
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry.
+      </p>
+    </div>
+  </div>
+
+  <div className="mt-16 max-w-xl mx-auto">
+    <h2 className="text-2xl font-semibold">
+      Our <span className="text-[#45a388]">Services</span>
+    </h2>
+    <p className="mt-2 text-gray-600">
+      Customer service should not be a department. It should be the entire company.
+    </p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+    {[
+      {
+        icon: <FaTruckMoving className="text-[#45a388] text-2xl" />,
+        title: "Free Shipping",
+        text: "Free shipping on all US orders or orders above $200",
+      },
+      {
+        icon: <FaHandHoldingMedical className="text-[#45a388] text-2xl" />,
+        title: "24X7 Support",
+        text: "Contact us 24 hours a day, 7 days a week",
+      },
+      {
+        icon: <BadgePercent className="text-[#45a388] text-2xl" />,
+        title: "30 Days Return",
+        text: "Simply return it within 30 days for an exchange",
+      },
+      {
+        icon: <BadgeDollarSignIcon className="text-[#45a388] text-2xl" />,
+        title: "Payment Secure",
+        text: "Secure and safe payment system",
+      },
+    ].map((service, i) => (
       <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "2rem",
-          width: "100%",
-          alignItems: "center",
-        }}
+        key={i}
+        className="border rounded-md p-6 shadow-sm bg-white text-center"
       >
-        <div
-          style={{
-            display: "flex",
-            gap: "1rem",
-            width: "100%",
-            alignItems: "stretch",
-          }}
-        >
-          <img
-            src={abt}
-            alt=""
-            style={{
-              borderRadius: "5px",
-              width: "60%",
-              objectFit: "cover",
-              height: "100%",
-            }}
-          />
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-between",
-              width: "40%",
-            }}
-          >
-            <img
-              src={abt2}
-              alt=""
-              style={{
-                borderRadius: "5px",
-                width: "100%",
-                height: "49%",
-                objectFit: "cover",
-              }}
-            />
-            <img
-              src={abt3}
-              alt=""
-              style={{
-                borderRadius: "5px",
-                width: "100%",
-                height: "49%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
-        </div>
-
-        <div style={{ textAlign: "left" }}>
-          <h3 style={{ marginTop: "2rem" }}>
-            Who We <span className="green">Are?</span>
-          </h3>
-          <p style={{ marginTop: "1rem", fontSize: "12px", lineHeight: "1.7" }}>
-            <b>
-              WE'RE HERE TO SERVE ONLY THE BEST PRODUCTS FOR YOU. ENRICHING YOUR
-              HOMES WITH THE BEST ESSENTIALS.
-            </b>
-          </p>
-          <p style={{ marginTop: "1rem", fontSize: "13px", lineHeight: "1.7" }}>
-            Lorem ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text
-            since the 1500s. It has survived not only five centuries, but also
-            the leap into electronic typesetting, remaining essentially
-            unchanged.
-          </p>
-          <p style={{ marginTop: "1rem", fontSize: "13px", lineHeight: "1.7" }}>
-            Lorem Ipsum has survived not only five centuries, but also the leap
-            into electronic typesetting, remaining essentially unchanged.
-          </p>
-          <p style={{ marginTop: "1rem", fontSize: "13px", lineHeight: "1.7" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry standard dummy text
-            since the 1500s, type and scrambled it to make a type specimen book.
-          </p>
-        </div>
+        <div className="flex justify-center mb-3">{service.icon}</div>
+        <h4 className="font-semibold">{service.title}</h4>
+        <p className="text-sm text-gray-600 mt-2">{service.text}</p>
       </div>
+    ))}
+  </div>
 
-      <div style={{ marginTop: "4rem", width: "35%", textAlign: "center" }}>
-        <h2>
-          Our <span className="green">Services</span>
-        </h2>
-        <p style={{ fontSize: "16px" }}>
-          Customer service should not be a department. It should be the entire
-          company.
-        </p>
-      </div>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          gap: "1rem",
-          width: "100%",
-          justifyItems: "center",
-          padding: "2rem 0",
-          marginTop: "1rem",
-        }}
-      >
-        {[
-          {
-            icon: <FaTruckMoving color="#45a388" size={32} />,
-            title: "Free Shipping",
-            text: "Free shipping on all US orders or orders above $200",
-          },
-          {
-            icon: <FaHandHoldingMedical color="#45a388" size={32} />,
-            title: "24X7 Support",
-            text: "Contact us 24 hours a day, 7 days a week",
-          },
-          {
-            icon: <BadgePercent color="#45a388" size={32} />,
-            title: "30 Days Return",
-            text: "Simply return it within 30 days for an exchange",
-          },
-          {
-            icon: <BadgeDollarSignIcon color="#45a388" size={32} />,
-            title: "Payment Secure",
-            text: "Contact us 24 hours a day, 7 days a week",
-          },
-        ].map((service, i) => (
-          <div
-            key={i}
-            style={{
-              border: "1px solid #e5e7eb",
-              borderRadius: "5px",
-              padding: "1rem",
-              textAlign: "center",
-              width: "260px",
-              height: "10rem",
-              boxShadow: "0 2px 6px rgba(0, 0, 0, 0.1)",
-            }}
-          >
-            {service.icon}
-            <h4>{service.title}</h4>
-            <p style={{ fontSize: "0.8rem" }}>{service.text}</p>
-          </div>
-        ))}
-      </div>
-
-      <div
-        style={{
-          width: "100%",
-          background: "#eee",
-          borderRadius: "5px",
-          marginTop: "4rem",
-          display: "flex",
-          justifyContent: "center",
-          padding: "2rem 0",
-        }}
-      >
-        <div style={{ maxWidth: "600px", textAlign: "center" }}>
-          <img
-            src={mariya}
-            alt=""
-            style={{ width: "70px", height: "70px", borderRadius: "50%" }}
-          />
-          <p style={{ lineHeight: "1.5", fontSize: "14px", padding: "10px" }}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text.
-          </p>
-          <h3>
-            <span className="green">Mariya Klinton</span>
-          </h3>
-          <h4>CEO</h4>
-          <p style={{ color: "orange" }}>
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-            <FaStar />
-          </p>
-        </div>
-      </div>
-
-      <div style={{ marginTop: "4rem", textAlign: "center" }}>
-        <h2>
-          Our <span className="green">Team</span>
-        </h2>
-        <p style={{ fontSize: "16px", marginTop: "0.5rem" }}>
-          Meet our expert team members.
-        </p>
-      </div>
-
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "1.5rem",
-          width: "100%",
-          justifyItems: "center",
-          padding: "2rem 0",
-        }}
-      >
-        {[team1, team2, team3, team4, team2].map((img, i) => (
-          <div
-            key={i}
-            style={{
-              borderRadius: "5px",
-              padding: "1rem",
-              width: "220px",
-              textAlign: "center",
-              background: "#fff",
-            }}
-          >
-            <img
-              src={img}
-              alt=""
-              style={{
-                width: "100%",
-                height: "220px",
-                borderRadius: "5px",
-                objectFit: "cover",
-              }}
-            />
-            <h4 style={{ marginTop: "0.5rem" }}>
-              {["William Dalin", "Emma Welson", "Benjamin Martin", "Amelia Martin", "Emma Welson"][i]}
-            </h4>
-            <p style={{ fontSize: "0.8rem" }}>
-              {["Co-Founder", "Manager", "Leader", "Leader", "Manager"][i]}
-            </p>
-          </div>
+  <div className="mt-20 bg-gray-100 rounded-md py-10 px-6 flex justify-center">
+    <div className="max-w-md text-center">
+      <img
+        src={mariya}
+        alt=""
+        className="w-16 h-16 rounded-full mx-auto"
+      />
+      <p className="text-sm text-gray-600 mt-4">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </p>
+      <h3 className="mt-3 font-semibold text-[#45a388]">Mariya Klinton</h3>
+      <p className="text-sm">CEO</p>
+      <div className="flex justify-center gap-1 text-orange-400 mt-2">
+        {[...Array(5)].map((_, i) => (
+          <FaStar key={i} />
         ))}
       </div>
     </div>
+  </div>
+
+  <div className="mt-20 text-center">
+    <h2 className="text-2xl font-semibold">
+      Our <span className="text-[#45a388]">Team</span>
+    </h2>
+    <p className="text-gray-600 mt-2">Meet our expert team members.</p>
+  </div>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-10">
+    {[team1, team2, team3, team4, team2].map((img, i) => (
+      <div key={i} className="bg-white rounded-md p-4 text-center">
+        <img
+          src={img}
+          alt=""
+          className="w-full h-56 object-cover rounded-md"
+        />
+        <h4 className="mt-3 font-semibold">
+          {["William Dalin", "Emma Welson", "Benjamin Martin", "Amelia Martin", "Emma Welson"][i]}
+        </h4>
+        <p className="text-sm text-gray-600">
+          {["Co-Founder", "Manager", "Leader", "Leader", "Manager"][i]}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
   );
 }
 
