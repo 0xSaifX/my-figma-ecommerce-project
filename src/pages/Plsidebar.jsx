@@ -267,139 +267,6 @@ const ProductGrid = () => {
   </div>
 </div>
 
-      {/* Main content */}
-      {/* <main className="main-content">
-        <div className="top-section">
-          <div className="image-section">
-            <img
-              src={productImages[selectedImage]}
-              alt="Product"
-              className="main-image"
-            />
-            <div className="thumbnail-row">
-              <FaChevronLeft className="nav-icon" />
-              {productImages.map((img, index) => (
-                <img
-                  key={index}
-                  src={img}
-                  alt="thumb"
-                  className={`thumb ${selectedImage === index ? "active" : ""}`}
-                  onClick={() => setSelectedImage(index)}
-                />
-              ))}
-              <FaChevronRight className="nav-icon" />
-            </div>
-          </div>
-
-          <div className="info-section">
-            <h2>
-              Potato Chips 52g, American Cream & Onion Flavour, Crunchy Chips &
-              Snacks.
-            </h2>
-            <div className="rating" style={{margin:"1rem 0rem 2rem"}}>
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} className={i < 4 ? "filled" : ""}  />
-              ))}
-              <span style={{marginLeft:"0.9rem"}}>| 982 Ratings</span>
-            </div>
-            <div className="price" style={{width:"100%"}}>
-              <span className="new">$664.00</span>
-              <span className="discount">-78%
-              </span>
-                <p className="sku" style={{paddingTop:"14px",marginLeft:"40px"}}><b>SKU#: WH12</b> </p>
-            </div>
-              <div style={{paddingTop:"1rem",paddingBottom:"1rem",display:"flex"}}>M.R.P.: <span style={{textDecoration:"line-through",color:"#999"}}> 
-                $2,999.00
-                </span>
-                <p style={{color:"#45a388",marginLeft:"75px",paddingBottom:"1rem"}}>| IN STOCK </p>
-              </div>
-            <div>
-            </div>
-            
-            <ul className="details">
-                <p>Lorem ipsum dolor sit, voluptas quae, qui provident natus deserunt illo minus sequi,
-                 impedit fuga lab cupiditate amet dolorem nihil odit.</p>
-              <li style={{marginTop:"1rem"}}>Closure: Hook & Loop</li>
-              <li style={{marginTop:"0.5rem"}}>Sole: Polyvinyl Chloride</li>
-              <li style={{marginTop:"0.5rem"}}>Width: Medium</li>
-              <li style={{marginTop:"0.5rem"}}>Outer Material: A-Grade Standard Quality</li>
-            </ul>                
-            <h3 style={{paddingTop:"1rem"}}>Weight</h3>
-            <div className="tabs">
-          <button className="active">250g</button>
-          <button>500g</button>
-          <button>1kg</button>
-          <button>2kg</button>
-        </div>
-            <div className="buy-section">
-              <div className="qty-control">
-                <button onClick={() => setQuantity(Math.max(1, quantity - 1))}>
-                  -
-                </button>
-                <span>{quantity}</span>
-                <button onClick={() => setQuantity(quantity + 1)}>+</button>
-              </div>
-              <button className="add-btn" style={{fontSize:"10px"}}>Add to Cart</button>
-              <button style={{padding:"7px 13px",background:"whitesmoke",border:"2px #555",borderRadius:"5px"}} ><FaHeart/></button>
-              <button style={{padding:"7px 13px",background:"whitesmoke",border:"2px #555",borderRadius:"5px"}}><FaEye/></button>
-            </div>
-          </div>
-        </div>
-
-         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:"2rem",margin:"2rem 0rem"}}>
-      {relatedProducts.map((item) => (
-      <div key={item.id} className="product-row" style={{background:"#eee"}}>
-        <img src={item.img} alt={item.title} />
-        <div className="product-text" style={{display:"block"}}>
-          <h4 style={{fontWeight:"10px"}}>{item.title}</h4>
-          <p className="category">{item.category}</p>
-           <div className="stars" style={{color:"red"}}>
-            {[...Array(5)].map((_, i) => (
-              <FaStar 
-              key={i} 
-              className={i < item.rating ? "star filled" : ""} />
-             ))}
-              </div>
-          <div className="price">
-            <span className="new">{item.price}</span>
-            <span className="old">{item.oldPrice}</span>
-          </div>
-        </div>
-      </div>
-    ))}
-    </div>
-
-        <div className="tabs">
-          <button className="active">Details</button>
-          <button>Specifications</button>
-          <button>Vendor</button>
-          <button>Reviews</button>
-        </div>
-        <div className="tab-content">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-            tincidunt, sapien nec vulp amet consectetur adipisicing elit. Inventore quasi et cupiditate,
-            adipisci laboriosam quos atque ea, ut odio necessitatibus veniam libero cum dicta architecto hic.
-            Quidem iste fugiat quaerat!
-          </p>
-          <ul style={{marginTop:"1rem",marginBottom:"1rem"}}>
-            <li>Any product types You want - Simple, Configurable</li>
-            <li>Downloadable/Digital Products, Virtual Products </li>
-            <li>Inventory Management with Backordered items </li>
-            <li>Flatlock seams throughout. </li>
-          </ul>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam reprehenderit a at ad magnam earum rerum accusantium, 
-            ipsum suscipit praesentium iste eos autem illum deserunt optio, nulla ut nesciunt sit?
-          </p>
-          <p>
-            There are many variations of passages of lorem ipsum available, but majority have suffered alteration in some forms, 
-            by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
-          </p>
-        </div>
-
-      </main> */}
-
 <main className="max-w-7xl mx-auto px-4 py-6">
 
   {/* TOP SECTION */}
@@ -589,7 +456,7 @@ const ProductGrid = () => {
   <p className="text-gray-600 text-sm sm:text-base">
     Browse The Collection of Top Products
   </p>
-</div>
+        </div>
         <ProductGrid products={products} />
     </section>
 
