@@ -561,14 +561,26 @@ const ProductGrid = () => {
 
   {/* TAB CONTENT */}
   <div className="text-sm text-gray-600 space-y-3">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+            tincidunt, sapien nec vulp amet consectetur adipisicing elit. Inventore quasi et cupiditate,
+            adipisci laboriosam quos atque ea, ut odio necessitatibus veniam libero cum dicta architecto hic.
+            Quidem iste fugiat quaerat!
+          </p>
     <ul className="list-disc ml-5">
       <li>Any product types you want</li>
       <li>Downloadable/Digital products</li>
       <li>Inventory management</li>
       <li>Flatlock seams throughout</li>
     </ul>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam reprehenderit a at ad magnam earum rerum accusantium, 
+            ipsum suscipit praesentium iste eos autem illum deserunt optio, nulla ut nesciunt sit?
+          </p>
+          <p>
+            There are many variations of passages of lorem ipsum available, but majority have suffered alteration in some forms, 
+            by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage
+          </p>
   </div>
 
 </main>
