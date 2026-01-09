@@ -324,14 +324,14 @@ const ProductGrid2 = ({}) => {
 
 const trending = [
   { id: 1, name: "Healthy Nutmix, 200g Pack", category: "Driedfruit", price: "$45.00", oldPrice: "$42.00", image: trend1 },
-  { id: 2, name: "Organic Fresh Tomato", category: "Vegetables", price: "$30.00", oldPrice: "$25.00", image: trend2 },
+  { id: 2, name: "Natural Organic Fresh Tomato", category: "Vegetables", price: "$30.00", oldPrice: "$25.00", image: trend2 },
   { id: 3, name: "Coffee With Chocolate Cream Mix", category: "Coffee", price: "$65.00", oldPrice: "$62.00", image: trend3 },
 ];
 
 const topRated = [
   { id: 1, name: "Ginger - Natural Organic", category: "Vegetables", price: "$65.00", oldPrice: "$62.00", image: toprated1 },
   { id: 2, name: "Dates Value Pouch Natural", category: "Driedfruit", price: "$78.00", oldPrice: "$56.00", image: toprated2 },
-  { id: 3, name: "Natural Blue Berry", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
+  { id: 3, name: "Natural Blue Berry Fruit", category: "Fruits", price: "$30.00", oldPrice: "$25.00", image: toprated3 },
 ];
 
 const topSelling = [
