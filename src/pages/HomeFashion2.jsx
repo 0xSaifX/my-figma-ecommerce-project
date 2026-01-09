@@ -443,9 +443,11 @@ const TrendProducts = () => {
   </div>
 </div>
 
-      <div style={{margin:"2rem 5rem",justifyContent:"center",alignItems:"center"}}>
-        <TrendProducts/>
-      </div>
+      <div className="w-full flex justify-center px-4 sm:px-6 lg:px-12 my-8">
+  <div className="w-full max-w-7xl">
+    <TrendProducts />
+  </div>
+</div>
       
       <div style={{background:"#fff",padding:"1rem 8rem",marginBottom:"5rem",margin:"3rem 0rem"}}>
              <div style={{display:"flex",gap:"29rem",margin:"2rem 0rem",width:"100%",alignItems:"center",objectFit:"cover"}}>
