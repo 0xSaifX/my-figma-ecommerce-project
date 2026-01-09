@@ -39,8 +39,8 @@ const Header = () => {
         </div>
         <p>World's Fastest Online Shopping Destination</p>
         <div className="flex gap-4">
-          <span>Help?</span>
-          <span>Track Order?</span>
+          <span className="hover:text-green-400">Help?</span>
+          <span className="hover:text-green-400">Track Order?</span>
           <span className="flex items-center gap-1">English <FaChevronDown /></span>
           <span className="flex items-center gap-1">Dollar <FaChevronDown /></span>
         </div>
