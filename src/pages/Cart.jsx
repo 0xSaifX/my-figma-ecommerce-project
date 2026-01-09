@@ -128,121 +128,168 @@ const ProductGrid = () => {
   );
 };
 
-function Cart () {
-    return(
-      <div>
-        <div className="product-page">
-       <div className="sidebar" style={{margin:"3rem 4rem",display:"grid",gridTemplateColumns:"1fr 1fr"}}>
+function Cart() {
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-10 space-y-16">
 
+      {/* Cart Section */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
-             <div className="filter-card" style={{width:"460px",background:"#eee"}}>
+        {/* Summary */}
+        <div className="bg-gray-100 rounded-lg p-6 w-full max-w-md">
+          <h3 className="text-lg font-semibold mb-4">Summary</h3>
 
-              <div className="filter-header">
-                <h3>Summary</h3>
-              </div>
-              <div style={{display:"flex",lineHeight:"2.5rem"}}>
-                <span style={{color:"#666"}}> <b>Estimate-Shipping</b> </span>
-                <span style={{marginLeft:"14rem"}}> 
-                    <b><ChevronDown style={{cursor:"pointer"}}/> </b> </span>
-              </div> <hr color="#ddd" />
-              <div style={{display:"grid",lineHeight:"2.5rem"}}>
-                <span style={{fontSize:"13px"}}>Enter your Destination to get a shipping estimate </span>
-                <span><b>Country *</b></span>
-                <span style={{width:"100%"}}>
-                  <input type="text" placeholder="Country"
-                   style={{position:"relative",width:"99%",height:"3rem",padding:"10px",border:"#eee 3px solid"}} />
-                  <ChevronDown style={{position:"absolute",right:"60%",marginTop:"0.7rem",cursor:"pointer"}}/>
-                </span>
-              </div>
+          <div className="flex justify-between items-center text-sm mb-2">
+            <span className="text-gray-600 font-semibold">
+              Estimate Shipping
+            </span>
+            <ChevronDown className="cursor-pointer" />
+          </div>
 
-              <div style={{display:"grid",lineHeight:"2.5rem",marginTop:"2rem"}}>
-                <span><b>State/Province </b></span>
-                <input type="text" id="state" 
-                style={{position:"relative",width:"99%",height:"3rem",padding:"10px",border:"#eee 3px solid"}}/>
-                <ChevronDown style={{position:"absolute",right:"60%",marginTop:"3.3rem",cursor:"pointer"}}/>
-              </div> <hr color="#ddd" style={{marginTop:"1rem",marginBottom:"1rem"}}/>
+          <hr className="border-gray-300 mb-4" />
 
-              <div style={{display:"grid",lineHeight:"2.5rem",marginTop:"2rem"}}>
-                <span><b>Zip/Postal Code </b></span>
-                <input type="text" placeholder="Zip/Postal Code" 
-                style={{position:"relative",width:"99%",height:"3rem",padding:"10px",
-                border:"#ddd 1px solid",background:"#eee"}}/>
-              </div>
-              <div style={{display:"flex",marginTop:"2rem"}}>
-                <span>Sub-Total</span>
-                <span style={{marginLeft:"16.8rem"}}> <b>$162.00</b> </span>
-              </div> 
-              <div style={{display:"flex",marginTop:"1rem"}}>
-                <span>Delivery Charges</span>
-                <span style={{marginLeft:"13.7rem"}}> <b>$32.40</b> </span>
-              </div> 
-              <div style={{display:"flex",marginTop:"1rem",marginBottom:"2rem"}}>
-                <span style={{marginRight:"3.5rem"}}>Coupon Discount</span>
-                <span><a href="www.70+web.com"
-                 style={{color:"#45a388"}}>Apply Discount</a>
-                </span>
-              </div> <hr color="#ddd" />
-              <div style={{marginTop:"1rem"}}>
-                <span><b>Total Amount</b></span>
-                <span style={{marginLeft:"14.7rem"}}><b>$194.40</b></span>
+          <div className="space-y-4 text-sm">
+            <p className="text-gray-500">
+              Enter your destination to get a shipping estimate
+            </p>
+
+            <div>
+              <label className="font-semibold block mb-1">
+                Country *
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Country"
+                  className="w-full h-12 px-3 border border-gray-300 rounded bg-white"
+                />
+                <ChevronDown className="absolute right-3 top-3 cursor-pointer" />
               </div>
             </div>
 
-        <div  style={{minWidth:"600px",maxHeight:"30rem"}}>
+            <div>
+              <label className="font-semibold block mb-1">
+                State / Province
+              </label>
+              <div className="relative">
+                <input
+                  type="text"
+                  className="w-full h-12 px-3 border border-gray-300 rounded bg-white"
+                />
+                <ChevronDown className="absolute right-3 top-3 cursor-pointer" />
+              </div>
+            </div>
 
-        <table className="wishlist-table" style={{maxWidth:"65%"}}>
-          <thead>
-            <tr style={{padding:"5px 15px"}}>
-              <th>Img</th>
-              <th>Product</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Total</th>
-              <th>Action</th>
-            </tr>
-          </thead>
-          <tbody>
-            {wishitem.map((item) => (
-              <tr key={item.id}>
-                <td style={{padding:"5px 10px"}}>
-                  <img src={item.image} alt={item.name} className="product-img" />
-                </td>
-                <td style={{margin:"5px 10px",fontSize:"10px"}}>{item.name}</td>
-                <td style={{padding:"5px 10px"}}>{item.price}</td>
-                <td style={{padding:"5px 10px"}}>
-                  <button style={{padding:"5px 10px",cursor:"pointer"}}>{item.quantity}</button>
-                </td>
-                <td style={{padding:"5px 10px"}}>
-                  {item.total}
-                </td>
-                <td style={{padding:"5px 10px"}}>
-                  <div className="action-buttons">
-                    <button className="delete-btn"> <b>X</b> </button>
-                  </div>
-                </td>
-              </tr>
-            ))}
-            <tr style={{height:"2rem"}}><hr style={{color:"#ddd",width:"100%"}} /></tr>
-          </tbody>
-        </table>
-        <div style={{width:"100%",Top:"30rem"}}>
-          <span><a href="www.grabit.com" style={{color:"#333"}}>Continue Shopping</a></span>
-          <button style={{padding:"10px 15px",background:"#45a388",float:"right",borderRadius:"5px"}}>
-            <a href="grabitstore.com" style={{color:"#fff"}}>Check Out</a></button>
-      </div>
+            <div>
+              <label className="font-semibold block mb-1">
+                Zip / Postal Code
+              </label>
+              <input
+                type="text"
+                placeholder="Zip / Postal Code"
+                className="w-full h-12 px-3 border border-gray-300 rounded bg-gray-100"
+              />
+            </div>
+          </div>
 
-      </div>
+          <hr className="border-gray-300 my-6" />
 
+          <div className="space-y-3 text-sm">
+            <div className="flex justify-between">
+              <span>Sub Total</span>
+              <span className="font-semibold">$162.00</span>
+            </div>
 
-       </div>
-       
-      </div>
-      <div style={{textAlign:"center",justifyContent:"center",marginTop:"5rem"}}>
-            <h2 style={{margin:"1rem"}}>Related <span className="green">Products</span> </h2>
-            <p>Browse The Collection of Top Products</p>
+            <div className="flex justify-between">
+              <span>Delivery Charges</span>
+              <span className="font-semibold">$32.40</span>
+            </div>
+
+            <div className="flex justify-between">
+              <span>Coupon Discount</span>
+              <a href="#" className="text-green-600">
+                Apply Discount
+              </a>
+            </div>
+          </div>
+
+          <hr className="border-gray-300 my-4" />
+
+          <div className="flex justify-between font-semibold">
+            <span>Total Amount</span>
+            <span>$194.40</span>
+          </div>
         </div>
-          <ProductGrid products={products} />
+
+        {/* Cart Table */}
+        <div className="w-full overflow-x-auto">
+          <table className="min-w-[700px] w-full text-sm border border-gray-200">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="px-4 py-3 text-left">Img</th>
+                <th className="px-4 py-3 text-left">Product</th>
+                <th className="px-4 py-3 text-left">Price</th>
+                <th className="px-4 py-3 text-left">Quantity</th>
+                <th className="px-4 py-3 text-left">Total</th>
+                <th className="px-4 py-3 text-left">Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {wishitem.map((item) => (
+                <tr key={item.id} className="border-t hover:bg-gray-50">
+                  <td className="px-4 py-3">
+                    <img
+                      src={item.image}
+                      alt={item.name}
+                      className="w-12 h-12 object-cover rounded"
+                    />
+                  </td>
+                  <td className="px-4 py-3 text-xs">
+                    {item.name}
+                  </td>
+                  <td className="px-4 py-3">{item.price}</td>
+                  <td className="px-4 py-3">
+                    <button className="px-3 py-1 border rounded">
+                      {item.quantity}
+                    </button>
+                  </td>
+                  <td className="px-4 py-3">{item.total}</td>
+                  <td className="px-4 py-3">
+                    <button className="text-red-600 font-bold">
+                      ✕
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          {/* Actions */}
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mt-6">
+            <a href="#" className="text-gray-700">
+              Continue Shopping
+            </a>
+            <button className="bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">
+              Check Out
+            </button>
+          </div>
+        </div>
       </div>
-      
-    )
-}export default Cart;
+
+      {/* Related Products */}
+      <div className="text-center space-y-2">
+        <h2 className="text-2xl font-bold">
+          Related <span className="text-green-600">Products</span>
+        </h2>
+        <p className="text-gray-500">
+          Browse the collection of top products
+        </p>
+      </div>
+
+      <ProductGrid products={products} />
+    </div>
+  );
+}
+
+export default Cart;
