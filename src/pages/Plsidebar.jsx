@@ -141,7 +141,6 @@ const ProductGrid = () => {
 
   <div className="bg-gray-100 rounded-lg p-4 space-y-8">
 
-    {/* CATEGORY */}
     <div>
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-lg">Category</h3>
@@ -173,7 +172,6 @@ const ProductGrid = () => {
       </div>
     </div>
 
-    {/* WEIGHT */}
     <div>
       <div className="flex items-center justify-between">
         <h3 className="font-semibold text-lg">Weight</h3>
@@ -191,7 +189,6 @@ const ProductGrid = () => {
       </div>
     </div>
 
-    {/* COLOR */}
     <div>
       <div className="flex items-center justify-between text-green-600">
         <h3 className="font-semibold text-lg">Color</h3>
@@ -214,7 +211,6 @@ const ProductGrid = () => {
       </div>
     </div>
 
-    {/* PRICE */}
     <div className="text-center">
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-semibold text-lg">Price</h3>
@@ -246,7 +242,6 @@ const ProductGrid = () => {
       </div>
     </div>
 
-    {/* TAGS */}
     <div>
       <div className="flex items-center justify-between mb-4">
         <h3 className="font-semibold text-lg">Tags</h3>
@@ -534,7 +529,7 @@ const ProductGrid = () => {
 
         <div className="flex gap-1 my-1">
           {[...Array(5)].map((_, i) => (
-            <FaStar key={i} className={i < item.rating ? "text-red-500" : "text-gray-300"} />
+            <FaStar key={i} className={i < item.rating ? "text-orange-500" : "text-gray-300"} />
           ))}
         </div>
 
