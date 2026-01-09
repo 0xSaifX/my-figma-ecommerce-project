@@ -198,239 +198,175 @@ const TrendProducts = () => {
   </div>
 </div>
 
-           <section style={{margin:"2rem 8rem"}}>
+              <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
 
-             <div className="section">
-              <div className="section-header" style={{display:"flex"}}>
-               <div>
-                 <h2 style={{color:"#4a4949"}}>
-                  Day Of The <span style={{color:"#45a388"}}>Deal</span>
-                </h2>
-                <p>Don't wait. The time will never be just right.</p>
-               </div>
-                <div className="nav-btns">
-                  <button>
-                    <ChevronLeft />
-                  </button>
-                  <button>
-                    <ChevronRight />
-                  </button>
-                </div>
-              </div>
+  {/* Day Of The Deal */}
+  <div className="mb-12">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+      <div>
+        <h2 className="text-2xl font-semibold text-gray-700">
+          Day Of The <span className="text-[#45a388]">Deal</span>
+        </h2>
+        <p className="text-gray-500 text-sm">
+          Don't wait. The time will never be just right.
+        </p>
+      </div>
 
-              <div className="product-grid" style={{background:"#f7f7f7",gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr"}}>
-                {dayOfDealProducts.map((product, idx) => (
-                  <div key={idx} className="product-card">
-                    <div className="product-image">
-                      <img src={product.image} alt={product.title} />
-                      {product.badge && (
-                        <div className={`badge ${product.badge}`}>{product.badge}</div>
-                      )}
-                    </div>
-                    <div className="product-info">
-                      <p className="category">{product.category}</p>
-                      <h5>{product.title}</h5>
-                      <div className="stars">
-                        {[...Array(5)].map((_, i) => (
-                          <FaStar 
-                          key={i} 
-                          size={12} className={i < product.rating ? "star filled" : "star"} />
-                        ))}
-                      </div>
-                      <div className="price">
-                        <span className="current">{product.price}</span>
-                        <span className="old">{product.originalPrice}</span>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <div className="flex gap-2">
+        <button className="p-2 border rounded hover:bg-gray-100">
+          <ChevronLeft />
+        </button>
+        <button className="p-2 border rounded hover:bg-gray-100">
+          <ChevronRight />
+        </button>
+      </div>
+    </div>
 
-          <div 
-              style={{
-              position: "relative",
-              width: "100%",
-              height: "100%",
-              overflow: "hidden",
-              marginBottom:"5rem"
-              }}>
-            <img src={back2} 
-                style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-                display: "block",
-                }}  />
-              <div className="back-text" 
-                style={{
-                width:"20rem",
-                position: "absolute",
-                top: "50%",
-                right: "5%",
-                transform: "translateY(-50%)",
-                textAlign: "right",
-                }} >
-              <p style={{lineHeight:"2.5",color:"#eee"}}>30% off sale</p>
-                <h1 style={{color:"#eee"}}>Latest Exclusive <br />Summer Collection</h1>
-                  <button 
-                     style={{
-                     background: "#45a388",
-                     padding: "10px 15px",
-                     marginTop: "1rem",
-                     color: "#eee",
-                     border: "none",
-                     cursor: "pointer",
-                     }} >Shop Now</button>
-                  </div>
-            </div>
-
-            <div className="section">
-              <div className="section-header">
-                <h2>New <span>Arrivals</span></h2>
-                  <div className="tabs">
-                     <button className="active">All</button>
-                     <button>Clothes</button>
-                     <button>Footwear</button>
-                     <button>Accessories</button>
-                  </div>
-                 </div>
-               <div className="product-grid" style={{background:"#f7f7f7",gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr"}}>
-                  {newArrivals.map((product, idx) => (
-                    <div key={idx} className="product-card">
-                      <div className="product-image">
-                        <img src={product.image} alt={product.title} />
-                        {product.badge && <div className={`badge ${product.badge}`}>{product.badge}</div>}
-                      </div>
-                <div className="product-info">
-                  <p className="category">{product.category}</p>
-                    <h5>{product.title}</h5>
-                    <div className="stars">
-                      {[...Array(5)].map((_, i) => (
-                      <FaStar key={i} className={i < product.rating ? " star filled" : "star"} />
-                      ))}
-                     </div>
-                     <div className="price">
-                        <span className="current">{product.price}</span>
-                        <span className="old">{product.originalPrice}</span>
-                      </div>
-                     </div>
-                    </div>
-                    ))}
-                </div>
-              </div>
-
-
-        <div style={{width:"100%",display:"flex", justifyContent:"spaceBetween",alignItems:"center",gap:"1rem"}}>
-            <div 
-              style={{
-              position: "relative",
-              overflow: "hidden",
-              marginBottom:"2rem"
-              }}>
-            <img src={womens} 
-                style={{
-                objectFit: "cover",
-                width:"100%",
-                height:"100%",
-                display: "block",
-                }}  /> 
-              <div className="back-text" 
-                style={{
-                width:"20rem",
-                position: "absolute",
-                top: "50%",
-                right: "5%",
-                transform: "translateY(-50%)",
-                textAlign: "right",
-                }} >
-                  <button style={{borderRadius:"0px",border:"none",padding:"5px"}}>50% Off</button>
-                <h1 style={{color:"#eee",marginTop:"1rem"}}>Women's <br />Collection</h1>
-                  <button 
-                     style={{
-                     background: "#45a388",
-                     padding: "10px 15px",
-                     marginTop: "0.2rem",
-                     color: "#eee",
-                     border: "none",
-                     cursor: "pointer",
-                     }} >Shop Now</button>
-                  </div>
-            </div>
-
-            <div 
-              style={{
-              position: "relative",
-              overflow: "hidden",
-              marginBottom:"2rem"
-              }}>
-            <img src={kids} 
-                style={{
-                objectFit: "cover",
-                width:"100%",
-                display: "block",
-                }}  />
-              <div className="back-text" 
-                style={{
-                width:"20rem",
-                position: "absolute",
-                top: "50%",
-                right: "5%",
-                transform: "translateY(-50%)",
-                textAlign: "right",
-                }} >
-                  <button style={{borderRadius:"0px",border:"none",padding:"5px"}}>50% Off</button>
-                <h1 style={{color:"#eee",marginTop:"1rem"}}>Kid's <br />Collection</h1>
-                  <button 
-                     style={{
-                     background: "#45a388",
-                     padding: "10px 15px",
-                     marginTop: "0.2rem",
-                     color: "#eee",
-                     border: "none",
-                     cursor: "pointer",
-                     }} >Shop Now</button>
-                  </div>
-            </div>
-
-            <div 
-              style={{
-              position: "relative",
-              overflow: "hidden",
-              marginBottom:"2rem"
-              }}>
-            <img src={men} 
-                style={{
-                objectFit: "cover",
-                width:"100%",
-                display: "block",
-                }}  />
-              <div className="back-text" 
-                style={{
-                width:"20rem",
-                position: "absolute",
-                top: "50%",
-                right: "5%",
-                transform: "translateY(-50%)",
-                textAlign: "right",
-                }} >
-                  <button style={{borderRadius:"0px",border:"none",padding:"5px"}}>50% Off</button>
-                <h1 style={{color:"#eee",marginTop:"1rem"}}>Men's <br />Collection</h1>
-                  <button 
-                     style={{
-                     background: "#45a388",
-                     padding: "10px 15px",
-                     marginTop: "0.2rem",
-                     color: "#eee",
-                     border: "none",
-                     cursor: "pointer",
-                     }} >Shop Now</button>
-                  </div>
-             </div>
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 bg-gray-100 p-4 rounded">
+      {dayOfDealProducts.map((product, idx) => (
+        <div key={idx} className="bg-white rounded shadow-sm p-3">
+          <div className="relative">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full h-40 object-cover rounded"
+            />
+            {product.badge && (
+              <span className="absolute top-2 left-2 bg-[#45a388] text-white text-xs px-2 py-1 rounded">
+                {product.badge}
+              </span>
+            )}
           </div>
 
+          <div className="mt-3">
+            <p className="text-xs text-gray-500">{product.category}</p>
+            <h5 className="text-sm font-medium">{product.title}</h5>
 
-          </section>
+            <div className="flex gap-1 my-1">
+              {[...Array(5)].map((_, i) => (
+                <FaStar
+                  key={i}
+                  size={12}
+                  className={i < product.rating ? "text-yellow-400" : "text-gray-300"}
+                />
+              ))}
+            </div>
+
+            <div className="flex gap-2 text-sm">
+              <span className="font-semibold">{product.price}</span>
+              <span className="line-through text-gray-400">
+                {product.originalPrice}
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Promo Banner */}
+  <div className="relative mb-16">
+    <img
+      src={back2}
+      className="w-full h-[280px] sm:h-[350px] object-cover rounded"
+      alt=""
+    />
+
+    <div className="absolute right-6 top-1/2 -translate-y-1/2 text-right text-white max-w-xs">
+      <p className="text-sm mb-2">30% off sale</p>
+      <h1 className="text-2xl font-semibold leading-snug">
+        Latest Exclusive <br /> Summer Collection
+      </h1>
+      <button className="mt-3 bg-[#45a388] px-4 py-2 rounded text-sm">
+        Shop Now
+      </button>
+    </div>
+  </div>
+
+  {/* New Arrivals */}
+  <div className="mb-14">
+    <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+      <h2 className="text-2xl font-semibold">
+        New <span className="text-[#45a388]">Arrivals</span>
+      </h2>
+
+      <div className="flex gap-3 text-sm">
+        <button className="text-[#45a388] font-medium">All</button>
+        <button className="text-gray-500 hover:text-black">Clothes</button>
+        <button className="text-gray-500 hover:text-black">Footwear</button>
+        <button className="text-gray-500 hover:text-black">Accessories</button>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 bg-gray-100 p-4 rounded">
+      {newArrivals.map((product, idx) => (
+        <div key={idx} className="bg-white rounded shadow-sm p-3">
+          <div className="relative">
+            <img
+              src={product.image}
+              alt={product.title}
+              className="w-full h-40 object-cover rounded"
+            />
+            {product.badge && (
+              <span className="absolute top-2 left-2 bg-[#45a388] text-white text-xs px-2 py-1 rounded">
+                {product.badge}
+              </span>
+            )}
+          </div>
+
+          <div className="mt-3">
+            <p className="text-xs text-gray-500">{product.category}</p>
+            <h5 className="text-sm font-medium">{product.title}</h5>
+
+            <div className="flex gap-1 my-1">
+              {[...Array(5)].map((_, i) => (
+                <FaStar
+                  key={i}
+                  size={12}
+                  className={i < product.rating ? "text-yellow-400" : "text-gray-300"}
+                />
+              ))}
+            </div>
+
+            <div className="flex gap-2 text-sm">
+              <span className="font-semibold">{product.price}</span>
+              <span className="line-through text-gray-400">
+                {product.originalPrice}
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  {/* Category Banners */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    {[{img:womens,title:"Women's"},
+      {img:kids,title:"Kid's"},
+      {img:men,title:"Men's"}].map((item,i)=>(
+      <div key={i} className="relative">
+        <img
+          src={item.img}
+          className="w-full h-[260px] object-cover rounded"
+          alt=""
+        />
+        <div className="absolute right-4 top-1/2 -translate-y-1/2 text-right text-white">
+          <span className="bg-white text-black text-xs px-2 py-1">
+            50% Off
+          </span>
+          <h2 className="text-2xl font-semibold mt-2">
+            {item.title} <br /> Collection
+          </h2>
+          <button className="mt-2 bg-[#45a388] px-4 py-2 text-sm rounded">
+            Shop Now
+          </button>
+        </div>
+      </div>
+    ))}
+  </div>
+
+</section>
 
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr 1fr ",width:"100%",alignItems:"center",background:"#fff", 
          padding:"2rem 8rem",alignItems:"center", justifyContent:"center",gap:"1rem",textAlign:"center"}}>
