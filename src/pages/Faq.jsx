@@ -39,7 +39,7 @@ function FAQ() {
   return (
     <section className="w-full flex justify-center px-4">
       <div className="w-full max-w-7xl py-12">
-        {/* Header */}
+
         <div className="text-center mb-10">
           <h2 className="text-2xl md:text-3xl font-semibold">
             Frequently Asked{" "}
@@ -50,7 +50,6 @@ function FAQ() {
           </p>
         </div>
 
-        {/* FAQ Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-3">
             {faqs.map((faq, i) => (
