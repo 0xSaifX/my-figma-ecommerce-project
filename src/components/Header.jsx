@@ -29,7 +29,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full">
+    <header className="w-full top-0 sticky z-50 ">
 
       <div className="hidden md:flex justify-between items-center bg-gray-100 text-sm px-6 py-2">
         <div className="flex gap-4">
