@@ -108,18 +108,11 @@ const ProductList = ({ title, highlight, items }) => (
 );
 const TrendProducts = () => {
   return (
-    <div className="flex flex-col lg:flex-row gap-6">
-  <div className="w-full lg:w-1/3">
-    <ProductList title="Trending" highlight="Items" items={trending} />
-  </div>
-  <div className="w-full lg:w-1/3">
-    <ProductList title="Top" highlight="Rated" items={topRated} />
-  </div>
-  <div className="w-full lg:w-1/3">
-    <ProductList title="Top" highlight="Selling" items={topSelling} />
-  </div>
-</div>
-
+    <div className="top-most" style={{background:"#f7f7f7",display:"flex",justifyContent:"space-between",gap:"1.5rem",flexWrap:"wrap"}}>
+      <ProductList  title="Trending" highlight="Items" items={trending} />
+      <ProductList  title="Top" highlight="Rated" items={topRated} />
+      <ProductList  title="Top" highlight="Selling" items={topSelling} />
+    </div>
   );
 };
 
