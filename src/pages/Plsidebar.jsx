@@ -137,113 +137,140 @@ const ProductGrid = () => {
     <main style={{margin:"2rem 6rem"}}>
         <div className="product-page">
       {/* Sidebar */}
-       <div className="sidebar">
+<div className="w-full lg:w-[260px]">
 
-            <div className="filter-card" style={{width:"260px",background:"#eee"}}>
-              <div className="filter-header">
-                <h3>Category</h3>
-                <ChevronDown className="icon" />
-              </div> <hr />
-              <div className="filter-content">
-                {[
-                  {icon: <FaStar/>, name: "Dried Fruit ",  },
-                  {icon: <FaCookie/>, name: "Cookies " },
-                  {icon: <FaHamburger/>, name: "Foods " },
-                  {icon: <FaApple/>, name: "Fresh Fruit " },
-                  {icon: <FaBell/>, name: "Tuber Root" },
-                  {icon: <FaApple/>, name: "Vegetables" },
-                  {icon: <FaIceCream/>, name: "Snacks" },
-                  {icon: <FaUserAlt/>, name: "Unisex" },
-                  {icon: <FaDelicious/>, name: "Jewellery" },
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.icon}</span>
-                      <span>{item.name}</span>
-                    </div>
-                  </div>
-                ))}
-                <div className="filter-header" style={{paddingTop:"3rem"}}>
-                <h3>Weight</h3>
-                <ChevronDown className="icon" />
-              </div> <hr />
-                {[{ name: "2kg" },
-                 { name: "10kg" },
-                 { name: "1kg" },
-                 { name: "2pack" },
-                 { name: "500g" },
-                 { name: "2pcs" },
-                 { name: "100g" },
-                 { name: "3pcs" }
-                ].map((item) => (
-                  <div key={item.name} className="filter-item">
-                    <div className="filter-item-left">
-                      <div className="checkbox" />
-                      <span>{item.name}</span>
-                    </div>
-                  </div>
-                ))}
+  <div className="bg-gray-100 rounded-lg p-4 space-y-8">
 
-                <div className="filter-section" style={{color:"#27ae60"}}>
-                 <div className="filter-header" style={{paddingTop:"3rem"}}>
-                <h3>Color</h3>
-                <ChevronDown className="icon" />
-              </div> <hr />
-            <div className="color-palette" style={{display:"grid",gap:"0.5rem",marginTop:"1rem",
-              gridTemplateColumns:"1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr",objectFit:"cover"}}>
-              <span className="color" style={{ background: "#ff6b6b",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#feca57",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#48dbfb",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#1dd1a1",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#5f27cd",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#3f2",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#f7f",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#3ea5",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#ffe2ad",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#333",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "#5ea",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "rgba(9, 33, 33, 0.13)",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-              <span className="color" style={{ background: "purple",width:"20px",height:"20px",borderRadius:"50%",display:"inline-block" }}></span>
-            </div>
-           </div>
+    {/* CATEGORY */}
+    <div>
+      <div className="flex items-center justify-between">
+        <h3 className="font-semibold text-lg">Category</h3>
+        <ChevronDown className="w-5 h-5" />
+      </div>
+      <hr className="my-3" />
 
-            <div style={{textAlign:"center"}}>
-              <div className="filter-header" style={{marginTop:"3rem",marginBottom:"2rem"}}>
-                <h3>Price</h3>
-                <ChevronDown className="icon" />
-              </div>               
-              <h5>Item:{count} </h5>
-             <div style={{display:"flex",justifyContent:"center",gap:"1rem"}}>
-               <div style={{textAlign:"center",marginTop:"10px",padding:"10px"}}>
-                From <br /> <button onClick={increase} style={{padding:"5px 15px",background:"#fff",border:"none",borderRadius:"3px"}} >0</button> 
-              </div> 
-              <div style={{textAlign:"center",marginTop:"10px",padding:"10px"}}> 
-                To <br /> <button onClick={decrease} style={{padding:"5px 15px",background:"#fff",border:"none",borderRadius:"3px"}} >250</button> 
-              </div>
-             </div>
-            </div>
+      <div className="space-y-3">
+        {[
+          { icon: <FaStar />, name: "Dried Fruit" },
+          { icon: <FaCookie />, name: "Cookies" },
+          { icon: <FaHamburger />, name: "Foods" },
+          { icon: <FaApple />, name: "Fresh Fruit" },
+          { icon: <FaBell />, name: "Tuber Root" },
+          { icon: <FaApple />, name: "Vegetables" },
+          { icon: <FaIceCream />, name: "Snacks" },
+          { icon: <FaUserAlt />, name: "Unisex" },
+          { icon: <FaDelicious />, name: "Jewellery" },
+        ].map((item) => (
+          <label
+            key={item.name}
+            className="flex items-center gap-3 text-sm cursor-pointer"
+          >
+            <input type="checkbox" className="accent-green-600" />
+            <span className="text-gray-600">{item.icon}</span>
+            <span>{item.name}</span>
+          </label>
+        ))}
+      </div>
+    </div>
 
-            <div className="filter-header" style={{marginTop:"3rem",marginBottom:"2rem"}}>
-                <h3>Tags</h3>
-                <ChevronDown className="icon" />
-              </div>
-              <div className="filter-content">
-                <div className="tags" style={{marginBottom:"2rem"}}>
-                  {["Fruits", "Cookies", "Foods", "Tuber", "Vegetables", "Snacks", "Clothes", "Jewellery"].map((tag) => (
-                    <button key={tag} className="tag-btn" style={{background:"#459a88"}}>{tag}</button>
-                  ))}
-                </div>
-                <button style={{background:"#45a388",
-                    border:"none",padding:"10px 20px",
-                    borderRadius:"5px",float:"right",
-                    color:"white"}}>Filter</button>
-              </div>
+    {/* WEIGHT */}
+    <div>
+      <div className="flex items-center justify-between">
+        <h3 className="font-semibold text-lg">Weight</h3>
+        <ChevronDown className="w-5 h-5" />
+      </div>
+      <hr className="my-3" />
 
-          </div>
+      <div className="space-y-3">
+        {["2kg","10kg","1kg","2pack","500g","2pcs","100g","3pcs"].map((item) => (
+          <label key={item} className="flex items-center gap-3 text-sm">
+            <input type="checkbox" className="accent-green-600" />
+            <span>{item}</span>
+          </label>
+        ))}
+      </div>
+    </div>
 
+    {/* COLOR */}
+    <div>
+      <div className="flex items-center justify-between text-green-600">
+        <h3 className="font-semibold text-lg">Color</h3>
+        <ChevronDown className="w-5 h-5" />
+      </div>
+      <hr className="my-3" />
+
+      <div className="grid grid-cols-8 gap-2">
+        {[
+          "#ff6b6b","#feca57","#48dbfb","#1dd1a1",
+          "#5f27cd","#3f2","#f7f","#3ea5",
+          "#ffe2ad","#333","#5ea","rgba(9,33,33,0.13)","purple"
+        ].map((color, i) => (
+          <span
+            key={i}
+            className="w-5 h-5 rounded-full cursor-pointer border"
+            style={{ background: color }}
+          />
+        ))}
+      </div>
+    </div>
+
+    {/* PRICE */}
+    <div className="text-center">
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="font-semibold text-lg">Price</h3>
+        <ChevronDown className="w-5 h-5" />
+      </div>
+
+      <h5 className="mb-4">Item: {count}</h5>
+
+      <div className="flex justify-center gap-6">
+        <div>
+          <p className="text-sm mb-1">From</p>
+          <button
+            onClick={increase}
+            className="px-4 py-1 bg-white rounded shadow text-sm"
+          >
+            0
+          </button>
         </div>
-     </div>
+
+        <div>
+          <p className="text-sm mb-1">To</p>
+          <button
+            onClick={decrease}
+            className="px-4 py-1 bg-white rounded shadow text-sm"
+          >
+            250
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {/* TAGS */}
+    <div>
+      <div className="flex items-center justify-between mb-4">
+        <h3 className="font-semibold text-lg">Tags</h3>
+        <ChevronDown className="w-5 h-5" />
+      </div>
+
+      <div className="flex flex-wrap gap-2 mb-4">
+        {["Fruits","Cookies","Foods","Tuber","Vegetables","Snacks","Clothes","Jewellery"].map(tag => (
+          <button
+            key={tag}
+            className="bg-[#459a88] text-white text-sm px-3 py-1 rounded"
+          >
+            {tag}
+          </button>
+        ))}
+      </div>
+
+      <button className="w-full bg-[#45a388] text-white py-2 rounded">
+        Filter
+      </button>
+    </div>
+
+  </div>
+</div>
 
       {/* Main content */}
       <main className="main-content">
