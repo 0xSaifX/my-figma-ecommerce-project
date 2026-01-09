@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 px-6 py-12">
 
         <div>
-          <h2 className="text-xl font-bold text-white flex items-center gap-2">
+          <h2 className="text-xl font-bold text-green-700 flex items-center gap-2">
             <FaShoppingBag className="text-green-700"/> Grabit
           </h2>
           <p className="mt-4 text-sm">
