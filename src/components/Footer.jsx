@@ -48,7 +48,7 @@ const Footer = () => {
           <h3 className="text-white mb-3">Contact</h3>
           <ul className="space-y-3 text-sm">
             <li className="flex gap-2 hover:text-green-300"><FaMapMarkerAlt className="hover:text-green-300" /> New York, USA</li>
-            <li className="flex gap-2 hover:text-green-300"><FaWhatsapp className="hover:text-green-300" /> +00 9876543210</li>
+            <li className="flex gap-2 hover:text-green-300"><FaWhatsapp className="hover:text-green-300" /> +00 987-654-321</li>
             <li className="flex gap-2 hover:text-green-300"><FaEnvelope className="hover:text-green-300" /> example@email.com</li>
           </ul>
 
