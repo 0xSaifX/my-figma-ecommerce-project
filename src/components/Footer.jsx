@@ -27,36 +27,36 @@ const Footer = () => {
         <div>
           <h3 className="text-white mb-3">Category</h3>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-green-300" >Vegetables</li>
-            <li className="hover:text-green-300" >Fresh Fruits</li>
-            <li className="hover:text-green-300" >Cookies</li>
-            <li className="hover:text-green-300" >Dried Fruits</li>
+            <li className="hover:text-green-300 cursor-pointer" >Vegetables</li>
+            <li className="hover:text-green-300 cursor-pointer" >Fresh Fruits</li>
+            <li className="hover:text-green-300 cursor-pointer" >Cookies</li>
+            <li className="hover:text-green-300 cursor-pointer" >Dried Fruits</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-white mb-3">Company</h3>
           <ul className="space-y-2 text-sm">
-            <li className="hover:text-green-300" >About Us</li>
-            <li className="hover:text-green-300" >Delivery</li>
-            <li className="hover:text-green-300" >Legal Notice</li>
-            <li className="hover:text-green-300" >Contact</li>
+            <li className="hover:text-green-300 cursor-pointer" >About Us</li>
+            <li className="hover:text-green-300 cursor-pointer" >Delivery</li>
+            <li className="hover:text-green-300 cursor-pointer" >Legal Notice</li>
+            <li className="hover:text-green-300 cursor-pointer" >Contact</li>
           </ul>
         </div>
 
         <div>
           <h3 className="text-white mb-3">Contact</h3>
           <ul className="space-y-3 text-sm">
-            <li className="flex gap-2 hover:text-green-300"><FaMapMarkerAlt className="hover:text-green-300" /> New York, USA</li>
-            <li className="flex gap-2 hover:text-green-300"><FaWhatsapp className="hover:text-green-300" /> +00 987-654-321</li>
-            <li className="flex gap-2 hover:text-green-300"><FaEnvelope className="hover:text-green-300" /> example@email.com</li>
+            <li className="flex gap-2 hover:text-green-300 cursor-pointer"><FaMapMarkerAlt className="hover:text-green-300 cursor-pointer" /> New York, USA</li>
+            <li className="flex gap-2 hover:text-green-300 cursor-pointer"><FaWhatsapp className="hover:text-green-300 cursor-pointer" /> +00 987-654-321</li>
+            <li className="flex gap-2 hover:text-green-300 cursor-pointer"><FaEnvelope className="hover:text-green-300 cursor-pointer" /> example@email.com</li>
           </ul>
 
           <div className="flex gap-4 mt-4">
-            <FaFacebookF className="hover:text-green-300" />
-            <FaTwitter className="hover:text-green-300" />
-            <FaLinkedinIn className="hover:text-green-300" />
-            <FaInstagram className="hover:text-green-300" />
+            <FaFacebookF className="hover:text-green-300 cursor-pointer" />
+            <FaTwitter className="hover:text-green-300 cursor-pointer" />
+            <FaLinkedinIn className="hover:text-green-300 cursor-pointer" />
+            <FaInstagram className="hover:text-green-300 cursor-pointer" />
           </div>
         </div>
       </div>
